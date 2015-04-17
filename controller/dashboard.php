@@ -15,5 +15,11 @@ $events=getNearestEvents($userLogname,3);
 
 //TO DO, get the info of last activity of users
 
+//code....
+
+//--------------
+
+
+
 
 ?>
