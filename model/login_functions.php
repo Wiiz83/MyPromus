@@ -1,7 +1,7 @@
 <?php
 /*author: Ferran Rovira 	mail:ferran294@gmail.com
 Login model functions */
-include(db_connection.inc.php);
+include $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/db_connection.inc.php';	//Database connections
 
 //Check user
 function checkUser($id,$password){
