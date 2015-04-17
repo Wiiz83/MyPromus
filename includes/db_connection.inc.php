@@ -19,7 +19,7 @@ if (!mysqli_set_charset($link, 'utf8'))
 }
 
 
-$db=mysqli_select_db($link,'myPromus');
+$db=mysqli_select_db($link,'promus');
 if(!$db){
 	$output_error="There is an error trying to select the database";
 	include $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/error_output.php';

@@ -7,6 +7,10 @@ require $_SERVER['DOCUMENT_ROOT'].'/myPromus/model/signup_functions.php';	//incl
 
 //Validate and check that the data is correct and not null TODO
 
+
+//Code to DO.................
+
+
 //The data should be validated in the client side
 
 //Variables from the form
@@ -17,7 +21,7 @@ $country=strip_tags(trim($_POST[country]));
 $city=strip_tags(trim($_POST[city]));
 
 
-if(!checkUser($username)){
+if(!checkUsername($username)){
 	$errorMessage="This username already exists";
 	include $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/signup_form.html.php'; 
 }else{

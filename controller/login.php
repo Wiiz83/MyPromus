@@ -5,8 +5,8 @@ session_start();
 include $_SERVER['DOCUMENT_ROOT'].'/myPromus/model/login_functions.php';	//include the functions of the login model
 
 
-$username=$_POST[username];
-$password=$_POST[password];
+$username=$_POST['username'];
+$password=$_POST['password'];
 
 if(checkUser($username,$password)){
 	$errorlogin=false;
@@ -15,8 +15,9 @@ if(checkUser($username,$password)){
 	header("Location: dashboard.php");	//redirect to the dahsboard
 }else{
 	$errorlogin=true;
-	include 'index.html.php' //show again the index with the error login
-	exit();
+	$output_error="No valid username or password";
+	include $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/error_output.php'; //show again the index with the error login,,,,,en pruebas,debe redirigir a index
+	
 }
 
 ?>
