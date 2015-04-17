@@ -8,7 +8,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/db_connection.inc.php';	//
 //Register user,return true if the user is finally registered in the database and return false if there was an error with the query
 function insertUser($username,$password,$email,$country,$city){
 	global $link;
-	$sql="INSERT INTO User (username,password,country,city,email) VALUES ('$username',md5('$password'),'$country','$city','$email')";
+	$sql="INSERT INTO user (username,password,country,city,email) VALUES ('$username',md5('$password'),'$country','$city','$email')";
 	if(!mysqli_query($link,$sql)){
 		return false;
 	}else{
