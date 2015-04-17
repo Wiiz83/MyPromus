@@ -11,7 +11,7 @@ function checkUser($id,$password){
 	$num=mysqli_num_rows($result);
 
 	if($num>0){	//login name was found
-		$sql="SELECT username FROM user WHERE username='$id' AND password='$password'";
+		$sql="SELECT username FROM user WHERE username='$id' AND password='$password'";  //Anyadir encriptacion md5
 		$result=mysqli_query($link,$sql);
 		$num=mysqli_num_rows($result);
 		if($num>0){

@@ -20,6 +20,16 @@ $email=strip_tags(trim($_POST[email]));
 $country=strip_tags(trim($_POST[country]));
 $city=strip_tags(trim($_POST[city]));
 
+//Securizing data cleaning malicious html
+$username=htmlspecialchars($username,ENT_QUOTES,'UTF-8');
+$password=htmlspecialchars($password,ENT_QUOTES,'UTF-8');
+$email=htmlspecialchars($email,ENT_QUOTES,'UTF-8');
+$country=htmlspecialchars($country,ENT_QUOTES,'UTF-8');
+$city=htmlspecialchars($city,ENT_QUOTES,'UTF-8');
+
+
+
+
 
 if(!checkUsername($username)){
 	$errorMessage="This username already exists";
