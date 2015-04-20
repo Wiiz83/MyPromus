@@ -50,5 +50,38 @@ function getNearestEvents($userId,$numberOfEvents){		//The id is the username of
 	}
 }
 
+function getMyEvents($userId,$numberOfEvents){
+	global $link;
+	$todayDate=date("Y-m-d");
+
+
+	$sql="SELECT * FROM event WHERE user_id='$userId' AND date>'$todayDate'";
+	$result=mysqli_query($link,$sql) or die(mysqli_error($link));
+
+	$rowsNumber=mysqli_num_rows($result);
+
+	echo "$rowsNumber";
+	
+	if($rowsNumber<$numberOfEvents){
+		$numberOfEvents=$rowsNumber;	//If in the database there are less events than asked, the number of
+	}									//events showed will change
+	
+
+	for($i=0;$i<$numberOfEvents;$i++){
+		$eventInfo=mysqli_fetch_assoc($result);
+		$events[]=new Event($eventInfo['id'],$eventInfo['user_id'],$eventInfo['name'],$eventInfo['date'],$eventInfo['place'],$eventInfo['description']);
+		print_r($eventInfo);
+		echo "<br>";
+	}
+
+	
+	
+	if(isset($events)){
+		return $events;
+	}else{
+		return null;		//If there is any event return null,need to be handled 
+	}
+}
+
 
 ?>

@@ -8,11 +8,25 @@ require $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/db_connection.inc.php';	//
 function createEvent($userAdmin,$name,$date,$place,$description){
 
 	global $link;
-	$sql="INSERT INTO event (user_id,name,date,place,description) VALUES ('$userAdmin',$name,'$date','$place','$description')";
+
+	$sql="INSERT INTO event (user_id,name,date,place,description)
+	 VALUES ('$userAdmin',$name,'$date','$place','$description')";	
+
 	if(!mysqli_query($link,$sql)){
+
 		return false;
+	
 	}else{
-		return true;
+		$eventId = mysqli_insert_id($link);  //get the id of the event inserted in the DB
+
+		$sql="INSERT INTO event_friend (event_id,friend_id) VALUES ('$eventId','$userAdmin')";	//insert in the event_friend table the admin of the event as an assistant
+		if(!mysqli_query($link,$sql)){
+			return false;
+		}else{
+			return true;
+		}
+
+		
 	}
 }
 
