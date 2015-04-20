@@ -50,6 +50,15 @@ function getNearestEvents($userId,$numberOfEvents){		//The id is the username of
 	}
 }
 
+
+
+
+/*
+Function to get the next events where the owner is the admin
+*/
+
+
+
 function getMyEvents($userId,$numberOfEvents){
 	global $link;
 	$todayDate=date("Y-m-d");
@@ -60,7 +69,6 @@ function getMyEvents($userId,$numberOfEvents){
 
 	$rowsNumber=mysqli_num_rows($result);
 
-	echo "$rowsNumber";
 	
 	if($rowsNumber<$numberOfEvents){
 		$numberOfEvents=$rowsNumber;	//If in the database there are less events than asked, the number of
@@ -70,8 +78,7 @@ function getMyEvents($userId,$numberOfEvents){
 	for($i=0;$i<$numberOfEvents;$i++){
 		$eventInfo=mysqli_fetch_assoc($result);
 		$events[]=new Event($eventInfo['id'],$eventInfo['user_id'],$eventInfo['name'],$eventInfo['date'],$eventInfo['place'],$eventInfo['description']);
-		print_r($eventInfo);
-		echo "<br>";
+		
 	}
 
 	

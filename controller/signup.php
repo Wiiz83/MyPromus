@@ -4,6 +4,8 @@ Signup controller */
 
 session_start();
 require $_SERVER['DOCUMENT_ROOT'].'/myPromus/model/signup_functions.php';	//include the functions of the signup model
+require $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/validatorHelper.php';
+
 
 //Validate and check that the data is correct and not null TODO
 
@@ -14,18 +16,13 @@ require $_SERVER['DOCUMENT_ROOT'].'/myPromus/model/signup_functions.php';	//incl
 //The data should be validated in the client side
 
 //Variables from the form
-$username=strip_tags(trim($_POST[username]));
-$password=strip_tags(trim($_POST[password]));
-$email=strip_tags(trim($_POST[email]));
-$country=strip_tags(trim($_POST[country]));
-$city=strip_tags(trim($_POST[city]));
+$username=sanitizeInput($_POST[username]);
+$password=sanitizeInput($_POST[password]);
+$email=sanitizeInput($_POST[email]);
+$country=sanitizeInput($_POST[country]);
+$city=sanitizeInput($_POST[city]);
 
-//Securizing data cleaning malicious html
-$username=htmlspecialchars($username,ENT_QUOTES,'UTF-8');
-$password=htmlspecialchars($password,ENT_QUOTES,'UTF-8');
-$email=htmlspecialchars($email,ENT_QUOTES,'UTF-8');
-$country=htmlspecialchars($country,ENT_QUOTES,'UTF-8');
-$city=htmlspecialchars($city,ENT_QUOTES,'UTF-8');
+
 
 
 
