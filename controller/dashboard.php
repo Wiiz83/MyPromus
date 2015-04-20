@@ -8,10 +8,10 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/classes/event.class.php';
 
 //Starts session and gets username
 session_start();
-$userLogname=$_SESSION['logname'];
+$userId=$_SESSION['userId'];
 
 //Get the three next events
-$events=getNearestEvents($userLogname,3);
+$events=getNearestEvents($userId,3);
 
 //TO DO, get the info of last activity of users
 

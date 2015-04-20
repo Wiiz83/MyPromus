@@ -3,7 +3,7 @@
 Login controller */
 session_start();
 include $_SERVER['DOCUMENT_ROOT'].'/myPromus/model/login_functions.php';	//include the functions of the login model
-
+require $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/id_parser.inc.php';
 
 $username=$_POST['username'];
 $password=$_POST['password'];
@@ -11,7 +11,10 @@ $password=$_POST['password'];
 if(checkUser($username,$password)){
 	$errorlogin=false;
 	$_SESSION['auth']=true;		//put the authentication of the session as valid
-	$_SESSION['logname']=$username;		//variable that identificates the user in the session
+	$_SESSION['logname']=$username;		//variable that identificates the user name in the session
+	$_SESSION['userId']=getUserId($username); //variable of the id of the user
+	
+	
 	header("Location: dashboard.php");	//redirect to the dahsboard
 }else{
 	$errorlogin=true;

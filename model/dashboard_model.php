@@ -12,25 +12,36 @@ require $_SERVER['DOCUMENT_ROOT'].'/myPromus/classes/event.class.php';
 will be passed as an argument in the method,the function returns an array of Events
 */
 
-function getNearestEvents($username,$numberOfEvents){		//The id is the username of the user that is asking for the events
+function getNearestEvents($userId,$numberOfEvents){		//The id is the username of the user that is asking for the events
 	global $link;
 	$todayDate=date("Y-m-d");
+
+	//The query select the info of the events that the user is going to assist
+
+	$sql="SELECT  event.*
+	 FROM event_friend AS ef INNER JOIN event ON ef.event_id=event.id
+	 WHERE ef.friend_id='$userId' AND event.date>'$todayDate'
+	 ORDER BY event.date";
 	
-	$sql="SELECT * FROM event WHERE user_id='$username' ORDER BY date";
+	
 	$result=mysqli_query($link,$sql) or die(mysqli_error($link));
 	$rowsNumber=mysqli_num_rows($result);
+
+	echo "$rowsNumber";
 	
 	if($rowsNumber<$numberOfEvents){
 		$numberOfEvents=$rowsNumber;	//If in the database there are less events than asked, the number of
 	}									//events showed will change
 	
+
 	for($i=0;$i<$numberOfEvents;$i++){
 		$eventInfo=mysqli_fetch_assoc($result);
 		$events[]=new Event($eventInfo['id'],$eventInfo['user_id'],$eventInfo['name'],$eventInfo['date'],$eventInfo['place'],$eventInfo['description']);
-		
+		print_r($eventInfo);
+		echo "<br>";
 	}
 
-	print_r("$events");
+	
 	
 	if(isset($events)){
 		return $events;

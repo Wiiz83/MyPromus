@@ -17,20 +17,20 @@ require $_SERVER['DOCUMENT_ROOT'].'/myPromus/model/event_model.php';
 //The data should be validated in the client side
 
 //Variables from the form
-$username=$_SESSION['logname'];
+$userId=$_SESSION['userId'];
 $name=strip_tags(trim($_POST['name']));
 $date=strip_tags(trim($_POST['date']));
 $place=strip_tags(trim($_POST['place']));
 $description=strip_tags(trim($_POST['description']));
 
 //Securizing data cleaning malicious html
-$username=htmlspecialchars($username,ENT_QUOTES,'UTF-8');
+$userId=htmlspecialchars($userId,ENT_QUOTES,'UTF-8');
 $name=htmlspecialchars($name,ENT_QUOTES,'UTF-8');
 $date=htmlspecialchars($date,ENT_QUOTES,'UTF-8');
 $place=htmlspecialchars($place,ENT_QUOTES,'UTF-8');
 $description=htmlspecialchars($description,ENT_QUOTES,'UTF-8');
 
-if(createEvent($username,$name,$date,$place,$description)){
+if(createEvent($userId,$name,$date,$place,$description)){
 	header("Location: event_creation_succesful.html.php");
 }else{
 	$errorMessage="An error ocurred when trying to insert the user in the database";
