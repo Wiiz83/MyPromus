@@ -4,9 +4,10 @@ Login controller */
 session_start();
 include $_SERVER['DOCUMENT_ROOT'].'/myPromus/model/login_functions.php';	//include the functions of the login model
 require $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/id_parser.inc.php';
+include $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/validatorHelper.inc.php';
 
-$username=$_POST['username'];
-$password=$_POST['password'];
+$username=sanitizeInput($_POST['username']);
+$password=sanitizeInput($_POST['password']);
 
 if(checkUser($username,$password)){
 	$errorlogin=false;
