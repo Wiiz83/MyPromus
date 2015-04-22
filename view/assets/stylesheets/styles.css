@@ -77,25 +77,63 @@ table {
                 height: 100%
         }
 
+        .event-box {
+                display: inline-block;
+                background-color: #B54AF2;
+        }
+
 /*
 	===========================================================
 	Grid
 	===========================================================
 */
+        
+        
+        *,
+        *:before,
+        *:after {
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                        box-sizing: border-box;
+        }
+        
+        
+        .grid {
+             position: fixed;
+             top: 70px;
+             left: 80px;
+             padding-left: 15px;
+             padding-right: 15px;
+             margin: 0 auto;
+             width: 94%;
+
+        }
+
+        
         .col-1-2 {
                 display: inline-block;
                 width: 50%;
+                padding: 10px 10px;
+                margin: 5px 5px;
+                
+        }
+
+        .col-1-6 {
+                width: 16.66%;
+        }
+        
+        .row {
+                margin-top: 10px;
+                margin-bottom: 10px;
+                border-top: 1px solid #5F007F;
+                width: 100%;
+                background-color: #D1D1D1;
+                padding: 5px 5px;
         }
 
 /*
 	===========================================================
 	Clearfix (Just needed if we use float)
-	===========================================================
-*/
-
-/*
-	===========================================================
-	Rows
 	===========================================================
 */
 
@@ -214,6 +252,10 @@ table {
                 display:block;
                 text-decoration: none;
                 color: #FFF;
+        }
+
+        .left-menu a:hover {
+                color: #5F007F;
         }
 
         
