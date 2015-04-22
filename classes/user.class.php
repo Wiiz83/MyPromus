@@ -6,6 +6,10 @@ User class that has the attributes of an User and functions to set new values */
 TO DO implementar los updates en cada metodo set
 TO DO decidir si quitar atributos bla bla bla
 */
+
+require $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/db_connection.inc.php';	//Database connections
+
+
 class User {
 	
 	private $idUser;
