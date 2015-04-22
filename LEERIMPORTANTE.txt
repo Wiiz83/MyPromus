@@ -1,0 +1,7 @@
+Tambien habra que parsear la id en la creacion de eventos y en la obtencion de los eventos proximos en el dashboard.
+
+
+Anyadir dateCreation en la base de datos en varias entidades como eventos.(opcional)
+
+Anyadir el atributo imagen en la BD a usuarios y eventos
+
