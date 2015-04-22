@@ -29,8 +29,7 @@ function getFriends($userId){
 	}
 }
 
-/*TO DO a lo mejor hay que introducir y borrar el usuario en las dos columnas xk no sabemos  cuando se acepta a un amigo 
-en que columna se quedara el usuario pues cada vez acepta uno
+/*Delete a friendship between two users,we have to delete it from the two columns
 
 */
 
@@ -39,7 +38,19 @@ function deleteFriend($userId,$friendId){
 
 	$sql="DELETE FROM friend WHERE id='$userId' AND user_id='$friendId'";
 	if(mysqli_query($link,$sql)){
-			return true;
+
+			$sql="DELETE FROM friend WHERE id='$friendId' AND user_id='$userId'";
+
+			if(mysqli_query($link,$sql)){
+
+				return true;
+			
+			}else{
+
+				return false;
+			
+			}
+			
 		}else{
 			return false;  //Error deleting the friend
 		}
@@ -47,12 +58,29 @@ function deleteFriend($userId,$friendId){
 
 }
 
+/*
+Add a relationship between two users,we have to add it in the two columns
+*/
+
 function addFriend($userId,$friendId){
 	global $link;
 
 	$sql="INSERT INTO friend (id,user_id) VALUES ('$userId','$friendId')";
+	
 	if(mysqli_query($link,$sql)){
-			return true;
+
+			$sql="INSERT INTO friend (id,user_id) VALUES ('$userId','$friendId')";
+
+			if(mysqli_query($link,$sql)){
+
+				return true;
+			
+			}else{
+			
+				return false;
+			
+			}
+			
 		}else{
 			return false;  //Error deleting the friend
 		}
