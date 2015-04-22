@@ -144,7 +144,7 @@ table {
 */
         small {
                 font-size: 12px;
-                font-weight: 700;
+                font-weight: 400;
         }
 /*
 	===========================================================
@@ -350,8 +350,9 @@ table {
         }
 
 
-        login-action {
-             color: #FFF;
+        login-action #accept_conditions {
+             text-align: center;
+             text-size: 10pt;
         }
 
         #spoti-login {
