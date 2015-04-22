@@ -4,23 +4,21 @@ User class that has the attributes of an User and functions to set new values */
 
 /*
 TO DO implementar los updates en cada metodo set
-TO DO decidir si quitar atributos
+TO DO decidir si quitar atributos bla bla bla
 */
 class User {
 	
 	private $idUser;
 	private $username;
-	private $password;
 	private $country;
 	private $city;
 	private $email;
 
 
-	function __construct($idUser,$username,$password,$country,$city,$email)
+	function __construct($idUser,$username,$country,$city,$email)
 	{
 		$this->idUser=$idUser;
 		$this->username=$username;
-		$this->password=$password;
 		$this->country=$country;
 		$this->city=$city;
 		$this->email=$email;
@@ -32,10 +30,6 @@ class User {
 
 	public function getUsername(){
 		return $this->username;
-	}
-
-	public function getPassword(){
-		return $this->password;
 	}
 
 	public function getCountry(){
