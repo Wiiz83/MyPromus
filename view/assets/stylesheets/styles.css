@@ -352,10 +352,14 @@ table {
         }
 
 
-        login-action #accept_conditions {
-             text-align: center;
-             text-size: 10pt;
+        .login-action a {
+                text-decoration: none;
         }
+
+        .login-action a:hover {
+            text-decoration: underline;
+        }
+
 
         #spoti-login {
                 margin: 10px 22px 0 22px;
@@ -378,26 +382,31 @@ table {
 
 
          input[name="register_username"] {
-             width: 45%;
+             width: 48%;
              float:left;
         }
 
 
          input[name="register_password"] {
-             width: 45%;
+             width: 48%;
              float: right;
         }
 
              input[name="register_city"] {
-             width: 45%;
+             width: 48%;
              float:left;
         }
 
          input[name="register_country"] {
-             width: 45%;
+             width: 48%;
              float:right;
         }
 
+
+
+        input[name="register_submit"] {
+             cursor: pointer;
+        }
 
 /*
     ===========================================================
