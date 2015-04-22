@@ -4,7 +4,7 @@ Signup controller */
 
 session_start();
 require $_SERVER['DOCUMENT_ROOT'].'/myPromus/model/signup_functions.php';	//include the functions of the signup model
-require $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/validatorHelper.php';
+require $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/validatorHelper.inc.php';
 
 
 

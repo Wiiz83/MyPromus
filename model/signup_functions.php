@@ -21,9 +21,10 @@ function insertUser($username,$password,$email,$country,$city){
 
 function checkUsername($id){
 	global $link;
-	$sql="SELECT username FROM User WHERE username='$id'";
+	$sql="SELECT username FROM user WHERE username='$id'";
 	$result=mysqli_query($link,$sql);
-	$num=mysqli_num_rows($result);
+	$num=mysqli_num_rows($result) or die(mysqli_error($link));
+
 	if($num>0){
 		return false;	//this means that the user already exists and the user have to choose another one
 	}else{

@@ -19,7 +19,7 @@
                 <br/>
 		
 		<div class="login-box">
-			<form action="/myPromus/controller/login.php" method="post">
+			<form action="/myPromus/controller/signup.php" method="post">
 	
 				<fieldset class="login-data">
 			
