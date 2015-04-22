@@ -59,14 +59,20 @@ table {
 	Custom Styles
 	===========================================================
 */
-
+        body {
+                color: #464646;
+                font: 400 16px/22px "Roboto", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
 
 /*
 	===========================================================
 	Grid
 	===========================================================
 */
-
+        .col-1-2 {
+                display: inline-block;
+                width: 50%;
+        }
 
 /*
 	===========================================================
@@ -85,7 +91,10 @@ table {
 	Typography
 	===========================================================
 */
-
+        small {
+                font-size: 12px;
+                font-weight: 700;
+        }
 /*
 	===========================================================
 	Links
@@ -97,11 +106,62 @@ table {
 	Buttons
 	===========================================================
 */
+        .btn-login {
+                border: 0;
+                border-radius: 15px;
+                background: #5F007F;
+                padding: 10px 27px;
+                color: #FFF;
+        }
 
+        .btn-login:hover {
+                background: #FFF;
+                color: #5F007F;
+        }
 
 /*
+        ===========================================================
+        Top Menu
+        ===========================================================
+*/
+         .top-menu {
+                position: fixed;
+                left: 80;
+                top: 0;
+                height: 70px;
+                width: 100%;
+                background: url(../images/header.png) no-repeat center center;
+                background-size:cover;
+                background-color: #000;
+                color: #FFF;
+        }
+        
+        .topmenu-left {
+                display: inline-block;
+                width: 50%;
+                padding: 22px 0;
+        }
+       
+        .topmenu-right {
+                display: inline-block;
+                width: 50%;
+        }
+
+        .topmenu-right img {
+                width: 22px;
+                height: 22px;
+                margin: 0 5px;
+        }
+
+        .topmenu-right nav {
+                margin-left: 450px;
+                padding-top: 22px;
+        }
+
+        
+/*
 	===========================================================
-	Navigation
+	Left Menu
 	===========================================================
 */
 	.left-menu {
@@ -109,19 +169,124 @@ table {
 		left: 0;
 		top: 0;
 		height: 100%;
-		width: 66px;
-		background-color: #43FA65;
-	}
+		width: 80px;
+		background-color: #000;
+	        text-align: center;
+                color: #FFF;
+        }
+
+       
+        .left-menu img {
+                margin-top: 10px;
+                margin-bottom: 15px;
+                width: 50px;
+                height: 50px;
+        }
+
+        .left-menu nav li {
+                margin: 0 10px;
+                font-size: 10px;
+                font-weight: 500;
+        }
+
+        .left-menu nav li img {
+                display: block;
+                height: 26px;
+                width: 32px;
+                margin-right: auto;
+                margin-left: auto;
+        }
+       
+        .left-menu a {
+                display:block;
+                text-decoration: none;
+                color: #FFF;
+        }
+
+        
+        .menubar-new {
+                margin-top: 240px;
+                font-size: 10px;
+                font-weight: 500;
+                margin-left: 5px;
+                margin-right: 5px;
+        }
+
+        .menubar-new img {
+                display: block;
+                height: 40px;
+                width: 40px;
+                margin-left: auto;
+                margin-right: auto;
+        }
+
 /*
 	===========================================================
 	Login
 	===========================================================
 */
 
-	.login-box {
-				
+	#login-page {
+		background: url(../images/login-background.jpg) no-repeat center center fixed;
+		background-size: cover;
+		background-color: #CCC;
+                height: 100%;
 	}
+
+	.login-box {
+                border-radius: 10px;
+                box-shadow: 10px 10px 5px rgba(0, 0, 0, .5);
+                background-color: #90C;
+                background-color: rgba(91, 0, 127, .5);
+                width: 480px;
+                margin-left: auto;
+                margin-right:auto;
+                padding: 12px 24px 12px 12px;
+                margin-bottom: 66px;
+        }
 
 	.login-box form {
 		margin: 22px;
-	}	
+	}
+
+        #login-page .logo {
+                padding-top: 90px;
+                padding-bottom: 30px;
+                height: 25%;
+        }
+        
+        .logo img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                height: 120px;
+                width: 120px;
+                vertical-align: middle;
+        }
+
+        .login-data input {
+                display: block;
+                border: 2px solid #c6c9cc;
+                border-radius: 3px;
+                margin: 5px 0 12px 0;
+                text-align: center;
+                padding: 5px 5px;
+                width: 100%;
+        }
+
+        .login-action {
+                text-align: center;
+        }
+
+        .login-action input {
+                margin: 12px 0 5px 0;
+        }
+
+        #spoti-login {
+                margin: 10px 22px 0 22px;
+                width: 220px;
+        }
+
+        #login-page a {
+                color: #FFF;
+        }

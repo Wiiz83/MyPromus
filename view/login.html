@@ -7,30 +7,46 @@
 		<link rel="stylesheet" href="assets/stylesheets/styles.css">
 	</head>
 
+<<<<<<< HEAD
+	<body id="login-page">
+                                
+                <div class="logo">
+                        <img src="assets/images/logo.png" alt="MyPromus logo">
+                </div>
+		
+                <div class="login-box">
+			<form action="#" method="post">
+=======
 	<body>
 
 		<div class="login-box">
 			<form action="/myPromus/controller/login.php" method="post">
+>>>>>>> 6aeaa829a3950dff2b3ab1f23491fc6c1d9d3c99
 	
-				<fieldset>
+				<fieldset class="login-data">
 			
-					<legend>Login</legend>
-					<label>
-						Username
-						<input type="text" name="username" required>
-					</label>			
+					<input type="text" name="username" placeholder="Username" required>
 	
-					<label>
-						Password
-						<input type="text" name="password" required>
-					</label>		
-			
-					<label>
-						<input type="checkbox" name="stay" value="stay"> Remember Me
-					</label>	
-				
-					<input type="submit" name="submit" value="Sing In">
-				
+					<input type="text" name="password" placeholder="Password" required>
+			        
+                                </fieldset>
+                                
+                                <fieldset class="login-action">
+                                        
+                                        <label>
+				                <input type="checkbox" name="stay" value="stay"> <small>Remember me</small>
+				        </label>
+					<br>
+                                        <input class="btn-login" type="submit" name="submit" value="SIGN IN">
+			                <br>
+                                        <small>
+                                               <a href="#">or create an account</a>
+                                        </small>
+                                        <br>
+                                        <a href="#">
+                                                <img id="spoti-login" src="assets/images/spoty-login.png" alt="Sing In with Spotify"/>
+                                        
+                                        </a>
 				</fieldset>
 			</form>
 		</div>
