@@ -16,7 +16,7 @@ $myEvents=getMyEvents($userId,3);
 //TO DO, get the info of last activity of users
 
 //code....
-include $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/dashboard.html.php';
+include $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/index.html';
 //--------------
 
 

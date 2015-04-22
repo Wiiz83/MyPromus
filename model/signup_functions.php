@@ -9,7 +9,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/db_connection.inc.php';	//
 function insertUser($username,$password,$email,$country,$city){
 	global $link;
 	$todayDate=date("Y-m-d");
-	$sql="INSERT INTO user (username,password,country,city,email,dateCreation) VALUES ('$username',md5('$password'),'$country','$city','$email','$todayDate')";
+	$sql="INSERT INTO user (username,password,country,city,email,dateCreation) VALUES ('$username','$password','$country','$city','$email','$todayDate')";
 	if(!mysqli_query($link,$sql)){
 		return false;
 	}else{
@@ -20,11 +20,14 @@ function insertUser($username,$password,$email,$country,$city){
 //Check if the username already exists, return false if the user exist and true if not exists
 
 function checkUsername($id){
+	
 	global $link;
 	$sql="SELECT username FROM user WHERE username='$id'";
-	$result=mysqli_query($link,$sql);
-	$num=mysqli_num_rows($result) or die(mysqli_error($link));
-
+	
+	$result=mysqli_query($link,$sql) or die(mysqli_error($link));
+	
+	$num=mysqli_num_rows($result);
+	
 	if($num>0){
 		return false;	//this means that the user already exists and the user have to choose another one
 	}else{

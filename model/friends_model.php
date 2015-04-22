@@ -18,7 +18,7 @@ function getFriends($userId){
 	$result=mysqli_query($link,$sql) or die(mysqli_error($link));
 
 	while($friendInfo=mysqli_fetch_assoc($result)){
-		$friends=new User($friendInfo['id'],$friendInfo['username'],$friendInfo['country'],$friendInfo['city'],$friendInfo['email']);
+		$friends[]=new User($friendInfo['id'],$friendInfo['username'],$friendInfo['country'],$friendInfo['city'],$friendInfo['email']);
 
 	}
 
