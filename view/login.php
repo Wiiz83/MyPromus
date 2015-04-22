@@ -19,35 +19,34 @@
                 <br/>
 		
 		<div class="login-box">
-			<form action="/myPromus/controller/signup.php" method="post">
+			<form action="/myPromus/controller/login.php" method="post">
 	
 				<fieldset class="login-data">
 			
-					<input type="text" name="register_username" autocomplete="off" placeholder="Username" required>
-					<input type="password" name="register_password" autocomplete="off" placeholder="Password" required>
-					<input type="email" name="register_email" autocomplete="off" placeholder="Email"  required>
-					<input type="text" name="register_city" autocomplete="off" placeholder="City" required>
-					<input type="text" name="register_country" autocomplete="off" placeholder="Country" required>
-			        
+					<input type="text" name="username" autocomplete="off" placeholder="Username" required>
+	
+					<input type="password" name="password"  autocomplete="off" placeholder="Password" required>
+
 
 			        
                                 </fieldset>
                                 
                                 <fieldset class="login-action">
+        
+                                        <input class="btn-login" style="cursor:pointer" type="submit" name="submit" value="SIGN IN">
+			                <br>
+                                        <small>
+                                             <a href="http://localhost/myPromus/view/register.php" style="font-weight: bold !important;">Create an account now !</a>
+                                        </small>
 
-                                        <input class="btn-login" type="submit" name="register_submit" value="SIGN UP">
-                                        <br>
-                                         <small><font color="white">By clicking on "Sign up", you accept the <a href="#">General Conditions of use</a>.</font></small>
-                                         <br>
-			              				<small><font color="white"><<  </font><a href="http://localhost/myPromus/view/login.php">Back</a></small>
 				</fieldset>
 			</form>
 
 
 		</div>
 
-
-<footer class="index-footer">
+	
+	<footer class="index-footer">
 			<div class="index-navbar">
 				<div class="index-navbar-links">
 											<a class="evt-click" href="/en/offers" data-redirect="1" data-tracking="1" data-tracking-tag="loggedout_click" data-tracking-params="{'type': 'footer_offers'}">
@@ -64,6 +63,7 @@
 						Help &amp; Contact					</a>
 											<a class="evt-click" href="/en/legal/cgu" data-redirect="1" data-tracking="1" data-tracking-tag="loggedout_click" data-tracking-params="{'type': 'footer_cgu'}">
 							Terms & conditions						</a>
+						
 					</div>
 				<div class="index-copyright">
 					<p id="copyright" >&copy;&nbsp;2015 MyPromus</p>
