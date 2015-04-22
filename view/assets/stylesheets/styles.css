@@ -367,8 +367,36 @@ table {
         }
 
 
+       
+
+/*
+    ===========================================================
+    Register Page
+    ===========================================================
+*/
 
 
+
+         input[name="register_username"] {
+             width: 45%;
+             float:left;
+        }
+
+
+         input[name="register_password"] {
+             width: 45%;
+             float: right;
+        }
+
+             input[name="register_city"] {
+             width: 45%;
+             float:left;
+        }
+
+         input[name="register_country"] {
+             width: 45%;
+             float:right;
+        }
 
 
 /*

@@ -23,13 +23,11 @@
 	
 				<fieldset class="login-data">
 			
-					<input type="text" name="username" autocomplete="off" placeholder="Username" required>
-	
-					<input type="password" name="password" autocomplete="off" placeholder="Password" required>
-
-						<input type="text" name="city" autocomplete="off" placeholder="City" required>
-
-					<input type="text" name="country" autocomplete="off" placeholder="Country" required>
+					<input type="text" name="register_username" autocomplete="off" placeholder="Username" required>
+					<input type="password" name="register_password" autocomplete="off" placeholder="Password" required>
+					<input type="email" name="register_email" autocomplete="off" placeholder="Email"  required>
+					<input type="text" name="register_city" autocomplete="off" placeholder="City" required>
+					<input type="text" name="register_country" autocomplete="off" placeholder="Country" required>
 			        
 
 			        
@@ -46,9 +44,11 @@
 			              
 				</fieldset>
 			</form>
+
+
 		</div>
 
-		
+
 <footer class="index-footer">
 			<div class="index-navbar">
 				<div class="index-navbar-links">
