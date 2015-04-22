@@ -77,14 +77,60 @@ table {
                 height: 100%
         }
 
+        .event-box {
+                display: inline-block;
+                background-color: #B54AF2;
+                margin: 1px 1px;
+        
+        }
+
 /*
 	===========================================================
 	Grid
 	===========================================================
 */
+        
+        
+        *,
+        *:before,
+        *:after {
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                        box-sizing: border-box;
+        }
+        
+        
+        .grid {
+             position: fixed;
+             top: 70px;
+             left: 80px;
+             padding-left: 15px;
+             padding-right: 15px;
+             margin: 0 auto;
+             width: 94%;
+
+        }
+
+        
         .col-1-2 {
                 display: inline-block;
                 width: 50%;
+                padding: 10px 10px;
+                margin: 5px 5px;
+                
+        }
+
+        .col-1-6 {
+                width: 16.66%;
+        }
+        
+        .row {
+                margin-top: 10px;
+                margin-bottom: 10px;
+                border-top: 1px solid #5F007F;
+                width: 100%;
+                background-color: #D1D1D1;
+                padding: 2px 2px;
         }
 
 /*
@@ -95,18 +141,12 @@ table {
 
 /*
 	===========================================================
-	Rows
-	===========================================================
-*/
-
-/*
-	===========================================================
 	Typography
 	===========================================================
 */
         small {
                 font-size: 12px;
-                font-weight: 700;
+                font-weight: 400;
         }
 /*
 	===========================================================
@@ -216,6 +256,10 @@ table {
                 color: #FFF;
         }
 
+        .left-menu a:hover {
+                color: #5F007F;
+        }
+
         
         .menubar-new {
                 margin-top: 240px;
@@ -308,8 +352,9 @@ table {
         }
 
 
-        login-action {
-             color: #FFF;
+        login-action #accept_conditions {
+             text-align: center;
+             text-size: 10pt;
         }
 
         #spoti-login {

@@ -23,25 +23,32 @@
 	
 				<fieldset class="login-data">
 			
-					<input type="text" name="username" placeholder="Username" required>
+					<input type="text" name="username" autocomplete="off" placeholder="Username" required>
 	
-					<input type="password" name="password" placeholder="Password" required>
+					<input type="password" name="password" autocomplete="off" placeholder="Password" required>
 
-						<input type="text" name="city" placeholder="City" required>
+						<input type="text" name="city" autocomplete="off" placeholder="City" required>
 
-					<input type="text" name="country" placeholder="Country" required>
+					<input type="text" name="country" autocomplete="off" placeholder="Country" required>
 			        
 
 			        
                                 </fieldset>
                                 
+
+
+
                                 <fieldset class="login-action">
 
                                         <input class="btn-login" type="submit" name="submit" value="SIGN UP">
+                                        <br><br>
+                                         <small><font color="white">By clicking on "Sign up", you accept the <a href="#">General Conditions of use</a>.</font></small>
 			              
 				</fieldset>
 			</form>
 		</div>
+
+		
 <footer class="index-footer">
 			<div class="index-navbar">
 				<div class="index-navbar-links">

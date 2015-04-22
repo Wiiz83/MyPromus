@@ -23,9 +23,9 @@
 	
 				<fieldset class="login-data">
 			
-					<input type="text" name="username" placeholder="Username" required>
+					<input type="text" name="username" autocomplete="off" placeholder="Username" required>
 	
-					<input type="password" name="password" placeholder="Password" required>
+					<input type="password" name="password"  autocomplete="off" placeholder="Password" required>
 
 
 			        
@@ -33,16 +33,12 @@
                                 
                                 <fieldset class="login-action">
         
-                                        <input class="btn-login" type="submit" name="submit" value="SIGN IN">
+                                        <input class="btn-login" style="cursor:pointer" type="submit" name="submit" value="SIGN IN">
 			                <br>
                                         <small>
-                                              <a href="register.php">Create an account now !</a>
+                                              <a href="http://localhost/myPromus/view/register.php">Create an account now !</a>
                                         </small>
-                                        <br>
-                                        <a href="#">
-                                                <img id="spoti-login" src="assets/images/spoty-login.png" alt="Sing In with Spotify"/>
-                                        
-                                        </a>
+
 				</fieldset>
 			</form>
 
