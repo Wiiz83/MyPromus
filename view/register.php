@@ -23,11 +23,11 @@
 	
 				<fieldset class="login-data">
 			
-					<input type="text" name="register_username" autocomplete="off" placeholder="Username" required>
-					<input type="password" name="register_password" autocomplete="off" placeholder="Password" required>
-					<input type="email" name="register_email" autocomplete="off" placeholder="Email"  required>
-					<input type="text" name="register_city" autocomplete="off" placeholder="City" required>
-					<input type="text" name="register_country" autocomplete="off" placeholder="Country" required>
+					<input type="text" name="username" autocomplete="off" placeholder="Username" required>
+					<input type="password" name="password" autocomplete="off" placeholder="Password" required>
+					<input type="email" name="email" autocomplete="off" placeholder="Email"  required>
+					<input type="text" name="city" autocomplete="off" placeholder="City" required>
+					<input type="text" name="country" autocomplete="off" placeholder="Country" required>
 			        
 
 			        
@@ -38,8 +38,7 @@
                                         <input class="btn-login" type="submit" name="register_submit" value="SIGN UP">
                                         <br>
                                          <small><font color="white">By clicking on "Sign up", you accept the <a href="#">General Conditions of use</a>.</font></small>
-                                         <br>
-			              				<small><font color="white"><<  </font><a href="http://localhost/myPromus/view/login.php">Back</a></small>
+
 				</fieldset>
 			</form>
 
