@@ -11,7 +11,7 @@
 <body>
     <div class="top-menu">
         <div class="topmenu-left">
-            <h1> Create Event Page </h1> 
+            <h1> Events Page </h1> 
                         </div><!--
 
                     --><div class="topmenu-right">

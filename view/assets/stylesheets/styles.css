@@ -179,7 +179,7 @@ table {
 */
          .top-menu {
                 position: fixed;
-                left: 80;
+                left: 70px;
                 top: 0;
                 height: 70px;
                 width: 100%;
@@ -192,12 +192,13 @@ table {
         .topmenu-left {
                 display: inline-block;
                 width: 50%;
-                padding: 22px 0;
+                padding-left: 25px;
         }
        
         .topmenu-right {
                 display: inline-block;
                 width: 50%;
+                right:0;
         }
 
         .topmenu-right img {
@@ -207,7 +208,7 @@ table {
         }
 
         .topmenu-right nav {
-                margin-left: 450px;
+                margin-left: 570px;
                 padding-top: 22px;
         }
 
@@ -231,7 +232,7 @@ table {
        
         .left-menu img {
                 margin-top: 10px;
-                margin-bottom: 15px;
+
                 width: 50px;
                 height: 50px;
         }
@@ -257,12 +258,12 @@ table {
         }
 
         .left-menu a:hover {
-                color: #5F007F;
+                color: #b54af2;
         }
 
         
         .menubar-new {
-                margin-top: 240px;
+                margin-top: 380px;
                 font-size: 10px;
                 font-weight: 500;
                 margin-left: 5px;
@@ -373,40 +374,6 @@ table {
 
        
 
-/*
-    ===========================================================
-    Register Page
-    ===========================================================
-*/
-
-
-
-         input[name="register_username"] {
-             width: 48%;
-             float:left;
-        }
-
-
-         input[name="register_password"] {
-             width: 48%;
-             float: right;
-        }
-
-             input[name="register_city"] {
-             width: 48%;
-             float:left;
-        }
-
-         input[name="register_country"] {
-             width: 48%;
-             float:right;
-        }
-
-
-
-        input[name="register_submit"] {
-             cursor: pointer;
-        }
 
 /*
     ===========================================================
@@ -417,12 +384,14 @@ table {
 
       
         .index-footer {
-            position: absolute;
+            margin-top: 15% !important;
             bottom: 0;
             left: 0;
             right: 0;
             background: rgba(0,0,0, 0.5);
         }
+
+
 
 
 
