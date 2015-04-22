@@ -20,7 +20,7 @@ if(checkUser($username,$password)){
 }else{
 	$errorlogin=true;
 	$output_error="No valid username or password";
-	include $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/error_output.php'; //show again the index with the error login,,,,,en pruebas,debe redirigir a index1
+	include $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/login.php'; //show again the index with the error login,,,,,en pruebas,debe redirigir a index1
 }
 
 ?>

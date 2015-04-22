@@ -4,14 +4,14 @@
 	<head>
 		<meta charset="utf-8">
 		<title>My Promus</title>
-		<link rel="stylesheet" href="assets/stylesheets/styles.css">
+		<link rel="stylesheet" href="../view/assets/stylesheets/styles.css">
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	</head>
 
 	<body id="login-page">
                                 
                 <div class="logo">
-                        <img src="assets/images/logo.png" alt="MyPromus logo">
+                        <img src="../view/assets/images/logo.png" alt="MyPromus logo">
                          <br/>
                         <h2>Make Your Event Possible.</h2>
                 </div>
@@ -27,6 +27,7 @@
 	
 					<input type="password" name="password"  autocomplete="off" placeholder="Password" required>
 
+					<p style="text-align:center; color:red;"><?php if(isset($errorlogin)){echo "$output_error";} ?></p>
 
 			        
                                 </fieldset>
