@@ -27,30 +27,22 @@
 	
 					<input type="password" name="password" placeholder="Password" required>
 
+						<input type="text" name="city" placeholder="City" required>
+
+					<input type="text" name="country" placeholder="Country" required>
+			        
 
 			        
                                 </fieldset>
                                 
                                 <fieldset class="login-action">
-        
-                                        <input class="btn-login" type="submit" name="submit" value="SIGN IN">
-			                <br>
-                                        <small>
-                                              <a href="register.php">Create an account now !</a>
-                                        </small>
-                                        <br>
-                                        <a href="#">
-                                                <img id="spoti-login" src="assets/images/spoty-login.png" alt="Sing In with Spotify"/>
-                                        
-                                        </a>
+
+                                        <input class="btn-login" type="submit" name="submit" value="SIGN UP">
+			              
 				</fieldset>
 			</form>
-
-
 		</div>
-
-	
-	<footer class="index-footer">
+<footer class="index-footer">
 			<div class="index-navbar">
 				<div class="index-navbar-links">
 											<a class="evt-click" href="/en/offers" data-redirect="1" data-tracking="1" data-tracking-tag="loggedout_click" data-tracking-params="{'type': 'footer_offers'}">
@@ -67,7 +59,6 @@
 						Help &amp; Contact					</a>
 											<a class="evt-click" href="/en/legal/cgu" data-redirect="1" data-tracking="1" data-tracking-tag="loggedout_click" data-tracking-params="{'type': 'footer_cgu'}">
 							Terms & conditions						</a>
-						
 					</div>
 				<div class="index-copyright">
 					<p id="copyright" >&copy;&nbsp;2015 MyPromus</p>

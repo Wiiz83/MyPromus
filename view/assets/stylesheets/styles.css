@@ -55,6 +55,18 @@ table {
 
 
 /*
+    ===========================================================
+    Font Styles
+    ===========================================================
+*/
+
+@font-face {
+    font-family: "Harlow";
+    src: url(../font/HARLOWSI.TTF);
+
+}
+
+/*
 	===========================================================
 	Custom Styles
 	===========================================================
@@ -62,6 +74,7 @@ table {
         body {
                 color: #464646;
                 font: 400 16px/22px "Roboto", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+                height: 100%
         }
 
 /*
@@ -264,6 +277,18 @@ table {
                 vertical-align: middle;
         }
 
+         .logo h2 {
+                font-family: "Harlow", Verdana, Tahoma;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 400px;
+                font-size: 17pt;
+                vertical-align: middle;
+                text-align: center;
+                color: #5f007f;
+        }
+
         .login-data input {
                 display: block;
                 border: 2px solid #c6c9cc;
@@ -282,6 +307,11 @@ table {
                 margin: 12px 0 5px 0;
         }
 
+
+        login-action {
+             color: #FFF;
+        }
+
         #spoti-login {
                 margin: 10px 22px 0 22px;
                 width: 220px;
@@ -289,4 +319,159 @@ table {
 
         #login-page a {
                 color: #FFF;
+        }
+
+
+
+
+
+
+/*
+    ===========================================================
+    Footer Login & Signup
+    ===========================================================
+*/
+
+
+      
+        .index-footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0, 0.5);
+        }
+
+
+
+        .index-container {
+            display: table-cell;
+            padding: 0 30px;
+            vertical-align: middle;
+        }
+       .index-navbar {
+            background-color: rgba(0, 0, 0, 0.45);
+            padding: 0 100px;
+            position: relative;
+        }
+
+        .index-navbar-links {
+            color: #e2e2ea;
+            font-size: 10px;
+            padding: 4px 0;
+            text-align: center;
+        }
+
+
+
+
+        .index-navbar-links > a {
+            color: #e2e2ea;
+            margin-right: 15px;
+            transition-duration: 0.15s;
+            transition-property: color;
+            white-space: nowrap;
+        }
+         .index-footer a {
+            color: #FFFFFF;
+            cursor: pointer;
+            outline: 0 none;
+            text-decoration: none;
+        }
+
+        .index-navbar-lang {
+            background-color: rgba(0, 0, 0, 0.45);
+            border-radius: 3px;
+            color: #cccccc;
+            cursor: pointer;
+            font-size: 11px;
+            height: 22px;
+            left: 0;
+            line-height: 22px;
+            margin-top: -11px;
+            padding: 0 25px 0 8px;
+            position: absolute;
+            top: 50%;
+            transition-duration: 0.15s;
+            transition-property: background-color, color;
+        }
+        .index-navbar-lang {
+            color: #cccccc;
+            cursor: pointer;
+            font-size: 11px;
+            line-height: 22px;
+        }
+
+        .icon-chevron-down::before {
+            content: "\f078";
+            font-family: FontAwesome;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: inherit;
+
+        }
+        .icon::after {
+            left: 0;
+            position: absolute;
+        }
+        .index-navbar-lang > .lang-carret {
+            position: absolute;
+            right: 8px;
+            top: 6px;
+        }
+        .icon, .icon-stack {
+            display: inline-block;
+            font-family: "Deezer Icons";
+            font-style: normal;
+            font-variant: normal;
+            font-weight: normal;
+            line-height: 1;
+            position: relative;
+            text-rendering: geometricprecision;
+            text-transform: none;
+        }
+
+        .index-navbar-lang > .lang-select {
+            border: 0 none;
+            cursor: pointer;
+            font-size: 11px;
+            height: 100%;
+            left: 0;
+            margin: 0;
+            opacity: 0;
+            padding: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+        button, input, select, textarea {
+            font-size: 100%;
+            margin: 0;
+            outline: 0 none;
+            vertical-align: middle;
+        }
+
+        .index-navbar-lang > .lang-select {
+            cursor: pointer;
+            font-size: 11px;
+        }
+        button, input, select, textarea {
+            font-size: 100%;
+        }
+
+
+         .index-copyright {
+            background-color: rgba(0, 0, 0, 0.45);
+            border-radius: 3px;
+            color: #cccccc;
+            font-size: 11px;
+            height: 22px;
+            right: 0;
+            line-height: 22px;
+            margin-top: -11px;
+            padding: 0 25px 0 8px;
+            position: absolute;
+            top: 50%;
+            transition-duration: 0.15s;
+            transition-property: background-color, color;
         }
