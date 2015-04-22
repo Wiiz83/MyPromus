@@ -47,6 +47,8 @@
 				</fieldset>
 			</form>
 		</div>
+
+		
 <footer class="index-footer">
 			<div class="index-navbar">
 				<div class="index-navbar-links">
