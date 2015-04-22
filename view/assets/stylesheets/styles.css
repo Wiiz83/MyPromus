@@ -80,6 +80,8 @@ table {
         .event-box {
                 display: inline-block;
                 background-color: #B54AF2;
+                margin: 1px 1px;
+        
         }
 
 /*
@@ -128,7 +130,7 @@ table {
                 border-top: 1px solid #5F007F;
                 width: 100%;
                 background-color: #D1D1D1;
-                padding: 5px 5px;
+                padding: 2px 2px;
         }
 
 /*
