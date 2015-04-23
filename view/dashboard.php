@@ -61,59 +61,22 @@
 
                 <div class="grid">
                         <section class="row">
+
+                                <?php foreach ($events as $event): ?>
+                                 
                                 <section class="event-box col-1-6">
-                                        <h4> Event name <h4>
-                                        <p> Date </p>
-                                        <p> Place </p>
-                                        <p> Description </p>
-                                        <a href="#"> More </a>
-
-                                </section><!--
-                        
-                                --><section class="event-box col-1-6">
-                                        <h4> Event name <h4>
-                                        <p> Date </p>
-                                        <p> Place </p>
-                                        <p> Description </p>
-                                        <a href="#"> More </a>
-
-                                </section><!--
-
-                                --><section class="event-box col-1-6">
-                                        <h4> Event name <h4>
-                                        <p> Date </p>
-                                        <p> Place </p>
-                                        <p> Description </p>
-                                        <a href="#"> More </a>
-
-                                </section><!--
-
-                                --><section class="event-box col-1-6">
-                                        <h4> Event name <h4>
-                                        <p> Date </p>
-                                        <p> Place </p>
-                                        <p> Description </p>
-                                        <a href="#"> More </a>
-
-                                </section><!--
-
-                                --><section class="event-box col-1-6">
-                                        <h4> Event name <h4>
-                                        <p> Date </p>
-                                        <p> Place </p>
-                                        <p> Description </p>
+                                        <h4> Event name: <?php echo $event->getName();?> <h4>
+                                        <p> Date: <?php echo $event->getDate();?> </p>
+                                        <p> Place: <?php echo $event->getPlace();?> </p>
+                                        <p> Description: <?php echo $event->getDescription();?> </p>
                                         <a href="#"> More </a>
 
                                 </section><!--
                                 
-                                --><section class="event-box col-1-6">
-                                        <h4> Event name <h4>
-                                        <p> Date </p>
-                                        <p> Place </p>
-                                        <p> Description </p>
-                                        <a href="#"> More </a>
+                                -->
+                            <?php endforeach ?>
 
-                                </section>
+                                
 
 
                         </section>

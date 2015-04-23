@@ -4,14 +4,14 @@
 	<head>
 		<meta charset="utf-8">
 		<title>My Promus</title>
-		<link rel="stylesheet" href="assets/stylesheets/styles.css">
+		<link rel="stylesheet" href="../view/assets/stylesheets/styles.css">
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	</head>
 
 	<body id="login-page">
                                 
                 <div class="logo">
-                        <img src="assets/images/logo.png" alt="MyPromus logo">
+                        <img src="../view/assets/images/logo.png" alt="MyPromus logo">
                          <br/>
                         <h2>Make Your Event Possible.</h2>
                 </div>
@@ -19,7 +19,7 @@
                 <br/>
 		
 		<div class="login-box">
-			<form action="/myPromus/controller/signup.php" method="post">
+			<form action="/myPromus/controller/signup.php" method="post" enctype="multipart/form-data">
 	
 				<fieldset class="login-data">
 			
@@ -28,7 +28,7 @@
 					<input type="email" name="email" autocomplete="off" placeholder="Email"  required>
 					<input type="text" name="city" autocomplete="off" placeholder="City" required>
 					<input type="text" name="country" autocomplete="off" placeholder="Country" required>
-			        
+			      	<p style="text-align:center; color:red;"><?php if(isset($errorMessage)){echo "$errorMessage";} ?></p>
 
 			        
                                 </fieldset>

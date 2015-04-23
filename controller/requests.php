@@ -8,5 +8,8 @@ include $_SERVER['DOCUMENT_ROOT'].'/myPromus/model/requests_model.php';
 session_start();
 $userId=$_SESSION['userId'];
 
+$friendRequests=getFriendRequests($userId);
+$eventRequests=getEventRequests($userId);
+
 
 ?>

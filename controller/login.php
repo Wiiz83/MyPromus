@@ -6,6 +6,8 @@ include $_SERVER['DOCUMENT_ROOT'].'/myPromus/model/login_functions.php';	//inclu
 require $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/id_parser.inc.php';
 include $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/validatorHelper.inc.php';
 
+
+
 $username=sanitizeInput($_POST['username']);
 $password=sanitizeInput($_POST['password']);
 

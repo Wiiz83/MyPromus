@@ -22,8 +22,6 @@ $city=sanitizeInput($_POST['city']);
 
 
 
-
-
 if(!checkUsername($username)){
 	
 	$errorMessage="This username already exists";
