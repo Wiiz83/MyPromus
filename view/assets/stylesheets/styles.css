@@ -476,12 +476,18 @@ table {
 
 
         .notification-box {
-            width: 5%;
+            width: 10%;
             height: auto;
             display: inline-block;
             margin-left: 1%;
             margin-top: 10px;
 
+        }
+
+        .notification-box #picture{
+        display: block;
+    margin-left: auto;
+    margin-right: auto
         }
 
          .notification-box p{
@@ -497,7 +503,7 @@ table {
         }
 
         .notification-box .answer-box img{
-            width: 40%;
+            width: 20%;
 
         }
 
