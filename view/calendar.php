@@ -114,59 +114,60 @@
 
 
 </head>
-
-<body>
-
-
-    <div class="top-menu">
-        <div class="topmenu-left">
-            <h1> Calendar Page </h1> 
+  <body>
+                <div class="top-menu">
+                        <div class="topmenu-left">
+                                <h1> Calendar Page </h1> 
                         </div><!--
 
-                    --><div class="topmenu-right">
+                        --><div class="topmenu-right">
+             
+                                <nav>
+                                        <a href="#"><img src="assets/images/notifications.png"></a>
 
-                    <nav>
-                        <a href="#"><img src="assets/images/notifications.png"></a>
+                                        <a href="#"><img src="assets/images/settings.png"></a>
 
-                        <a href="#"><img src="assets/images/settings.png"></a>
+                                        <a href="#"><img src="assets/images/profile.png"></a>
 
-                        <a href="#"><img src="assets/images/profile.png"></a>
-
-                    </nav>
-                </div>
-            </div>
-
-
-            <div class="left-menu">
-                <a href="http://localhost/myPromus/view/dashboard.php">
-                    <img src="assets/images/logo2.png" alt="My Promus logo">
-                </a>
-
-                <nav style="margin-top:40px;">
-                    <ul>
-
-                        <li style="margin-top:20px">
-                            <a href="http://localhost/myPromus/view/calendar.php"><img src="assets/images/icon-calendar.png" onmouseover="this.src='assets/images/icon-calendar-hover.png'" onmouseout="this.src='assets/images/icon-calendar.png'" alt="Calendar icon">Calendar</a>
-                        </li>
-
-                        <li style="margin-top:20px;"> 
-                            <a href="http://localhost/myPromus/view/events.php"><img src="assets/images/icon-events.png" onmouseover="this.src='assets/images/icon-events-hover.png'" onmouseout="this.src='assets/images/icon-events.png'" alt="Events icon">Events</a>
-                        </li>
-
-                        <li style="margin-top:20px;">
-                            <a href="http://localhost/myPromus/view/friends.php"><img src="assets/images/icon-friends.png" onmouseover="this.src='assets/images/icon-friends-hover.png'" onmouseout="this.src='assets/images/icon-friends.png'" alt="Friends icon">Friends</a>
-                        </li>
-
-                        <ul>
-
-                        </nav>
-
-                        <div class="menubar-new">
-                            <a href="http://localhost/myPromus/view/create_event.php"><img src="assets/images/icon-addevent.png">Create Event</a>
-
+                                </nav>
                         </div>
+                </div>
+
+                <div class="black-bar">
+
+
+
+                    <div class="left-menu">
+                            <a href="index.html">
+                                    <img src="assets/images/logo.png" alt="My Promus logo">
+                            </a>
+
+                            <nav>
+                                    <ul>
+                                            
+                                            <li>
+                                                   <a href="#"><img src="assets/images/icon-calendar.png" alt="Calendar icon">Calendar</a>
+                                            </li>
+                                            
+                                            <li>
+                                                   <a href="#"><img src="assets/images/icon-events.png" alt="Events icon">Events</a>
+                                            </li>
+
+                                            <li>
+                                                    <a href="#"><img src="assets/images/icon-friends.png" alt="Friends icon">Friends</a>
+                                            </li>
+
+                                    <ul>
+                      
+                            </nav>
+
+                            <div class="menubar-new">
+                                <a href="#"><img src="assets/images/icon-addevent.png">Create Event</a>
+       
+                            </div>
                     </div>
 
+                </div>
             <div class="grid">
                         <section class="row">
 
