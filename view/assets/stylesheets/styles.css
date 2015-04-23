@@ -84,7 +84,7 @@ table {
 
         .event-box {
                 display: inline-block;
-                border: 10px solid #D1D1D1;
+                border: 6px solid #D1D1D1;
                 background-color: #B54AF2;
                 padding: 5px 5px;
                 text-align: center;
@@ -96,6 +96,10 @@ table {
                 height: 260px;
         }
 
+        .event-box p {
+            text-align: left;
+
+        }
         
         .black-bar { 
             position: fixed;

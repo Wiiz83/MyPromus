@@ -66,9 +66,9 @@
                 <div class="grid">
                         <h3> Incoming events </h3>
                         <section class="row">
-                                <section class="event-box col-1-3">
+                                <section class="event-box col-1-6">
                                         <img src="assets/images/event-example.png" alt="Event image">
-                                        <h4> Event name <h4>
+                                        <p> Name <p>
                                         <p> Date </p>
                                         <p> Place </p>
                                         <p> Description </p>
@@ -76,9 +76,9 @@
 
                                 </section><!--
                         
-                                --><section class="event-box col-1-3">
+                                --><section class="event-box col-1-6">
                                         <img src="assets/images/event-example.png" alt="Event image">
-                                        <h4> Event name <h4>
+                                        <p> Name <p>
                                         <p> Date </p>
                                         <p> Place </p>
                                         <p> Description </p>
@@ -86,9 +86,9 @@
 
                                 </section><!--
 
-                                --><section class="event-box col-1-3">
+                                --><section class="event-box col-1-6">
                                         <img src="assets/images/event-example.png" alt="Event image">
-                                        <h4> Event name <h4>
+                                        <p> Name <p>
                                         <p> Date </p>
                                         <p> Place </p>
                                         <p> Description </p>
@@ -96,9 +96,9 @@
 
                                 </section><!--
 
-                                --><section class="event-box col-1-3">
+                                --><section class="event-box col-1-6">
                                         <img src="assets/images/event-example.png" alt="Event image">
-                                        <h4> Event name <h4>
+                                        <p> Name <p>
                                         <p> Date </p>
                                         <p> Place </p>
                                         <p> Description </p>
@@ -106,9 +106,9 @@
 
                                 </section><!--
 
-                                --><section class="event-box col-1-3">
+                                --><section class="event-box col-1-6">
                                         <img src="assets/images/event-example.png" alt="Event image">
-                                        <h4> Event name <h4>
+                                        <p> Name <p>
                                         <p> Date </p>
                                         <p> Place </p>
                                         <p> Description </p>
@@ -116,9 +116,9 @@
 
                                 </section><!--
                                 
-                                --><section class="event-box col-1-3">
+                                --><section class="event-box col-1-6">
                                         <img src="assets/images/event-example.png" alt="Event image">
-                                        <h4> Event name <h4>
+                                        <p> Name <p>
                                         <p> Date </p>
                                         <p> Place </p>
                                         <p> Description </p>
@@ -130,6 +130,71 @@
 
                         </section>
 
+                        <h3> My events </h3>
+                        <section class="row">
+                                <section class="event-box col-1-6">
+                                        <img src="assets/images/event-example.png" alt="Event image">
+                                        <p> Name <p>
+                                        <p> Date </p>
+                                        <p> Place </p>
+                                        <p> Description </p>
+                                        <a href="#" class="btn btn-small"> More </a>
+
+                                </section><!--
+                        
+                                --><section class="event-box col-1-6">
+                                        <img src="assets/images/event-example.png" alt="Event image">
+                                        <p> Name <p>
+                                        <p> Date </p>
+                                        <p> Place </p>
+                                        <p> Description </p>
+                                        <a href="#" class="btn btn-small"> More </a>
+
+                                </section><!--
+
+                                --><section class="event-box col-1-6">
+                                        <img src="assets/images/event-example.png" alt="Event image">
+                                        <p> Name <p>
+                                        <p> Date </p>
+                                        <p> Place </p>
+                                        <p> Description </p>
+                                        <a href="#" class="btn btn-small"> More </a>
+
+                                </section><!--
+
+                                --><section class="event-box col-1-6">
+                                        <img src="assets/images/event-example.png" alt="Event image">
+                                        <p> Name <p>
+                                        <p> Date </p>
+                                        <p> Place </p>
+                                        <p> Description </p>
+                                        <a href="#" class="btn btn-small"> More </a>
+
+                                </section><!--
+
+                                --><section class="event-box col-1-6">
+                                        <img src="assets/images/event-example.png" alt="Event image">
+                                        <p> Name <p>
+                                        <p> Date </p>
+                                        <p> Place </p>
+                                        <p> Description </p>
+                                        <a href="#" class="btn btn-small"> More </a>
+
+                                </section><!--
+                                
+                                --><section class="event-box col-1-6">
+                                        <img src="assets/images/event-example.png" alt="Event image">
+                                        <p> Name <p>
+                                        <p> Date </p>
+                                        <p> Place </p>
+                                        <p> Description </p>
+                                        
+                                        <a href="#" class="btn btn-small"> More </a>
+
+                                </section>
+
+
+                        </section>
                 </div>
 
         </body>
