@@ -27,7 +27,7 @@ function getNearestEvents($userId,$numberOfEvents){		//The id is the username of
 	$result=mysqli_query($link,$sql) or die(mysqli_error($link));
 	$rowsNumber=mysqli_num_rows($result);
 
-	echo "$rowsNumber";
+	
 	
 	if($rowsNumber<$numberOfEvents){
 		$numberOfEvents=$rowsNumber;	//If in the database there are less events than asked, the number of
@@ -37,8 +37,7 @@ function getNearestEvents($userId,$numberOfEvents){		//The id is the username of
 	for($i=0;$i<$numberOfEvents;$i++){
 		$eventInfo=mysqli_fetch_assoc($result);
 		$events[]=new Event($eventInfo['id'],$eventInfo['user_id'],$eventInfo['name'],$eventInfo['date'],$eventInfo['place'],$eventInfo['description']);
-		print_r($eventInfo);
-		echo "<br>";
+		
 	}
 
 	

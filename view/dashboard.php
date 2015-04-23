@@ -4,7 +4,7 @@
         <head>
                 <meta charset="utf-8">
                 <title>My Promus :: Home Page</title>
-                <link rel="stylesheet" href="assets/stylesheets/styles.css">
+                <link rel="stylesheet" href="../view/assets/stylesheets/styles.css">
                 <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700,500,700italic,500italic,400italic,300italic,900,900italic' rel='stylesheet' type='text/css'> 
         </head>
 
@@ -66,7 +66,7 @@
                 <div class="grid">
                         <h3> Incoming events </h3>
                         <section class="row">
-<<<<<<< HEAD
+
 
                                 <?php foreach ($events as $event): ?>
                                  
@@ -81,7 +81,7 @@
                                 
                                 -->
                             <?php endforeach ?>
-=======
+
                                 <section class="event-box col-1-6">
                                         <img src="assets/images/event-example.png" alt="Event image">
                                         <p> Name <p>
@@ -140,7 +140,7 @@
                                         <p> Description </p>
                                         
                                         <a href="#" class="btn btn-small"> More </a>
->>>>>>> origin/master
+
 
                                 
 

@@ -23,14 +23,22 @@ $name=sanitizeInput($_POST['name']);
 $date=sanitizeInput($_POST['date']);
 $place=sanitizeInput($_POST['place']);
 $description=sanitizeInput($_POST['description']);
+$friends=sanitizeInput($_POST['friends']);
+$friends=parseFriends($friends);
 
 
-
-if(createEvent($userId,$name,$date,$place,$description)){
+if(createEvent($userId,$name,$date,$place,$description,$friends)){
 	header("Location: event_creation_succesful.html.php");
 }else{
 	$errorMessage="An error ocurred when trying to insert the user in the database";
 	include $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/error_output.php';
+}
+
+
+
+function parseFriends($friends){
+	$friendsArray=split(",",$friends);
+	return $friendsArray;
 }
 
 ?>
