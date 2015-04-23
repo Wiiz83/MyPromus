@@ -2,6 +2,7 @@
 /*author: Ferran Rovira 	mail:ferran294@gmail.com
 Helper to get an user from an $userId */
 require_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/db_connection.inc.php';	//Database connections
+require_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/classes/user.class.php';
 
 function getUser($userId){
 	global $link;

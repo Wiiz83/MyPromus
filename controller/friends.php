@@ -9,4 +9,6 @@ session_start();
 $userId=$_SESSION['userId'];
 $friends=getFriends($userId);
 
+include $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/friends.php';
+
 ?>

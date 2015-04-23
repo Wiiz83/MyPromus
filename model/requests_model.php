@@ -10,7 +10,7 @@ require $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/getEventHelper.inc.php';
 function getFriendRequests($userId){
 	global $link;
 
-	$sql="SELECT * FROM requests WHERE friend_id='$userId'";
+	$sql="SELECT * FROM friend_request WHERE friend_id='$userId'";
 	$result=mysqli_query($link,$sql) or die(mysqli_error($link));
 
 	while($requestInfo=mysqli_fetch_assoc($result)){
@@ -52,7 +52,7 @@ function acceptFriend($userId,$friendName){
 function getEventRequests($userId){
 	global $link;
 
-	$sql="SELECT * FROM requests WHERE friend_id='$userId'";
+	$sql="SELECT * FROM event_request WHERE friend_id='$userId'";
 	$result=mysqli_query($link,$sql) or die(mysqli_error($link));
 
 	while($requestInfo=mysqli_fetch_assoc($result)){

@@ -66,7 +66,7 @@
                 <div class="grid">
                         <h3> Friend Notifications </h3>
                         <section class="row">
-
+                                
 
                                 <section class="notification-box">
                                         <a href="#"><img src="assets/images/profile.png" alt="Profil Image"></a>
