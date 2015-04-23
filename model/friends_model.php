@@ -2,7 +2,7 @@
 /*author: Ferran Rovira 	mail:ferran294@gmail.com
 Functions for the actions between friend */
 
-require $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/db_connection.inc.php';	//Database connections
+require_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/db_connection.inc.php';	//Database connections
 require $_SERVER['DOCUMENT_ROOT'].'/myPromus/classes/user.class.php';
 
 

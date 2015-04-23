@@ -1,7 +1,7 @@
 <?php
 /*author: Ferran Rovira 	mail:ferran294@gmail.com
 Helper to get an event from an $eventId */
-require $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/db_connection.inc.php';	//Database connections
+require_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/db_connection.inc.php';	//Database connections
 
 function getEvent($eventId){
 	global $link;
