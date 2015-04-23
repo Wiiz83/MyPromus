@@ -5,7 +5,7 @@ Model functions of the requests page */
 require_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/db_connection.inc.php';	//Database connections
 require $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/getUserHelper.inc.php';
 require $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/id_parser.inc.php';
-require $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/getEventHelper.inc.php';	
+require_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/getEventHelper.inc.php';	
 
 function getFriendRequests($userId){
 	global $link;

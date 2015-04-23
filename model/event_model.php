@@ -4,6 +4,7 @@ Model functions to create,modify or delete event*/
 
 require $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/db_connection.inc.php';	//Database connections
 require $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/id_parser.inc.php';
+require $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/getUserHelper.inc.php';
 
 //Create an event and insert it in the database
 function createEvent($userAdmin,$name,$date,$place,$description,$friends){
@@ -64,8 +65,41 @@ function deleteEvent($idEvent,$username){
 	}
 }
 
+function checkAdmin($userId,$eventId){
+	global $link;
+
+	$sql="SELECT * FROM event WHERE id='$eventId' AND user_id='$userId'";
+	$result=mysqli_query($link,$sql) or die(mysqli_error($link));
+	$isAdmin=mysqli_num_rows($result);
+
+	if($isAdmin==1){
+		return true;
+	}else{
+		return false;
+	}
+
+}
+
+//Function that returns an array of Users that are going to go to an event
+function getParticipants($eventId){
+	global $link;
+
+	$sql="SELECT friend_id FROM event_friend WHERE event_id='$eventId'";
+	$result=mysqli_query($link,$sql) or die (mysqli_error($link));
+
+	while($userInfo=mysqli_fetch_assoc($result)){
+		$user=getUser($userInfo['friend_id']);
+		$friends[]=$user;
+	}
+
+	if(isset($friends)){
+		return $friends;
+	}else{
+		return null;
+	}
 
 
+}
 
 
 
