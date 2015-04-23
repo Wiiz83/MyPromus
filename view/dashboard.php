@@ -147,6 +147,7 @@
 
                         </section>
 
+
                         <h3> My events </h3>
                         <section class="row">
                                 <section class="event-box col-1-6">
@@ -214,6 +215,8 @@
                         </section>
                 </div>
 
+
+                                </div>
         </body>
 
 </html>
