@@ -8,11 +8,11 @@
                             <div class="topmenu-right">
 
                         <nav>
-                            <a href="../controller/dashboard.php"><img src="../view/assets/images/notifications.png"></a>
+                            <a href="../controller/notifications.php"><img src="../view/assets/images/notifications.png"></a>
 
-                            <a href="../controller/dashboard.php"><img src="../view/assets/images/settings.png"></a>
+                            <a href="../controller/settings.php"><img src="../view/assets/images/settings.png"></a>
 
-                            <a href="../controller/dashboard.php"><img src="../view/assets/images/profile.png"></a>
+                            <a href="../controller/profile.php"><img src="../view/assets/images/profile.png"></a>
 
                         </nav>
                     </div>
@@ -31,7 +31,7 @@
                             <ul>
 
                                 <li>
-                                 <a href="../controller/dashboard.php"><img src="../view/assets/images/icon-calendar.png" alt="Calendar icon">Calendar</a>
+                                 <a href="../controller/calendar.php"><img src="../view/assets/images/icon-calendar.png" alt="Calendar icon">Calendar</a>
                              </li>
 
                              <li>
