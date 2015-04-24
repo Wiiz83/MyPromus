@@ -5,11 +5,8 @@
     <meta charset="utf-8">
     <title>My Promus :: Home Page</title>
 
-    <script language="JavaScript" type="text/javascript" src="/js/jquery-1.2.6.min.js"></script>
-    <script language="JavaScript" type="text/javascript" src="/js/jquery-ui-personalized-1.5.2.packed.js"></script>
-    <script language="JavaScript" type="text/javascript" src="/js/sprinkle.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
 
     <link rel="stylesheet" href="../view/assets/stylesheets/styles.css">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700,500,700italic,500italic,400italic,300italic,900,900italic' rel='stylesheet' type='text/css'> 
@@ -113,61 +110,17 @@
 </style>
 
 
-</head>
-  <body>
-                <div class="top-menu">
-                        <div class="topmenu-left">
-                                <h1> Calendar Page </h1> 
-                        </div><!--
-
-                        --><div class="topmenu-right">
-             
-                                <nav>
-                                        <a href="#"><img src="assets/images/notifications.png"></a>
-
-                                        <a href="#"><img src="assets/images/settings.png"></a>
-
-                                        <a href="#"><img src="assets/images/profile.png"></a>
-
-                                </nav>
-                        </div>
-                </div>
-
-                <div class="black-bar">
 
 
 
-                    <div class="left-menu">
-                            <a href="index.html">
-                                    <img src="assets/images/logo.png" alt="My Promus logo">
-                            </a>
+                <?php include '../view/includes/menu.php'; ?>
 
-                            <nav>
-                                    <ul>
-                                            
-                                            <li>
-                                                   <a href="#"><img src="assets/images/icon-calendar-active.png" alt="Calendar icon">Calendar</a>
-                                            </li>
-                                            
-                                            <li>
-                                                   <a href="#"><img src="assets/images/icon-events.png" alt="Events icon">Events</a>
-                                            </li>
 
-                                            <li>
-                                                    <a href="#"><img src="assets/images/icon-friends.png" alt="Friends icon">Friends</a>
-                                            </li>
 
-                                    <ul>
-                      
-                            </nav>
 
-                            <div class="menubar-new">
-                                <a href="#"><img src="assets/images/icon-addevent.png">Create Event</a>
-       
-                            </div>
-                    </div>
 
-                </div>
+
+
             <div class="grid">
                         <section class="row">
 
