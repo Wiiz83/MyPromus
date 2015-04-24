@@ -21,4 +21,18 @@ function getUser($userId){
 	}
 
 }
+
+
+function getUserImage($userId){
+	global $link;
+
+	$sql="SELECT image_url FROM user WHERE id='$userId'";
+	$result=mysqli_query($link,$sql) or die(mysqli_error($link));
+
+	while($userInfo=mysqli_fetch_assoc($result)){
+		$imageURL=$userInfo['image_url'];
+	}	
+
+	return $imageURL;
+}
 ?>
