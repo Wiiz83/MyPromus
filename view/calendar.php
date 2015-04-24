@@ -146,7 +146,7 @@
                                     <ul>
                                             
                                             <li>
-                                                   <a href="#"><img src="assets/images/icon-calendar.png" alt="Calendar icon">Calendar</a>
+                                                   <a href="#"><img src="assets/images/icon-calendar-active.png" alt="Calendar icon">Calendar</a>
                                             </li>
                                             
                                             <li>

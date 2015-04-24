@@ -12,9 +12,7 @@
     <div class="top-menu">
         <div class="topmenu-left">
             <h1> Create Event Page </h1> 
-                        </div><!--
-
-                    --><div class="topmenu-right">
+                        </div><div class="topmenu-right">
 
                     <nav>
                         <a href="#"><img src="assets/images/notifications.png"></a>
@@ -33,18 +31,18 @@
                     <img src="assets/images/logo2.png" alt="My Promus logo">
                 </a>
 
-                <nav style="margin-top:40px;">
+                <nav>
                     <ul>
 
-                        <li style="margin-top:20px">
+                        <li>
                             <a href="http://localhost/myPromus/view/calendar.php"><img src="assets/images/icon-calendar.png" onmouseover="this.src='assets/images/icon-calendar-hover.png'" onmouseout="this.src='assets/images/icon-calendar.png'" alt="Calendar icon">Calendar</a>
                         </li>
 
-                        <li style="margin-top:20px;"> 
+                        <li> 
                             <a href="http://localhost/myPromus/view/events.php"><img src="assets/images/icon-events.png" onmouseover="this.src='assets/images/icon-events-hover.png'" onmouseout="this.src='assets/images/icon-events.png'" alt="Events icon">Events</a>
                         </li>
 
-                        <li style="margin-top:20px;">
+                        <li>
                             <a href="http://localhost/myPromus/view/friends.php"><img src="assets/images/icon-friends.png" onmouseover="this.src='assets/images/icon-friends-hover.png'" onmouseout="this.src='assets/images/icon-friends.png'" alt="Friends icon">Friends</a>
                         </li>
 
