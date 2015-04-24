@@ -7,14 +7,19 @@ require $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/id_parser.inc.php';
 require $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/getUserHelper.inc.php';
 
 //Create an event and insert it in the database
-function createEvent($userAdmin,$name,$date,$place,$description,$friends){
+function createEvent($userAdmin,$name,$date,$place,$description,$friends,$imageURL){
 
 	global $link;
 	$userAdmin=getUserId($userAdmin);
 	$dateToday=date("Y-m-d");
 
-	$sql="INSERT INTO event (user_id,name,date,place,description)
-	 VALUES ('$userAdmin',$name,'$date','$place','$description')";	
+	if(!isset($imageURL)){
+	$imageURL=$_SERVER['DOCUMENT_ROOT'].'/myPromus/view/assets/eventImages/default.jpg';
+	}
+
+
+	$sql="INSERT INTO event (user_id,name,date,place,description,image_url)
+	 VALUES ('$userAdmin',$name,'$date','$place','$description','$imageURL')";	
 
 	if(!mysqli_query($link,$sql)){
 
@@ -39,7 +44,7 @@ function createEvent($userAdmin,$name,$date,$place,$description,$friends){
 					mysqli_query($link,$sql) or die(mysqli_error($link));
 				}
 			}
-			return true;
+			return $eventId;
 		
 		}
 

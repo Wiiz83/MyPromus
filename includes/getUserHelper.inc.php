@@ -10,7 +10,7 @@ function getUser($userId){
 	$result=mysqli_query($link,$sql) or die(mysqli_error($link));
 
 	while($userInfo=mysqli_fetch_assoc($result)){
-		$user=new User($userInfo['id'],$userInfo['username'],$userInfo['country'],$userInfo['city'],$userInfo['email']);
+		$user=new User($userInfo['id'],$userInfo['username'],$userInfo['country'],$userInfo['city'],$userInfo['email'],$userInfo['image_url']);
 
 	}
 

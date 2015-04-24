@@ -30,10 +30,13 @@ if(!isset($_POST['submit'])){
 	$description=sanitizeInput($_POST['description']);
 	$friends=sanitizeInput($_POST['friends']);
 	$friends=parseFriends($friends);
+	$finalPath=null;	//Define to null the path to save the event image
+	require_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/imageEventUploader.inc.php'; //upload the image and takes the final path from there
 
+	$eventId=createEvent($userId,$name,$date,$place,$description,$friends,$finalPath);
 
-	if(createEvent($userId,$name,$date,$place,$description,$friends)){
-		header("Location: event_creation_succesful.html.php");
+	if($eventId!=false){
+		header("Location: ../controller/event.php?eventId=$eventId");
 	}else{
 		$errorMessage="An error ocurred when trying to insert the user in the database";
 		include $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/error_output.php';

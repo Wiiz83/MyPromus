@@ -7,13 +7,20 @@ include $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/db_connection.inc.php';	//
 
 //Register user,return true if the user is finally registered in the database and return false if there was an error with the query
 function insertUser($username,$password,$email,$country,$city){
+
 	global $link;
 	$todayDate=date("Y-m-d");
-	$sql="INSERT INTO user (username,password,country,city,email,dateCreation) VALUES ('$username','$password','$country','$city','$email','$todayDate')";
+	$defaultImage=$_SERVER['DOCUMENT_ROOT'].'/myPromus/view/assets/eventImages/default.jpg';
+	$sql="INSERT INTO user (username,password,country,city,email,dateCreation,image_url) VALUES ('$username','$password','$country','$city','$email','$todayDate','$defaultImage')";
+	
 	if(!mysqli_query($link,$sql)){
+	
 		return false;
+	
 	}else{
+	
 		return true;
+	
 	}
 }
 

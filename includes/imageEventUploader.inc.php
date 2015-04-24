@@ -1,6 +1,6 @@
 <?php
 /*author: Ferran Rovira 	mail:ferran294@gmail.com
-Helper to upload images for users */
+Helper to upload images for events */
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/db_connection.inc.php';
 
@@ -9,7 +9,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/db_connection.inc.php
 
 $allowed_filetypes = array('.jpg','.jpeg','.png','.gif');
 $max_filesize = 10485760;
-$upload_path = $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/assets/userImages/';
+$upload_path = $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/assets/eventImages/';
 
 
 $filename = $_FILES['userfile']['name'];
@@ -30,11 +30,7 @@ if(!is_writable($upload_path))
 
 if(move_uploaded_file($_FILES['userfile']['tmp_name'],$upload_path . $imageNewName)) {
 
-   $finalPath=$upload_path.$imageNewName;
-   $query = "UPDATE user SET image_url='$finalPath' WHERE id='$userId'"; //Update in the database the url of the image of the user
-   mysqli_query($link,$query);
-
-	header("Location: ../controller/profile.php");	//redirect to the profile controller
+	$finalPath=$upload_path.$imageNewName;
 
 
 } else {

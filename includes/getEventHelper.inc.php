@@ -10,7 +10,7 @@ function getEvent($eventId){
 	$result=mysqli_query($link,$sql) or die(mysqli_error($link));
 
 	while($eventInfo=mysqli_fetch_assoc($result)){
-		$event=new Event($eventInfo['id'],$eventInfo['user_id'],$eventInfo['name'],$eventInfo['date'],$eventInfo['place'],$eventInfo['description']);
+		$event=new Event($eventInfo['id'],$eventInfo['user_id'],$eventInfo['name'],$eventInfo['date'],$eventInfo['place'],$eventInfo['description'],$eventInfo['image_url']);
 
 	}
 

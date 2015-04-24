@@ -17,15 +17,17 @@ class User {
 	private $country;
 	private $city;
 	private $email;
+	private $imageURL;
 
 
-	function __construct($idUser,$username,$country,$city,$email)
+	function __construct($idUser,$username,$country,$city,$email,$imageURL)
 	{
 		$this->idUser=$idUser;
 		$this->username=$username;
 		$this->country=$country;
 		$this->city=$city;
 		$this->email=$email;
+		$this->imageURL=$imageURL;
 	}
 
 	public function getIdUser(){
@@ -46,6 +48,10 @@ class User {
 
 	public function getEmail(){
 		return $this->email;
+	}
+
+	function getImage(){
+		return $this->imageURL;
 	}
 
 	public function setName($newName){

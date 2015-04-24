@@ -17,7 +17,7 @@ function getFriendRequests($userId){
 
 		$user=getUser($requestInfo['user_id']);
 		$username=$user->getUsername();
-		//Image $image=$user->getImage()
+		$image=$user->getImage();
 
 		$requestFriend["$username"]=$image;
 
@@ -60,7 +60,7 @@ function getEventRequests($userId){
 		$event=getEvent($requestInfo['event_id']);	//Get the event that you have been invited
 		$friend=getUser($requestInfo['user_id']);  //Get the user that has invited you to the event
 		$friendName=$friend->getUsername();
-		$requestEvent["$friendName"]=$event;
+		$requestEvent["$friendName"]=$event;	//Return an associative array key="name of the invitator" value=Event object
 	}
 
 	if(isset($requestEvent)){
