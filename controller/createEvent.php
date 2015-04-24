@@ -5,9 +5,9 @@ Controller to create an event */
 
 session_start();
 include $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/session_checker.inc.php'; //Check if the session has expired,in that case redirect to the main page
-require $_SERVER['DOCUMENT_ROOT'].'/myPromus/model/event_model.php';
-include $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/validatorHelper.php';
-require $_SERVER['DOCUMENT_ROOT'].'/myPromus/model/friends_model.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/model/event_model.php';
+include $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/validatorHelper.inc.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/model/friends_model.php';
 
 
 if(!isset($_POST['submit'])){

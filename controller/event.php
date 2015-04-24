@@ -13,6 +13,8 @@ if(isset($_GET['eventId'])){
 	$userId=$_SESSION['userId'];
 	$eventId=$_GET['eventId'];
 
+
+
 	$isAdmin=checkAdmin($userId,$eventId);	//true if is admin and false if not
 	$event=getEvent($eventId);
 
@@ -25,6 +27,7 @@ if(isset($_GET['eventId'])){
 	$comments=loadComments($eventId);
 
 	$participants=getParticipants($eventId);
+
 
 	include $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/event.php';
 

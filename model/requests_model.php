@@ -59,8 +59,8 @@ function getEventRequests($userId){
 		
 		$event=getEvent($requestInfo['event_id']);	//Get the event that you have been invited
 		$friend=getUser($requestInfo['user_id']);  //Get the user that has invited you to the event
-		$friendName=$friend['username'];
-		$requestEvent['friendName']=$event;
+		$friendName=$friend->getUsername();
+		$requestEvent["$friendName"]=$event;
 	}
 
 	if(isset($requestEvent)){

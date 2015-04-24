@@ -2,6 +2,7 @@
 /*author: Ferran Rovira 	mail:ferran294@gmail.com
 Helper to get an event from an $eventId */
 require_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/db_connection.inc.php';	//Database connections
+include $_SERVER['DOCUMENT_ROOT'].'/myPromus/classes/event.class.php';
 
 function getEvent($eventId){
 	global $link;

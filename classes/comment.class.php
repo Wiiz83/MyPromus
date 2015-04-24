@@ -43,5 +43,5 @@ class Comment {
 		return $this->event_id;
 	}
 
-	
+}
 ?>

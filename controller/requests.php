@@ -11,5 +11,8 @@ $userId=$_SESSION['userId'];
 $friendRequests=getFriendRequests($userId);
 $eventRequests=getEventRequests($userId);
 
+
+
+
 include $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/notification.php';
 ?>

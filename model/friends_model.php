@@ -3,7 +3,7 @@
 Functions for the actions between friend */
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/db_connection.inc.php';	//Database connections
-require $_SERVER['DOCUMENT_ROOT'].'/myPromus/classes/user.class.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/classes/user.class.php';
 
 
 //Get the friend of a user

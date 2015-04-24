@@ -6,15 +6,15 @@ Model functions to create,load or delete comments*/
 
 
 require $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/db_connection.inc.php';	//Database connections
-
+require $_SERVER['DOCUMENT_ROOT'].'/myPromus/classes/comment.class.php';
 
 function loadComments($eventId){
 	global $link;
 
-	$sql="SELECT * FROM comment WHERE event_id='$eventId'";
+	$sql="SELECT * FROM comment WHERE event_id='$eventId' ORDER BY date";
 	$result=mysqli_query($link,$sql) or die(mysqli_error($link));
 
-	while($commentInfo=mysqli_fetch_assoc()){
+	while($commentInfo=mysqli_fetch_assoc($result)){
 		$comments[]=new Comment($commentInfo['id'],$commentInfo['date'],$commentInfo['message'],$commentInfo['user_id'],$commentInfo['event_id']);
 
 	}
