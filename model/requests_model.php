@@ -19,7 +19,7 @@ function getFriendRequests($userId){
 		$username=$user->getUsername();
 		//Image $image=$user->getImage()
 
-		$requestFriend['$username']=$image;
+		$requestFriend["$username"]=$image;
 
 	}
 
