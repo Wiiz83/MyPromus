@@ -69,7 +69,7 @@
                                 
 
                                 <section class="notification-box">
-                                        <a href="#"><img src="assets/images/profile.png" alt="Profil Image"></a>
+                                        <a href="#"><img src="assets/images/profile.png" id="picture" alt="Profil Image"></a>
                                         <p> Name <p>
                                            <section class="answer-box">
                                                 <a href="#"><img src="assets/images/icon-accept.png" alt="Accept Icon"></a>
@@ -78,7 +78,7 @@
 
                                 </section>
                                    <section class="notification-box">
-                                     <a href="#"><img src="assets/images/profile.png" alt="Profil Image"></a>
+                                     <a href="#"><img src="assets/images/profile.png" id="picture" alt="Profil Image"></a>
                                         <p> Name <p>
                                            <section class="answer-box">
                                                 <a href="#"><img src="assets/images/icon-accept.png" alt="Accept Icon"></a>
@@ -87,7 +87,7 @@
 
                                 </section>
                                    <section class="notification-box">
-                                           <a href="#"><img src="assets/images/profile.png" alt="Profil Image"></a>
+                                           <a href="#"><img src="assets/images/profile.png" id="picture" alt="Profil Image"></a>
                                         <p> Name <p>
                                            <section class="answer-box">
                                                 <a href="#"><img src="assets/images/icon-accept.png" alt="Accept Icon"></a>
@@ -106,7 +106,7 @@
 
 
                              <section class="notification-box">
-                                        <a href="#"><img src="assets/images/profile.png" alt="Profil Image"></a>
+                                        <a href="#"><img src="assets/images/profile.png" id="picture" alt="Profil Image"></a>
                                         <p> Name <p>
                                         <p> Place <p>
                                         <p> Date <p>
@@ -117,7 +117,7 @@
 
                                 </section>
                                    <section class="notification-box">
-                                          <a href="#"><img src="assets/images/profile.png" alt="Profil Image"></a>
+                                          <a href="#"><img src="assets/images/profile.png" id="picture" alt="Profil Image"></a>
                                            <p> Name <p>
                                         <p> Place <p>
                                         <p> Date <p>
@@ -128,7 +128,7 @@
 
                                 </section>
                                    <section class="notification-box">
-                                         <a href="#"><img src="assets/images/profile.png" alt="Profil Image"></a>
+                                         <a href="#"><img src="assets/images/profile.png" id="picture" alt="Profil Image"></a>
                                           <p> Name <p>
                                         <p> Place <p>
                                         <p> Date <p>
