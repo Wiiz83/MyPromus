@@ -9,7 +9,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/db_connection.inc.php
 
 $allowed_filetypes = array('.jpg','.jpeg','.png','.gif');
 $max_filesize = 10485760;
-$upload_path = $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/assets/eventImages/';
+$upload_path = '../view/assets/eventImages/';
 
 
 $filename = $_FILES['userfile']['name'];

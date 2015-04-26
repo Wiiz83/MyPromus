@@ -10,7 +10,7 @@ function insertUser($username,$password,$email,$country,$city){
 
 	global $link;
 	$todayDate=date("Y-m-d");
-	$defaultImage=$_SERVER['DOCUMENT_ROOT'].'/myPromus/view/assets/userImages/default.jpg';
+	$defaultImage='../view/assets/userImages/default.jpg';
 	$sql="INSERT INTO user (username,password,country,city,email,dateCreation,image_url) VALUES ('$username','$password','$country','$city','$email','$todayDate','$defaultImage')";
 	
 	if(!mysqli_query($link,$sql)){
