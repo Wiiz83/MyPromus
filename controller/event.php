@@ -16,7 +16,7 @@ if(isset($_GET['eventId'])){
 
 
 	$isAdmin=checkAdmin($userId,$eventId);	//true if is admin and false if not
-	$event=getEvent($eventId);
+	$event=getEvent($eventId);		//Event object
 
 	if($event==null){
 		$output_error="Ups! this event doesn't exists";
@@ -24,9 +24,9 @@ if(isset($_GET['eventId'])){
 		exit();
 	}
 
-	$comments=loadComments($eventId);
+	$comments=loadComments($eventId);	//Array of Comments
 
-	$participants=getParticipants($eventId);
+	$participants=getParticipants($eventId);	//Array of users
 
 
 	include $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/event.php';

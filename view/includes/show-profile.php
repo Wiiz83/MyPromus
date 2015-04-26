@@ -3,12 +3,12 @@
                        <h3> Lucas Uzan </h3>
                         <section class="row">
 
-                                <div id="profil-picture" ><a href="#"><img src="assets/images/profile.png"></a></div>
+                                <div id="profil-picture" ><a href="#"><img src="<?php echo $user->getImage();?>"></a></div>
                                 <ul id="profil-info" >
-                                    <li>Username: Wiiz83</li>
-                                    <li>Email: uzanlah@gmail.com</li>
-                                    <li>City: Cork</li>
-                                    <li>Country: Ireland</li>
+                                    <li>Username: <?php echo $user->getUsername();?></li>
+                                    <li>Email: <?php echo $user->getEmail();?></li>
+                                    <li>City: <?php echo $user->getCity();?></li>
+                                    <li>Country: <?php echo $user->getCountry();?></li>
 
                                 </ul>
 
