@@ -5,7 +5,8 @@ Signup controller */
 session_start();
 require $_SERVER['DOCUMENT_ROOT'].'/myPromus/model/signup_functions.php';	//include the functions of the signup model
 require $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/validatorHelper.inc.php';
-
+require $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/getUserHelper.inc.php';
+require $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/id_parser.inc.php';
 
 
 
@@ -30,9 +31,12 @@ if(!checkUsername($username)){
 	
 	if(insertUser($username,$password,$email,$country,$city)){
 		
+		$userId=getUserId($username);
+		$_SESSION['userId']=$userId;
 		$_SESSION['auth']=true;
 		$_SESSION['logname']=$username;
 		$_SESSION['firstLogin']=true;	//this is to show a welcome message for the first login in the dashboard
+		$_SESSION['userImage']=getUserImage($userId);
 		header("Location: dashboard.php");
 	}else{
 
