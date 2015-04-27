@@ -5,6 +5,7 @@ Controller to manage the user settings */
 include $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/session_checker.inc.php';
 
 $userId=$_SESSION['userId'];
+$titlePage="Settings";
 
 if(isset($_POST['submit'])){
 
@@ -32,7 +33,7 @@ if(isset($_POST['submit'])){
 
 	header("Location: ../controller/profile.php");
 
-else{
+}else{
 
 	include $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/settings.php';	
 } 

@@ -2,7 +2,7 @@
 <body>
     <div class="top-menu">
         <div class="topmenu-left">
-            <h1> Profil Page </h1> 
+            <h1> <?php echo "$titlePage";?> </h1> 
                             </div>
 
                             <div class="topmenu-right">

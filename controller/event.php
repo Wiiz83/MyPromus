@@ -7,7 +7,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/model/event_model.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/getEventHelper.inc.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/model/comment_model.php';
 
-session_start();
+$titlePage="Event";
 
 if(isset($_GET['eventId'])){
 	$userId=$_SESSION['userId'];

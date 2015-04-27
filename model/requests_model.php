@@ -37,7 +37,7 @@ function acceptFriend($userId,$friendName){
 	$isDone=addFriend($userId,$friendId);
 
 	if($isDone){
-		discardRequest($userId,$friendId);
+		discardFriendRequest($userId,$friendId);
 		return true;
 	}else{
 		return false;
@@ -73,7 +73,7 @@ function acceptEvent($userId,$eventId){
 
 	$sql="INSERT INTO event_friend (event_id,friend_id) VALUES ('$eventId','$userId')";
 	$result=mysqli_query($link,$sql);
-	discardRequest($userId,$friendId);
+	discardEventRequest($userId,$friendId);
 
 
 	

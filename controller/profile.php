@@ -10,6 +10,7 @@ $userId=$_SESSION['userId'];
 
 //If there is a POST request to upload an image profile charges the image loader and redirect again to 
 //profile controller
+$titlePage="Profile";
 
 if(isset($_POST['upload'])){
 	include $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/imageUploader.inc.php';	

@@ -6,7 +6,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/session_checker.inc.php'; 
 include $_SERVER['DOCUMENT_ROOT'].'/myPromus/model/friends_model.php';
 include_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/classes/user.class.php';
 
-session_start();
+$titlePage="Friends";
 $userId=$_SESSION['userId'];
 $friends=getFriends($userId);	//Array of Users
 

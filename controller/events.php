@@ -7,7 +7,7 @@ require $_SERVER['DOCUMENT_ROOT'].'/myPromus/model/dashboard_model.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/classes/event.class.php';
 
 //Starts session and gets username
-session_start();
+$titlePage="Events";
 $userId=$_SESSION['userId'];
 
 //Get the three next events

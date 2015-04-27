@@ -5,7 +5,7 @@ Controller of the requests page */
 include $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/session_checker.inc.php'; //Check if the session has expired,in that case redirect to the main page
 include $_SERVER['DOCUMENT_ROOT'].'/myPromus/model/requests_model.php';
 
-session_start();
+$titlePage="Notifications";
 $userId=$_SESSION['userId'];
 
 $friendRequests=getFriendRequests($userId);

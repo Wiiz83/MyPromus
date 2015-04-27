@@ -1,6 +1,6 @@
 
                 <div class="grid profil-container">
-                       <h3> <?php echo $user->getUsername();?> </h3>
+                       <h3> <?php echo ucfirst($user->getUsername());?> </h3>
                         <section class="row">
 
                                 <div id="profil-picture" ><a href="#"><img src="<?php echo $user->getImage();?>"></a></div>
