@@ -16,10 +16,7 @@ function getFriendRequests($userId){
 	while($requestInfo=mysqli_fetch_assoc($result)){
 
 		$user=getUser($requestInfo['user_id']);
-		$username=$user->getUsername();
 		$requestFriend[]=$user;
-
-		$requestFriend["$username"]=$image;
 
 	}
 
