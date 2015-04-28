@@ -50,6 +50,25 @@ function searchFriend($username){
 
 	global $link;
 
+	$sql="SELECT * FROM user WHERE username LIKE '%$username%'";
+
+	$result=mysqli_query($link,$sql) or die(mysqli_error($link));
+	$count=mysqli_num_rows($result);
+
+	if($count==0){
+
+		return null;	//If there isn't any result return null
+	
+	}else{
+	
+		while($friendInfo=mysqli_fetch_assoc($result)){
+
+		$friends[]=new User($friendInfo['id'],$friendInfo['username'],$friendInfo['country'],$friendInfo['city'],$friendInfo['email'],$friendInfo['image_url']);
+
+		}
+
+		return $friends;
+	}
 
 
 }

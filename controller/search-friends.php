@@ -8,12 +8,17 @@ require $_SERVER['DOCUMENT_ROOT'].'/myPromus/model/search-friends.php';
 
 $userId=$_SESSION['userId'];
 
-if(isset($_POST['submit'])){
+if(isset($_POST['search'])){
 
+	$search=$_POST['search'];
+	$search=preg_replace("#[^0-9a-z]#i", "", $search);
+	$users=searchFriend($search); //it's an array of users,can be null
+	include $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/search-friends.php';
 
 }else{
 
-	$friendSuggestions=getFriendSuggestions($userId,20);
+	$users=getFriendSuggestions($userId,20); //it's an array of user,can be null
 	include $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/search-friends.php';
+
 }
 ?>
