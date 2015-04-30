@@ -8,6 +8,21 @@ include $_SERVER['DOCUMENT_ROOT'].'/myPromus/model/requests_model.php';
 $titlePage="Notifications";
 $userId=$_SESSION['userId'];
 
+if(isset($_GET['friendId'])){
+
+	$friendId=$_GET['friendId'];
+	$isDone=acceptFriend($userId,$friendId);  //a lo mejor pasar username
+
+	//peticion ajax
+
+	if($isDone){
+		echo "Friend added";
+	}else{
+
+	}
+}
+
+
 $friendRequests=getFriendRequests($userId);
 $eventRequests=getEventRequests($userId);
 

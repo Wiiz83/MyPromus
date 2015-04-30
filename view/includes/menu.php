@@ -12,7 +12,7 @@
 
                             <a href="../controller/settings.php"><img src="../view/assets/images/settings.png"></a>
 
-                            <a href="../controller/profile.php"><img src="../view/assets/images/profile.png"></a>
+                            <a href="../controller/profile.php"><img src="<?php echo $_SESSION['userImage']; ?>"</a>
 
                         </nav>
                     </div>

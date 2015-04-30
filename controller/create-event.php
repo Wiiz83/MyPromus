@@ -15,7 +15,7 @@ if(!isset($_POST['submit'])){
 
 	$userId=$_SESSION['userId'];
 	$friends=getFriends($userId);  //$friends will be an array of Users
-	include $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/create_event.php';	//include view of the form
+	include $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/create-event.php';	//include view of the form
 
 
 

@@ -18,6 +18,7 @@ class User {
 	private $city;
 	private $email;
 	private $imageURL;
+	private $isFriend; //For the results of the search and to know if is a user friend (tiene que haber una array con los amigos y checkear si el usuario esta en la array,si lo esta ponemos este valor a true)
 
 
 	function __construct($idUser,$username,$country,$city,$email,$imageURL)
@@ -28,6 +29,7 @@ class User {
 		$this->city=$city;
 		$this->email=$email;
 		$this->imageURL=$imageURL;
+		$this->isFriend=false;
 	}
 
 	public function getIdUser(){
