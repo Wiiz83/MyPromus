@@ -13,14 +13,14 @@ if(isset($_GET['friendId'])){
 	$friendId=$_GET['friendId'];
 	$isDone=acceptFriend($userId,$friendId);  //a lo mejor pasar username
 
-	//peticion ajax
+	
 
 	if($isDone){
 		echo "Friend added";
 	}else{
-
+		echo "error adding friend";
 	}
-}
+}else{
 
 
 $friendRequests=getFriendRequests($userId);
@@ -30,4 +30,5 @@ $eventRequests=getEventRequests($userId);
 
 
 include $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/notification.php';
+}
 ?>

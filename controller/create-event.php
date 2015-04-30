@@ -15,7 +15,7 @@ if(!isset($_POST['submit'])){
 
 	$userId=$_SESSION['userId'];
 	$friends=getFriends($userId);  //$friends will be an array of Users
-	include $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/create-event.php';	//include view of the form
+	include $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/create_event.php';	//include view of the form
 
 
 
@@ -29,13 +29,13 @@ if(!isset($_POST['submit'])){
 	$date=sanitizeInput($_POST['date']);
 	$place=sanitizeInput($_POST['place']);
 	$description=sanitizeInput($_POST['description']);
-	$friends=sanitizeInput($_POST['friends']);
+	$friends=sanitizeInput($_POST['invited']);
 	$friends=parseFriends($friends);
 	$finalPath=null;	//Define to null the path to save the event image
 	require_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/imageEventUploader.inc.php'; //upload the image and takes the final path from there
 
 	$eventId=createEvent($userId,$name,$date,$place,$description,$friends,$finalPath);
-
+	echo($eventId);
 	if($eventId!=false){
 		header("Location: ../controller/event.php?eventId=$eventId");
 	}else{

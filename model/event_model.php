@@ -10,7 +10,6 @@ require $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/getUserHelper.inc.php';
 function createEvent($userAdmin,$name,$date,$place,$description,$friends,$imageURL){
 
 	global $link;
-	$userAdmin=getUserId($userAdmin);
 	$dateToday=date("Y-m-d");
 
 	if(!isset($imageURL)){
@@ -19,10 +18,12 @@ function createEvent($userAdmin,$name,$date,$place,$description,$friends,$imageU
 
 
 	$sql="INSERT INTO event (user_id,name,date,place,description,image_url)
-	 VALUES ('$userAdmin',$name,'$date','$place','$description','$imageURL')";	
+	 VALUES ('$userAdmin','$name','$date','$place','$description','$imageURL')";	
+
+	 
 
 	if(!mysqli_query($link,$sql)){
-
+		
 		return false;
 	
 	}else{
