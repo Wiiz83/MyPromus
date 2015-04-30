@@ -28,10 +28,10 @@ function getFriendRequests($userId){
 
 }
 
-function acceptFriend($userId,$friendName){
+function acceptFriend($userId,$friendId){
 	global $link;
 
-	$friendId=getUserId($friendName);
+	
 	require $_SERVER['DOCUMENT_ROOT'].'/myPromus/model/friends_model.php';
 
 	$isDone=addFriend($userId,$friendId);
@@ -40,6 +40,7 @@ function acceptFriend($userId,$friendName){
 		discardFriendRequest($userId,$friendId);
 		return true;
 	}else{
+
 		return false;
 	}
 
@@ -84,10 +85,10 @@ function acceptEvent($userId,$eventId){
 
 
 //Function to discard a friend request that userId have received
-function discardFriendRequest($userId,$friendName){
+function discardFriendRequest($userId,$friendId){
 	global $link;
 
-	$friendId=getUserId($friendName);
+	
 	
 	$sql="DELETE FROM friend_request WHERE user_id='$friendId' AND friend_id='$userId'";
 	$result=mysqli_query($link,$sql);

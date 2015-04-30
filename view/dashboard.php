@@ -19,7 +19,7 @@
                                         <h4>Name: <?php echo $event->getName();?> <h4>
                                         <p>Date: <?php echo $event->getDate();?> </p>
                                         <p>Place: <?php echo $event->getPlace();?> </p>
-                                        <a href="#">More</a>
+                                        <a href="event.php?eventId=<?php echo $event->getIdEvent();?>">More</a>
 
                                 </section><!--
                                 
@@ -42,7 +42,7 @@
                                         <h4>Name: <?php echo $event->getName();?> <h4>
                                         <p>Date: <?php echo $event->getDate();?> </p>
                                         <p>Place: <?php echo $event->getPlace();?> </p>
-                                        <a href="#">More</a>
+                                        <a href="event.php?eventId=<?php echo $event->getIdEvent();?>">More</a>
 
                                 </section><!--
                                 

@@ -10,8 +10,8 @@
                   var xmlhttp=new XMLHttpRequest();
                   xmlhttp.onreadystatechange = function() {
                   if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                    //document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
-                    //Change the buttons,some like friend accepted
+                    document.getElementById("resultado").innerHTML = xmlhttp.responseText;
+                    
                   }
                   }
 
@@ -30,17 +30,24 @@
                         <h3> Friend Notifications </h3>
                         <section class="row">
                                 
-
+                                <?php foreach($friendRequests as $friend): ?>
                                 <section class="notification-box">
-                                        <a href="#"><img src="assets/images/profile.png" id="picture" alt="Profil Image"></a>
-                                        <p> Name <p>
-                                           <section class="answer-box">
-                                                <button onClick="acceptFriend(this.value)" value="<?php echo $friend->getId();?>"></button>
-                                                <a href="#" ><img src="assets/images/icon-accept.png" alt="Accept Icon"></a>
-                                                 <a href="#"><img src="assets/images/icon-decline.png" alt="Decline Icon"></a>
+
+                                        <a href="#"><img src="<?php echo $friend->getImage();?>" id="picture" alt="Profil Image" width="100px" height="100px"></a>
+                                        <p> Name: <?php echo $friend->getUsername();?> <p>
+                                          
+
+                                          
+                                           
+                                           <section class="answer-box"><span id="resultado">
+                                                <button onClick="acceptFriend(this.value)" value="<?php echo $friend->getIdUser();?>">Accept</button>
+                                                <a href="#" ><img src="../view/assets/images/icon-accept.png" alt="Accept Icon"></a>
+                                                 <a href="#"><img src="../view/assets/images/icon-decline.png" alt="Decline Icon"></a>
+                                            </span>
                                             </section>
 
                                 </section>
+                                <?php endforeach ?>
                                    <section class="notification-box">
                                      <a href="#"><img src="assets/images/profile.png" id="picture" alt="Profil Image"></a>
                                         <p> Name <p>

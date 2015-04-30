@@ -11,6 +11,7 @@ $userId=$_SESSION['userId'];
 if(isset($_GET['friendId'])){
 
 	$friendId=$_GET['friendId'];
+	
 	$isDone=acceptFriend($userId,$friendId);  //a lo mejor pasar username
 
 	
@@ -23,7 +24,7 @@ if(isset($_GET['friendId'])){
 }else{
 
 
-$friendRequests=getFriendRequests($userId);
+$friendRequests=getFriendRequests($userId); //array of Users
 $eventRequests=getEventRequests($userId);
 
 

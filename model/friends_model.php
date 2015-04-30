@@ -69,7 +69,7 @@ function addFriend($userId,$friendId){
 	
 	if(mysqli_query($link,$sql)){
 
-			$sql="INSERT INTO friend (id,user_id) VALUES ('$userId','$friendId')";
+			$sql="INSERT INTO friend (id,user_id) VALUES ('$friendId','$userId')";
 
 			if(mysqli_query($link,$sql)){
 
@@ -82,6 +82,7 @@ function addFriend($userId,$friendId){
 			}
 			
 		}else{
+			
 			return false;  //Error deleting the friend
 		}
 }
