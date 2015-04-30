@@ -20,7 +20,7 @@ function createEvent($userAdmin,$name,$date,$place,$description,$friends,$imageU
 	$sql="INSERT INTO event (user_id,name,date,place,description,image_url)
 	 VALUES ('$userAdmin','$name','$date','$place','$description','$imageURL')";	
 
-	 
+	
 
 	if(!mysqli_query($link,$sql)){
 		

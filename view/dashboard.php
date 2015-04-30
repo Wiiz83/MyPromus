@@ -15,9 +15,10 @@
                                 <?php foreach ($events as $event): ?>
                                  
                                 <section class="event-box col-1-6">
-                                        <h4> Event name: <?php echo $event->getName();?> <h4>
-                                        <p> Date: <?php echo $event->getDate();?> </p>
-                                        <p> Place: <?php echo $event->getPlace();?> </p>
+                                        <img src="<?php echo $event->getImage();?>" />
+                                        <h4>Name: <?php echo $event->getName();?> <h4>
+                                        <p>Date: <?php echo $event->getDate();?> </p>
+                                        <p>Place: <?php echo $event->getPlace();?> </p>
                                         <a href="#">More</a>
 
                                 </section><!--
@@ -37,9 +38,10 @@
                                 <?php foreach ($myEvents as $event): ?>
                                  
                                 <section class="event-box col-1-6">
-                                        <h4> Event name: <?php echo $event->getName();?> <h4>
-                                        <p> Date: <?php echo $event->getDate();?> </p>
-                                        <p> Place: <?php echo $event->getPlace();?> </p>
+                                        <img src="<?php echo $event->getImage();?>" />
+                                        <h4>Name: <?php echo $event->getName();?> <h4>
+                                        <p>Date: <?php echo $event->getDate();?> </p>
+                                        <p>Place: <?php echo $event->getPlace();?> </p>
                                         <a href="#">More</a>
 
                                 </section><!--

@@ -76,7 +76,7 @@ function getMyEvents($userId,$numberOfEvents){
 
 	for($i=0;$i<$numberOfEvents;$i++){
 		$eventInfo=mysqli_fetch_assoc($result);
-		$events[]=new Event($eventInfo['id'],$eventInfo['user_id'],$eventInfo['name'],$eventInfo['date'],$eventInfo['place'],$eventInfo['description']);
+		$events[]=new Event($eventInfo['id'],$eventInfo['user_id'],$eventInfo['name'],$eventInfo['date'],$eventInfo['place'],$eventInfo['description'],$eventInfo['image_url']);
 		
 	}
 
