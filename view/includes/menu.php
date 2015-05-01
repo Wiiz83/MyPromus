@@ -81,7 +81,7 @@
                             <div class="topmenu-right">
 
                         <nav>
-                            <ul>
+                            <ul id="icons">
 
                                 <li id="notifications_li">
                       
@@ -103,8 +103,20 @@
                                     <div id="settingsContainer">
                                     <div id="settingsTitle">Settings</div>
                                     <div id="settingsBody" class="settings">
+                                        <ul>
+
+                                            <li><a href="#">Account</a></li>
+                                            <li><a href="#">Historic</a></li>
+                                            <li><a href="#">Security</a></li>
+                                            <li  class="limit-bot"><a href="#">Subscription</a></li>
+                                            <li><a href="#">About Us</a></li>
+                                            <li><a href="#">Help</a></li>
+
+
+                                        </ul>   
+
                                     </div>
-                                    <div id="settingsFooter"><input class="btn" type="submit" name="submit" value="Log Out"></div>
+                                    <div id="settingsFooter"><input class="btn" type="submit" name="submit" value="Log Out" onclick="window.location.href='../controller/logout.php'"></div>
                                     </div>
                                 </li>
 
@@ -130,7 +142,9 @@
                             <ul class="icons">
 
                                 <li>
-                                 <a href="../controller/calendar.php"><img src="../view/assets/images/icon-search.png" alt="Calendar icon">Calendar</a>
+                                 <a href="../controller/calendar.php"><img src="../view/assets/images/icon-search.png" alt="Calendar icon">Search</a>
+
+
                              </li>
 
                                 <li>
