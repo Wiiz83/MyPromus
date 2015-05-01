@@ -8,11 +8,20 @@ include $_SERVER['DOCUMENT_ROOT'].'/myPromus/model/requests_model.php';
 $titlePage="Notifications";
 $userId=$_SESSION['userId'];
 
-if(isset($_GET['friendId'])){
 
-	$friendId=$_GET['friendId'];
+
+if(isset($_POST['friendId']) && isset($_POST['decline'])){
+
+	$friendId=$_POST['friendId'];
+	discardFriendRequest($userId,$friendId);
+	echo "Declined";
+
+
+
+}else if(isset($_POST['friendId'])){
+	$friendId=$_POST['friendId'];
 	
-	$isDone=acceptFriend($userId,$friendId);  //a lo mejor pasar username
+	$isDone=acceptFriend($userId,$friendId);  
 
 	
 
@@ -21,6 +30,23 @@ if(isset($_GET['friendId'])){
 	}else{
 		echo "error adding friend";
 	}
+
+
+}else if( isset($_POST['eventId']) && isset($_POST['decline'])){
+
+	$eventId=$_POST['eventId'];
+	discardEventRequest($userId,$eventId);
+
+	echo "Declined";
+
+
+
+}else if(isset($_POST['eventId'])){
+
+	$eventId=$_POST['eventId'];
+	acceptEvent($userId,$eventId);
+	echo "Done";
+
 }else{
 
 
@@ -32,4 +58,5 @@ $eventRequests=getEventRequests($userId);
 
 include $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/notification.php';
 }
+
 ?>

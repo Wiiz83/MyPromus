@@ -6,6 +6,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/session_checker.inc.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/model/event_model.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/getEventHelper.inc.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/model/comment_model.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/getUserHelper.inc.php';
 
 $titlePage="Event";
 
@@ -23,6 +24,8 @@ if(isset($_GET['eventId'])){
 		include $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/error_output.php';
 		exit();
 	}
+	$adminUser=getUser($event->getIdAdmin());
+	$adminName=$adminUser->getUsername();
 
 	$comments=loadComments($eventId);	//Array of Comments
 

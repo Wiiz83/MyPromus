@@ -15,13 +15,62 @@
                   }
                   }
 
-                  xmlhttp.open("GET","../controller/notifications.php?friendId="+friendId,true);
-                  xmlhttp.send();
+                  xmlhttp.open("POST","../controller/notifications.php",true);
+                  xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+                  xmlhttp.send("friendId="+friendId);
+
+                }
+
+
+                function declineFriend(friendId){
+                  var xmlhttp=new XMLHttpRequest();
+                  xmlhttp.onreadystatechange = function() {
+                  if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    document.getElementById("resultado").innerHTML = xmlhttp.responseText;
+                    
+                  }
+                  }
+                  
+                  xmlhttp.open("POST","../controller/notifications.php",true);
+                  xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+                  xmlhttp.send("friendId="+friendId+"&decline=true");
 
                 }
 
 
 
+
+                   function acceptEvent(eventId){
+                  var xmlhttp=new XMLHttpRequest();
+                  xmlhttp.onreadystatechange = function() {
+                  if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    document.getElementById("resultado").innerHTML = xmlhttp.responseText;
+                    
+                  }
+                  }
+
+                  xmlhttp.open("POST","../controller/notifications.php",true);
+                  xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+                  xmlhttp.send("eventId="+eventId);
+
+                }
+
+
+                function declineEvent(eventId){
+                  var xmlhttp=new XMLHttpRequest();
+                  xmlhttp.onreadystatechange = function() {
+                  if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    document.getElementById("resultado").innerHTML = xmlhttp.responseText;
+                    
+                  }
+                  }
+                  
+                  
+                  xmlhttp.open("POST","../controller/notifications.php",true);
+                  xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+                  xmlhttp.send("eventId="+eventId+"&decline=true");
+
+                }
 
                 </script>
 
@@ -41,6 +90,7 @@
                                            
                                            <section class="answer-box"><span id="resultado">
                                                 <button onClick="acceptFriend(this.value)" value="<?php echo $friend->getIdUser();?>">Accept</button>
+                                                <button onClick="declineFriend(this.value)" value="<?php echo $friend->getIdUser();?>">Decline</button>
                                                 <a href="#" ><img src="../view/assets/images/icon-accept.png" alt="Accept Icon"></a>
                                                  <a href="#"><img src="../view/assets/images/icon-decline.png" alt="Decline Icon"></a>
                                             </span>
@@ -75,18 +125,19 @@
                          <h3> Event Notifications </h3>
                         <section class="row">
 
-
+                               <?php foreach($eventRequests as $event): ?>
                              <section class="notification-box">
-                                        <a href="#"><img src="assets/images/profile.png" id="picture" alt="Profil Image"></a>
-                                        <p> Name <p>
-                                        <p> Place <p>
-                                        <p> Date <p>
+                                        <a href="#"><img src="<?php echo $event->getImage(); ?>" id="picture" alt="Profil Image"></a>
+                                        <p>Name: <?php echo $event->getName(); ?><p>
+                                        <p>Place: <?php echo $event->getPlace(); ?><p>
+                                        <p>Date: <?php echo $event->getDate(); ?><p>
                                            <section class="answer-box">
                                                 <a href="#"><img src="assets/images/icon-accept.png" alt="Accept Icon"></a>
                                                  <a href="#"><img src="assets/images/icon-decline.png" alt="Decline Icon"></a>
                                             </section>
 
                                 </section>
+                                <?php endforeach ?>
                                    <section class="notification-box">
                                           <a href="#"><img src="assets/images/profile.png" id="picture" alt="Profil Image"></a>
                                            <p> Name <p>
