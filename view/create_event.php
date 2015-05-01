@@ -28,14 +28,23 @@
                                             <input type="text" name="place" required>
                                     
                                         </label>
+                                    </section><!--
+                                    
+                                    --><section class="col-1-2">
+                                        <label>
+                                            Date
+                                            <input type="date" name="date" placeholder="DD/MM/YYYY" maxlength="10" required>
+                                        </label>
+                                    </section><!--
+
+                                    --><section class="col-1-2">
+
+                                        <label>
+                                            Time
+                                            <input type="time" name="time" placeholder="HH:MM" maxlength="5" required><br>
+
+                                        </label>
                                     </section>
-
-                                    <label class=date-fields>
-                                        Date <br>
-                                        <input type="date" name="date" placeholder="DD/MM/YYYY" maxlength="10" required><!--
-                                        --><input type="time" name="time" placeholder="HH:MM" maxlength="5" required><br>
-
-                                    </label>
 
                                     
 
