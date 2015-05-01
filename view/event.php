@@ -64,59 +64,18 @@
                     <h6> Who is coming? </h6>
 
                     <ul class="scroll-list">
-                        <?php foreach($participants as $user): ?>
+
+                    <?php foreach($participants as $user): ?>
                         <li>
-                            <a href="#">
-                                <img src="assets/images/profile.png" alt="Profile pic">
-                                Ronald Ayala
+                            <a href="../controller/profile.php?userId=<?php echo $user->getIdUser();?>">
+                                <img src="<?php echo $user->getImage();?>" alt="Profile pic">
+                                <?php echo ucfirst($user->getUsername());?>
 
                             </a>
 
                         </li>
-
-                        <li>
-                            <a href="#">
-                                <img src="assets/images/profile.png" alt="Profile pic">
-                                Ronald Ayala
-
-                            </a>
-
-                        </li>
-
-                        <li>
-                            <a href="#">
-                                <img src="assets/images/profile.png" alt="Profile pic">
-                                Ronald Ayala
-
-                            </a>
-
-                        </li>
-
-                        <li>
-                            <a href="#">
-                                <img src="assets/images/profile.png" alt="Profile pic">
-                                Ronald Ayala
-
-                            </a>
-
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="assets/images/profile.png" alt="Profile pic">
-                                Ronald Ayala
-
-                            </a>
-
-                        </li>
-
-                        <li>
-                            <a href="#">
-                                <img src="assets/images/profile.png" alt="Profile pic">
-                                Ronald Ayala
-
-                            </a>
-
-                        </li>
+                    <?php endforeach ?>
+                      
                        
                     </ul>
 
@@ -131,83 +90,32 @@
 
                     <div class="comments-panel">
 
+                        <?php foreach($comments as $comment): ?>
+
                         <div class="comment">
                             <div class="comment-header">
-                                <img class="icon" src="assets/images/profile.png">
-                                <span>David Catalán</span>
-                                <small>30/04/2014 20:00</small>
+                                <img class="icon" src="<?php echo $comment->getUserImage();?>">
+                                <span><?php echo $comment->getUsername();?></span>
+                                <small><?php echo $comment->getDate();?> <?php echo $comment->getTime();?></small>
                             </div>
                             <div class="comment-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar molestie urna, mollis mattis nibh cursus vel.
+                              <?php echo $comment->getMessage();?>  
                             </div>
 
                         </div>
 
-                        <div class="comment">
-                            <div class="comment-header">
-                                <img class="icon" src="assets/images/profile.png">
-                                <span>David Catalán</span>
-                                <small>30/04/2014 20:00</small>
-                            </div>
-                            <div class="comment-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar molestie urna, mollis mattis nibh cursus vel.
-                            </div>
+                    <?php endforeach; ?>
 
-                        </div>
+                       
 
-                        <div class="comment">
-                            <div class="comment-header">
-                                <img class="icon" src="assets/images/profile.png">
-                                <span>David Catalán</span>
-                                <small>30/04/2014 20:00</small>
-                            </div>
-                            <div class="comment-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar molestie urna, mollis mattis nibh cursus vel.
-                            </div>
-
-                        </div>
-
-                        <div class="comment">
-                            <div class="comment-header">
-                                <img class="icon" src="assets/images/profile.png">
-                                <span>David Catalán</span>
-                                <small>30/04/2014 20:00</small>
-                            </div>
-                            <div class="comment-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar molestie urna, mollis mattis nibh cursus vel.
-                            </div>
-
-                        </div>
-
-                        <div class="comment">
-                            <div class="comment-header">
-                                <img class="icon" src="assets/images/profile.png">
-                                <span>David Catalán</span>
-                                <small>30/04/2014 20:00</small>
-                            </div>
-                            <div class="comment-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar molestie urna, mollis mattis nibh cursus vel.
-                            </div>
-
-                        </div>
-
-                        <div class="comment">
-                            <div class="comment-header">
-                                <img class="icon" src="assets/images/profile.png">
-                                <span>David Catalán</span>
-                                <small>30/04/2014 20:00</small>
-                            </div>
-                            <div class="comment-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar molestie urna, mollis mattis nibh cursus vel.
-                            </div>
-
-                        </div>
+                        
 
                     </div>
 
-                    <form id="comment-form">
+                    <form id="comment-form" action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST">
                             <p class="formtitle">Leave a comment </p>
-                            <textarea placeholder="Comment"></textarea>
+                            <textarea placeholder="Comment" name="comment"></textarea>
+                             <input type="hidden" name="eventId" value="<?php echo $event->getIdEvent();?>"> 
                             <input class="comment-btn" type="submit" value="Leave Comment">
                     </form>
                 </div>

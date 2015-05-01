@@ -14,6 +14,13 @@ $titlePage="Profile";
 
 if(isset($_POST['upload'])){
 	include $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/imageUploader.inc.php';	
+
+}else if(isset($_GET['userId'])){
+
+	$userId=$_GET['userId'];
+	$user=getUser($userId);
+	include $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/profile.php';
+
 }else{
 
 	$user=getUser($userId);

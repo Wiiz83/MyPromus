@@ -13,7 +13,6 @@ $userId=$_SESSION['userId'];
 //Get the three next events
 $events=getNearestEvents($userId,6);
 $myEvents=getMyEvents($userId,6);
-//TO DO, get the info of last activity of users
 
 //code....
 include $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/dashboard.php';
