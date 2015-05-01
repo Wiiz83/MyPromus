@@ -14,7 +14,6 @@
     <link href='../view/assets/stylesheets/fullcalendar.print.css' rel='stylesheet' media='print' />
 
     <script src='../view/assets/js/moment.min.js'></script>
-    <script src='../view/assets/js/jquery.min.js'></script>
     <script src='../view/assets/js/fullcalendar.min.js'></script> 
 
 

@@ -77,8 +77,8 @@
     @font-face {
         font-family: "Gravity-Book";
         src: url(../font/Gravity-Book.ttf);
-}
 
+}
         body {
                 color: #464646;
                 font: 400 16px/22px "Roboto", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -92,6 +92,7 @@
                 border: 6px solid #FFF;
                 background-color: #B54AF2;
                 padding: 5px 5px;
+
     }
 
     /*
@@ -126,6 +127,7 @@
             }
 
             .event-box p {
+
                 text-align: center;
 
             }
@@ -139,74 +141,6 @@
                 width: 80px;
 
             }
-
-    /*
-    	===========================================================
-    	Grid
-    	===========================================================
-    */
-            
-            
-            *,
-            *:before,
-            *:after {
-                    -webkit-box-sizing: border-box;
-                    -moz-box-sizing: border-box;
-                            box-sizing: border-box;
-            }
-            
-            
-            .grid {
-                 position: absolute;
-                 top: 70px;
-                 left: 80px;
-                 padding-left: 10px;
-                 padding-right: 10px;
-                 margin: 0 auto;
-                 width: 94%;
-                 height: 500px;
-                 
-            }
-
-            
-            .col-1-2 {
-                    display: inline-block;
-                    width: 50%;
-                    padding: 10px 10px;
-                    margin: 5px 5px;
-                    
-            }
-
-            .col-1-6 {
-                    width: 16.66%;
-            }
-            
-            .col-1-3 {
-                    width: 33.33%;
-                    padding: 15px 10px;
-            }
-            .row {
-                    margin-top: 2px;
-                    margin-bottom: 10px;
-                    width: 100%;
-                    padding: 2px 2px;
-            }
-
-
-
-            h3:after {
-                content:' ';
-                display:block;
-                border:1px solid #5f007f;
-                opacity: 0.5;
-                border-radius:4px;
-                -webkit-border-radius:4px;
-                -moz-border-radius:4px;
-                box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
-                -webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
-                -moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
-             }
-
 
 
     /*
@@ -332,15 +266,15 @@
                 font-weight:bold;
             }
 
+
         .event-box p {
             text-align: left;
-
-        }
-
+}
             .topmenu-right nav li a{
                 color:#333333;
                 text-decoration:none;
             }
+
 
             .topmenu-right nav li a:hover{
                 color:#006699;
@@ -477,7 +411,6 @@
         .row {
                 margin-top: 2px;
                 margin-bottom: 10px;
-                border-top: 1px solid #5F007F;
                 width: 100%;
                 padding: 2px 2px;
         }
@@ -742,6 +675,7 @@
     */
 
 
+
             .notification-box {
                 width: 10%;
                 height: auto;
@@ -749,6 +683,7 @@
                 margin-left: 1%;
                 margin-top: 10px;
 
+}
         h3:after {
             content:' ';
             display:block;
@@ -776,7 +711,6 @@
         }
 
 
-
             .notification-box #picture{
             display: block;
         margin-left: auto;
@@ -800,7 +734,6 @@
 
             }
 
-
         .btn-create {
             display: block;
             margin: 0 auto;
@@ -815,6 +748,7 @@
         }
 
 /*
+
         ===========================================================
         Profil Page
         ===========================================================
@@ -1145,6 +1079,7 @@
             border-bottom: 1px solid #7F6C7C;
             padding: 4px 0 4px 8px; 
         }
+
 
 
 /*
