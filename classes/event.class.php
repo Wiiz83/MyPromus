@@ -11,17 +11,19 @@ class Event {
 	private $idAdmin;
 	private $name;
 	private $date;
+	private $time;
 	private $place;
 	private $description;
 	private $imageURL;
 
 
-	function __construct($idEvent,$idAdmin,$name,$date,$place,$description,$imageURL)
+	function __construct($idEvent,$idAdmin,$name,$date,$time,$place,$description,$imageURL)
 	{
 		$this->idEvent=$idEvent;
 		$this->idAdmin=$idAdmin;
 		$this->name=$name;
 		$this->date=$date;
+		$this->time=$time;
 		$this->place=$place;
 		$this->description=$description;
 		$this->imageURL=$imageURL;
@@ -41,6 +43,10 @@ class Event {
 
 	public function getDate(){
 		return $this->date;
+	}
+
+	public function getTime(){
+		return $this->time;
 	}
 
 	public function getPlace(){

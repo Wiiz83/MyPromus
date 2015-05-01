@@ -31,6 +31,8 @@ if(isset($_POST['comment'])){
 
 
 	$isAdmin=checkAdmin($userId,$eventId);	//true if is admin and false if not
+	$existsPlaylist=checkPlaylist($eventId);  //true if exists a playlist,then hide the playlist creation in the view
+
 	$event=getEvent($eventId);		//Event object
 
 	if($event==null){

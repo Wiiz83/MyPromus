@@ -7,7 +7,7 @@ require $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/id_parser.inc.php';
 require $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/getUserHelper.inc.php';
 
 //Create an event and insert it in the database
-function createEvent($userAdmin,$name,$date,$place,$description,$friends,$imageURL){
+function createEvent($userAdmin,$name,$date,$time,$place,$description,$friends,$imageURL){
 
 	global $link;
 	$dateToday=date("Y-m-d");
@@ -17,8 +17,8 @@ function createEvent($userAdmin,$name,$date,$place,$description,$friends,$imageU
 	}
 
 
-	$sql="INSERT INTO event (user_id,name,date,place,description,image_url)
-	 VALUES ('$userAdmin','$name','$date','$place','$description','$imageURL')";	
+	$sql="INSERT INTO event (user_id,name,date,time,place,description,image_url)
+	 VALUES ('$userAdmin','$name','$date','$time','$place','$description','$imageURL')";	
 
 	
 
@@ -102,6 +102,24 @@ function getParticipants($eventId){
 		return $friends;
 	}else{
 		return null;
+	}
+
+
+}
+
+
+//Check if there is a playlist already created for this event
+function checkPlaylist($eventId){
+
+	global $link;
+	$sql="SELECT * FROM playlist WHERE event_id='$eventId'";
+	$result=mysqli_query($link,$sql);
+	$exists=mysqli_num_rows($result);
+
+	if($exists==0){
+		return false;
+	}else{
+		return true;
 	}
 
 

@@ -15,7 +15,7 @@
                 <h6> Event Information </h6>
                 <span class="event-name"> <?php echo ucfirst($event->getName());?> </span>
                 <p><b>Owner: </b><?php echo ucfirst($adminName);?></p>
-                <p><b>Date:</b> <?php echo $event->getDate();?> TIME</p>
+                <p><b>Date:</b> <?php echo $event->getDate();?> <?php echo $event->getTime();?></p>
                 <p><b>Place:</b> <?php echo ucfirst($event->getPlace());?> </p>
 
                 <h6>Description</h6>
