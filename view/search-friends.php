@@ -19,7 +19,6 @@
 
 						<img class="profile-icon" src="../view/assets/images/profile.png" alt="Profile picture">
 						<p>Pablo Cabezas</p>
-						<p>24</p>
 						<p>Alicante, Spain</p>
 						<button type="submit" class="btn">Add</button>
 					</div>
@@ -31,7 +30,6 @@
 
 						<img class="profile-icon" src="../view/assets/images/profile.png" alt="Profile picture">
 						<p>Pablo Cabezas</p>
-						<p>24</p>
 						<p>Alicante, Spain</p>
 						<button type="submit" class="btn">Add</button>
 					</div>
@@ -43,7 +41,6 @@
 
 						<img class="profile-icon" src="../view/assets/images/profile.png" alt="Profile picture">
 						<p>Pablo Cabezas</p>
-						<p>24</p>
 						<p>Alicante, Spain</p>
 						<button type="submit" class="btn">Add</button>
 					</div>
@@ -55,7 +52,6 @@
 
 						<img class="profile-icon" src="../view/assets/images/profile.png" alt="Profile picture">
 						<p>Pablo Cabezas</p>
-						<p>24</p>
 						<p>Alicante, Spain</p>
 						<button type="submit" class="btn">Add</button>
 					</div>
@@ -71,7 +67,6 @@
 
 						<img class="profile-icon" src="../view/assets/images/profile.png" alt="Profile picture">
 						<p>Pablo Cabezas</p>
-						<p>24</p>
 						<p>Alicante, Spain</p>
 						<button type="submit" class="btn">Add</button>
 					</div>
@@ -83,7 +78,6 @@
 
 						<img class="profile-icon" src="../view/assets/images/profile.png" alt="Profile picture">
 						<p>Pablo Cabezas</p>
-						<p>24</p>
 						<p>Alicante, Spain</p>
 						<button type="submit" class="btn">Add</button>
 					</div>
@@ -95,7 +89,7 @@
 
 						<img class="profile-icon" src="../view/assets/images/profile.png" alt="Profile picture">
 						<p>Pablo Cabezas</p>
-						<p>24</p>
+			
 						<p>Alicante, Spain</p>
 						<button type="submit" class="btn">Add</button>
 					</div>
@@ -107,7 +101,7 @@
 
 						<img class="profile-icon" src="../view/assets/images/profile.png" alt="Profile picture">
 						<p>Pablo Cabezas</p>
-						<p>24</p>
+						
 						<p>Alicante, Spain</p>
 						<button type="submit" class="btn">Add</button>
 					</div>
