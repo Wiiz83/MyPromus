@@ -192,6 +192,7 @@
     */
             .btn-login {
                     padding: 10px 27px;
+                    cursor: pointer;
             }
 
             .btn:hover {
@@ -200,11 +201,12 @@
             }
             
             .btn {
+                    cursor: pointer;
                     text-decoration: none;
                     border: 0;
-                    border-radius: 15px;
                     background: #5F007F;
                     color: #FFF;
+                    box-shadow: 1px 1px 3px #888;
             }
 
             .btn-small {
@@ -292,130 +294,7 @@
 
         }
 
-/*
-    ===========================================================
-    Forms
-    ===========================================================
-*/
-    .create-event-form {
-        margin: 15px 10px;
-    }
-
-    input,
-    select,
-    textarea {
-        font: 400 16px/22px "Roboto", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    }
-
-    .info-group label {
-        color: #5F007F;
-        cursor: pointer;
-        font-weight: 500; 
-
-    }
-
-    .info-group input,
-    .info-group select,
-    .info-group textarea {
-        border: 1px solid #5F007F;
-        border-radius: 5px;
-        color: #222;
-        display: block;
-        margin: 5px 0 10px 0;
-        padding: 5px 8px;
-        background: #FFF;
-    }
-
-    .info-group input,
-    .info-group textarea {
-        width: 100%;
-    }
-
-    .info-group select {
-        width: 360px;
-    }
-
-    .info-group textarea {
-        height: 140px;
-
-    }
-
-    .date-fields label {
-        display: block;
-    }
-    .date-fields input {
-        display: inline-block;
-        width: 240px;
-        margin-right: 20px;
-    }
-
-/*
-	===========================================================
-	Grid
-	===========================================================
-*/
-        
-        
-        *,
-        *:before,
-        *:after {
-                -webkit-box-sizing: border-box;
-                -moz-box-sizing: border-box;
-                        box-sizing: border-box;
-        }
-        
-        
-        .grid {
-             position: absolute;
-             top: 70px;
-             left: 80px;
-             padding-left: 10px;
-             padding-right: 10px;
-             margin: 0 auto;
-             width: 94%;
-             height: 500px;
-             
-        }
-
-        
-        .col-1-2 {
-                display: inline-block;
-                width: 50%;
-                padding: 10px 10px;
-        }
-
-        .col-1-6 {
-                width: 16.66%;
-        }
-        
-        .col-1-3 {
-                width: 33.33%;
-                padding: 15px 10px;
-        }
-
-        .col-2-3 {
-            width: 66.66%;
-            padding: 15px 10px;
-        }
-
-        .col-3-5 {
-            display: inline-block;
-            width: 60%;
-        }
-
-        .col-2-5 {
-            display: inline-block;
-            width: 40%;
-            vertical-align: top;
-        }
-        .row {
-                margin-top: 2px;
-                margin-bottom: 10px;
-                width: 100%;
-                padding: 2px 2px;
-        }
-
-             #notifications_li a {
+                  #notifications_li a {
                  position:relative;
             }
 
@@ -496,6 +375,203 @@
                     font-size: 9px;
             }
 
+
+
+
+
+
+        #settings_li a {
+                 position:relative;
+        }
+
+
+        #settingsContainer:before {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 0;
+                height: 0;
+                color: transparent;
+                border: 10px solid black;
+                border-color: transparent transparent white;
+                margin-top: -18px;
+                margin-left: 59%;
+            }
+
+            #settingsContainer 
+            {
+                     background-color: #fff;
+                    border: 1px solid rgba(100, 100, 100, .4);
+                    -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+                    overflow: visible;
+                    position: absolute;
+                    top: 53px;
+                    margin-left: -112px;
+                    width: 200px;
+                    z-index: 2;
+                    display: none; // Enable this after jquery implementation 
+            }
+
+    
+
+            #settingsTitle
+            {
+                    font-weight: bold;
+                    padding: 8px;
+                    font-size: 13px;
+                    background-color: #ffffff;
+                    color: black;
+                    position: fixed;
+                    z-index: 1000;
+                    width: 198px;
+                    border-bottom: 1px solid #dddddd;
+            }
+            #settingsBody
+            {
+                    padding: 33px 0px 0px 0px !important;
+                    min-height:300px;
+            }
+            #settingsFooter
+            {
+                    background-color: #e9eaed;
+                    text-align: center;
+                    font-weight: bold;
+                    padding: 8px;
+                    font-size: 12px;
+                    border-top: 1px solid #dddddd;
+            }
+
+        
+
+
+/*
+    ===========================================================
+    Forms
+    ===========================================================
+*/
+    .create-event-form {
+        margin: 15px 10px;
+    }
+
+    input,
+    select,
+    textarea {
+        font: 400 16px/22px "Roboto", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    .info-group label {
+        color: #5F007F;
+        cursor: pointer;
+        font-weight: 500; 
+
+    }
+
+    .info-group input,
+    .info-group select,
+    .info-group textarea {
+        border: 0px solid;
+        color: #222;
+        display: block;
+        padding: 1%;
+        margin: 1% 0 1% 0;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 1px solid #777;
+        background: #EEE;
+    }
+
+    .info-group input,
+    .info-group textarea {
+        width: 100%;
+    }
+
+    .info-group select {
+        width: 360px;
+    }
+
+    .info-group textarea {
+        height: 140px;
+
+    }
+
+    .date-fields label {
+        display: block;
+    }
+    .date-fields input {
+        display: inline-block;
+        width: 240px;
+        margin-right: 20px;
+    }
+
+/*
+	===========================================================
+	Grid
+	===========================================================
+*/
+        
+        
+        *,
+        *:before,
+        *:after {
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                        box-sizing: border-box;
+        }
+        
+        
+        .grid {
+             position: absolute;
+             top: 70px;
+             left: 80px;
+             padding-left: 10px;
+             padding-right: 10px;
+             margin: 0 auto;
+             width: 94%;
+             height: 500px;
+             
+        }
+
+        
+        .col-1-2 {
+                display: inline-block;
+                padding: 1%;
+                width: 50%;
+                vertical-align: top;
+        }
+
+        .col-1-6 {
+                width: 16.66%;
+        }
+        
+        .col-1-3 {
+                width: 33.33%;
+                padding: 15px 10px;
+        }
+
+        .col-2-3 {
+            width: 66.66%;
+            padding: 15px 10px;
+        }
+
+        .col-3-5 {
+            display: inline-block;
+            width: 60%;
+        }
+
+        .col-2-5 {
+            display: inline-block;
+            width: 40%;
+            vertical-align: top;
+        }
+        .row {
+                margin-top: 2px;
+                margin-bottom: 10px;
+                width: 100%;
+                padding: 2px 2px;
+        }
+
+   
             
             
     /*
@@ -738,7 +814,7 @@
             display: block;
             margin: 0 auto;
             padding: 15px 30px;
-            border-radius: 100px;
+            
         }
 
         .btn-create:hover {

@@ -10,7 +10,7 @@
                     <h3> Event information </h3>
 
                     <section class="row">  
-                        <div class="col-3-5">
+                        <div class="panel">
                             <form action="../controller/create-event.php" method="POST" class="create-event-form" enctype="multipart/form-data">
                                 <fieldset class="info-group">
                                     
@@ -28,14 +28,23 @@
                                             <input type="text" name="place" required>
                                     
                                         </label>
+                                    </section><!--
+                                    
+                                    --><section class="col-1-2">
+                                        <label>
+                                            Date
+                                            <input type="date" name="date" placeholder="DD/MM/YYYY" maxlength="10" required>
+                                        </label>
+                                    </section><!--
+
+                                    --><section class="col-1-2">
+
+                                        <label>
+                                            Time
+                                            <input type="time" name="time" placeholder="HH:MM" maxlength="5" required><br>
+
+                                        </label>
                                     </section>
-
-                                    <label class=date-fields>
-                                        Date <br>
-                                        <input type="date" name="date" placeholder="DD/MM/YYYY" maxlength="10" required><!--
-                                        --><input type="time" name="time" placeholder="HH:MM" maxlength="5" required><br>
-
-                                    </label>
 
                                     
 

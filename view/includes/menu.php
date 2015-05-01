@@ -21,6 +21,7 @@
 
     $("#notifications").click(function()
     {
+        $("#settingsContainer").fadeOut();
         $("#notificationContainer").fadeToggle(300);
         $("#notification_count").fadeOut("slow");
         return false;
@@ -38,7 +39,31 @@
           return false;
     });
 
-    });  
+   
+
+     $("#settings").click(function()
+    {
+        $("#notificationContainer").fadeOut();
+        $("#settingsContainer").fadeToggle(300);
+        $("#settings_count").fadeOut("slow");
+        return false;
+    });
+
+    //Document Click hiding the popup 
+    $(document).click(function()
+    {
+          $("#settingsContainer").hide();
+    });
+
+    //Popup on click
+    $("#settingsContainer").click(function()
+    {
+          return false;
+    });
+
+ 
+
+ });  
 
 
 </script>
@@ -71,8 +96,16 @@
 
                                 </li>
 
-                                <li>
-                                    <a href="../controller/settings.php"><img src="../view/assets/images/settings.png"></a>
+                                <li id="settings_li">
+                        
+                                    <a id="settings" href="#"><img src="../view/assets/images/settings.png"></a>
+
+                                    <div id="settingsContainer">
+                                    <div id="settingsTitle">Settings</div>
+                                    <div id="settingsBody" class="settings">
+                                    </div>
+                                    <div id="settingsFooter"><input class="btn" type="submit" name="submit" value="Log Out"></div>
+                                    </div>
                                 </li>
 
                                 <li>
