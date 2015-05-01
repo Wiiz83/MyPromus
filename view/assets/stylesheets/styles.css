@@ -111,7 +111,7 @@
                     color: #464646;
                     font: 400 16px/22px "Roboto", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
                     height: 100%;
-                     font-family: "Gravity-Light";
+                    font-family: "Gravity-Light";
             }
 
             .event-box {
@@ -1302,7 +1302,9 @@
 
     .panel {
         box-shadow: 0px 3px 5px -3px black;
+        margin: 1% 0;
         padding: 3% 4%;
+        background: #FFF;
     }
     .comments-panel {
         overflow: hidden;
@@ -1367,3 +1369,58 @@
             text-decoration: none;
             color: #01050A;
         }
+
+/*
+    ===========================================================
+    Search Friends
+    ===========================================================
+*/
+
+    .col-25 {
+        display: inline-block;
+        width: 25%;
+        vertical-align: top;
+    }
+
+    .search-friend {
+        text-align: center;
+        margin-bottom: 3%;
+    }
+
+    .search-friend input {
+
+        padding: .5%;
+        margin: 1% 0 1% 0;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 1px solid #777;
+
+    }
+
+    .profile-icon {
+        display: block;
+        margin: 5% auto;
+        width: 90px;
+        height: 90px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+            -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+            -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8); 
+    }
+
+    .friend-box {
+        margin: 1% 2%;
+        padding: 3% 5%;
+        box-shadow: 1px 1px 5px #888;
+
+    }
+
+    .friend-box button {
+        display: block;
+        margin: 0 auto;
+        padding: 1% 8%;
+    }
+
+    .friend-box p {
+        margin: 4% 6%;
+    }
