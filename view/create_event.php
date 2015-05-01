@@ -10,7 +10,7 @@
                     <h3> Event information </h3>
 
                     <section class="row">  
-                        <div class="col-3-5">
+                        <div class="panel">
                             <form action="../controller/create-event.php" method="POST" class="create-event-form" enctype="multipart/form-data">
                                 <fieldset class="info-group">
                                     
