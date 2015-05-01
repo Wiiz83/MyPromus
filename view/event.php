@@ -64,6 +64,7 @@
                     <h6> Who is coming? </h6>
 
                     <ul class="scroll-list">
+                        <?php foreach($participants as $user): ?>
                         <li>
                             <a href="#">
                                 <img src="assets/images/profile.png" alt="Profile pic">
