@@ -141,10 +141,8 @@
                         <nav>
                             <ul class="icons">
 
-                                <li>
-                                 <a href="../controller/calendar.php"><img src="../view/assets/images/icon-search.png" alt="Calendar icon">Search</a>
-
-
+                              <li>
+                                 <a href="../controller/search-friends.php"><img src="../view/assets/images/icon-search.png" alt="Calendar icon">Search</a>
                              </li>
 
                                 <li>

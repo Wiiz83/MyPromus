@@ -3,25 +3,7 @@
                 <?php include '../view/includes/header.php';  ?>
                 <?php include '../view/includes/menu.php';  ?>
 
-<script type="text/javascript">
-			function validateInput ()
-			{
-				var valid  = new Boolean(true);
 
-				if (document.getElementById("cname").value == "")
-				{
-					valid = false;
-					document.getElementById("cname").style.backgroundColor = "#ff0000";
-				}
-				else
-				{
-					document.getElementById("cname").style.backgroundColor = "#99ff99";
-				}
-
-				return valid;
-			}
-
-</script>
   
     <div class="grid">
         
@@ -39,16 +21,15 @@
                 <!-- <span> <?php echo ucfirst($user->getUsername());?> </span> -->
                    <ul id="profil-info" >
                                     <li>Username: <?php echo $user->getUsername();?></li>
-                                    <form  id="pizza-form" onSubmit="return validateInput();" name="theform" method="post" action="vieworder.php">
-                                    <li>Password:<input name="password" type="password" value='Password' required /></li>
-                                    <li>Email:<input name="email" id="cname" type="email" value='<?php echo $user->getEmail();?>' required /></li>
-                                    <li>City:<input name="city" id="cname" type="text" value='<?php echo $user->getCity();?>' required /></li>
-                                    <li>Country:<input name="country" id="cname" type="text" value='<?php echo $user->getCountry();?>' required /></li>
+                                    <li>Email: <?php echo $user->getEmail();?></li>
+                                    <li>City: <?php echo $user->getCity();?></li>
+                                    <li>Country: <?php echo $user->getCountry();?></li>
+
                                 </ul>
                                 <br>
-                        	<input class="submit" type="submit" name="submit" value="Update" />
-     					</form>
 
+                        <a class="btn btn-small" href="../controller/update-profile.php">Update My Profile</a>
+                        <a class="btn btn-small" href="../controller/delete-user.php">Delete My Account</a>
                     </div>
 
             </section>
@@ -85,16 +66,10 @@
                     <li><a href="#"> Name - Artist </a></li>
                 </ul>
 
-            </section><!--
-
-            --><section class="col-50">
-                <h6> Friends in Common </h6>
-
             </section>
 
-        </div>
 
-        <!-- Comments -->
+        </div>
 
 
         <div class="row-main">

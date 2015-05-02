@@ -1,4 +1,10 @@
 
+
+                <?php include '../view/includes/header.php';  ?>
+                <?php include '../view/includes/menu.php';  ?>
+
+
+  
     <div class="grid">
         
         <!-- Pic and info of the event -->
@@ -12,7 +18,7 @@
             --><section class="col-80 event-info">
                 <h6> User Informations </h6>
                 <div class="user-info">
-                <span> <?php echo ucfirst($user->getUsername());?> </span>
+                <!-- <span> <?php echo ucfirst($user->getUsername());?> </span> -->
                    <ul id="profil-info" >
                                     <li>Username: <?php echo $user->getUsername();?></li>
                                     <li>Email: <?php echo $user->getEmail();?></li>
@@ -21,10 +27,6 @@
 
                                 </ul>
                                 <br>
-
-                    <a class="btn btn-small" href="#">Change My Profile</a>
-                                <a class="btn btn-small" href="#">Delete My Account</a>
-                                <a class="btn btn-small" href="#">Change My Password</a>
                     </div>
 
             </section>
@@ -36,7 +38,7 @@
   
         <div class="row-main">
             <section class="col-50">
-                <h6> Playlist </h6>
+                <h6> Past Events </h6>
                 <ul class="playlist">
                     <li><a href="#"> Name - Artist </a></li>
                     <li><a href="#"> Name - Artist </a></li>
@@ -64,7 +66,7 @@
             </section><!--
 
             --><section class="col-50">
-                <h6> Who is coming? </h6>
+                <h6> Friends in Common </h6>
 
             </section>
 
