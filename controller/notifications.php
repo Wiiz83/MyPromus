@@ -10,7 +10,7 @@ $userId=$_SESSION['userId'];
 
 
 
-if(isset($_POST['friendId']) && isset($_POST['decline'])){
+if(isset($_POST['friendId']) && isset($_POST['decline'])){  //Discard a friend request and return a string to the AJAX function
 
 	$friendId=$_POST['friendId'];
 	discardFriendRequest($userId,$friendId);
@@ -18,7 +18,15 @@ if(isset($_POST['friendId']) && isset($_POST['decline'])){
 
 
 
-}else if(isset($_POST['friendId'])){
+}else if(isset($_POST['friendId']) && isset($_POST['request'])){	//Send a friend request and return a string to the AJAX function
+
+	$friendId=$_POST['friendId'];
+	sendFriendRequest($userId,$friendId);
+	echo "Done";
+
+
+
+}else if(isset($_POST['friendId'])){	//Accept friend request and return a string to the AJAX function
 	$friendId=$_POST['friendId'];
 	
 	$isDone=acceptFriend($userId,$friendId);  
@@ -32,7 +40,7 @@ if(isset($_POST['friendId']) && isset($_POST['decline'])){
 	}
 
 
-}else if( isset($_POST['eventId']) && isset($_POST['decline'])){
+}else if( isset($_POST['eventId']) && isset($_POST['decline'])){  ////Decline a request and return a string to the AJAX function
 
 	$eventId=$_POST['eventId'];
 	discardEventRequest($userId,$eventId);
@@ -41,7 +49,7 @@ if(isset($_POST['friendId']) && isset($_POST['decline'])){
 
 
 
-}else if(isset($_POST['eventId'])){
+}else if(isset($_POST['eventId'])){		//Accept an event request and return a string to the AJAX function
 
 	$eventId=$_POST['eventId'];
 	acceptEvent($userId,$eventId);

@@ -102,5 +102,13 @@ function discardEventRequest($userId,$eventId){
 	$result=mysqli_query($link,$sql);
 }
 
+function sendFriendRequest($userId,$friendId){
+	global $link;
+	$sql="INSERT INTO friend_request (user_id,friend_id,date) VALUES ('$userId','$friendId',DATE(NOW()))";
+	mysqli_query($link,$sql) or die(mysqli_error($link));
+
+	
+
+}
 
 ?>
