@@ -33,7 +33,7 @@
                                     --><section class="col-1-2">
                                         <label>
                                             Date
-                                            <input type="date" name="date" placeholder="DD/MM/YYYY" maxlength="10" required>
+                                            <input type="date" name="date" placeholder="YYYY/MM/DD" maxlength="10" required>
                                         </label>
                                     </section><!--
 
