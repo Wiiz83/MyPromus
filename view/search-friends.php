@@ -14,99 +14,25 @@
 
 			<div class="row-main">
 			
+
+			<?php foreach($users as $user): ?>
+
 				<section class="col-25">
 					<div class="friend-box">
 
-						<img class="profile-icon" src="../view/assets/images/profile.png" alt="Profile picture">
-						<p>Pablo Cabezas</p>
-						<p>Alicante, Spain</p>
+						<img class="profile-icon" src="<?php echo $user->getImage(); ?>" alt="Profile picture">
+						<p><?php echo $user->getUsername(); ?></p>
+						<p><?php echo $user->getCity(); ?>, <?php echo $user->getCountry(); ?></p>
 						<button type="submit" class="btn">Add</button>
 					</div>
 
 				</section><!--
 
-				--><section class="col-25">
-					<div class="friend-box">
+				-->
+			<?php endforeach ?>
 
-						<img class="profile-icon" src="../view/assets/images/profile.png" alt="Profile picture">
-						<p>Pablo Cabezas</p>
-						<p>Alicante, Spain</p>
-						<button type="submit" class="btn">Add</button>
-					</div>
-
-				</section><!--
-
-				--><section class="col-25">
-					<div class="friend-box">
-
-						<img class="profile-icon" src="../view/assets/images/profile.png" alt="Profile picture">
-						<p>Pablo Cabezas</p>
-						<p>Alicante, Spain</p>
-						<button type="submit" class="btn">Add</button>
-					</div>
-
-				</section><!--
-
-				--><section class="col-25">
-					<div class="friend-box">
-
-						<img class="profile-icon" src="../view/assets/images/profile.png" alt="Profile picture">
-						<p>Pablo Cabezas</p>
-						<p>Alicante, Spain</p>
-						<button type="submit" class="btn">Add</button>
-					</div>
-
-				</section>
-
-			</div>
-
-			<div class="row-main">
+				
 			
-				<section class="col-25">
-					<div class="friend-box">
-
-						<img class="profile-icon" src="../view/assets/images/profile.png" alt="Profile picture">
-						<p>Pablo Cabezas</p>
-						<p>Alicante, Spain</p>
-						<button type="submit" class="btn">Add</button>
-					</div>
-
-				</section><!--
-
-				--><section class="col-25">
-					<div class="friend-box">
-
-						<img class="profile-icon" src="../view/assets/images/profile.png" alt="Profile picture">
-						<p>Pablo Cabezas</p>
-						<p>Alicante, Spain</p>
-						<button type="submit" class="btn">Add</button>
-					</div>
-
-				</section><!--
-
-				--><section class="col-25">
-					<div class="friend-box">
-
-						<img class="profile-icon" src="../view/assets/images/profile.png" alt="Profile picture">
-						<p>Pablo Cabezas</p>
-			
-						<p>Alicante, Spain</p>
-						<button type="submit" class="btn">Add</button>
-					</div>
-
-				</section><!--
-
-				--><section class="col-25">
-					<div class="friend-box">
-
-						<img class="profile-icon" src="../view/assets/images/profile.png" alt="Profile picture">
-						<p>Pablo Cabezas</p>
-						
-						<p>Alicante, Spain</p>
-						<button type="submit" class="btn">Add</button>
-					</div>
-
-				</section>
 
 			</div>					
 
