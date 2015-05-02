@@ -4,6 +4,8 @@ Controller of the profile where the user can upload a user profile image and set
 
 include $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/session_checker.inc.php';
 include $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/getUserHelper.inc.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/model/friends_model.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/model/dashboard_model.php';
 
 $userId=$_SESSION['userId'];
 
@@ -12,14 +14,28 @@ $userId=$_SESSION['userId'];
 //profile controller
 $titlePage="Profile";
 
-if(isset($_POST['upload'])){
-	include $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/imageUploader.inc.php';	
+if(isset($_GET['userId'])){
 
-}else if(isset($_GET['userId'])){
+	$userProfileId=$_GET['userId'];
+	$user=getUser($userProfileId);
+	
 
-	$userId=$_GET['userId'];
-	$user=getUser($userId);
-	include $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/profile.php';
+	if($userId==$userProfileId){		//Check if the user is the owner of the profile that's visiting
+		$isAdmin=true;
+		$events=getPastEvents($userId,6);
+		
+		include $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/myprofile.php';
+	}else{
+		$isAdmin=false;
+		$events=getPastEvents($userProfileId,6);
+		$friends=getCommonFriends($userId,$userProfileId);
+
+		
+
+		include $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/profile-friend.php';
+	}
+
+	
 
 }else{
 

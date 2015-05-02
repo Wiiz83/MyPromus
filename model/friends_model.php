@@ -11,7 +11,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/classes/user.class.php';
 function getFriends($userId){
 	global $link;
 
-	$sql="SELECT user.id, user.username, user.country,user.city,user.email 
+	$sql="SELECT user.id, user.username, user.country,user.city,user.email ,user.image_url
 	FROM friend INNER JOIN user ON friend.user_id=user.id 
 	WHERE friend.id='$userId'";
 
@@ -28,6 +28,36 @@ function getFriends($userId){
 		return null;		//If there is any event return null,need to be handled 
 	}
 }
+
+/*
+Function that return an array of Users that are friends that have in common with another user
+*/
+
+function getCommonFriends($userId,$friendId){
+
+	global $link;
+
+	$sql="SELECT user.* FROM friend 
+	INNER JOIN user ON friend.user_id=user.id 
+	WHERE friend.id='$friendId' AND friend.user_id IN (SELECT user_id FROM friend WHERE id='$userId')";
+
+	$result=mysqli_query($link,$sql);
+
+	while($friendInfo=mysqli_fetch_assoc($result)){
+		$friends[]=new User($friendInfo['id'],$friendInfo['username'],$friendInfo['country'],$friendInfo['city'],$friendInfo['email'],$friendInfo['image_url']);
+
+	}
+
+	if(isset($friends)){
+		return $friends;
+	}else{
+		return null;		//If there is any event return null,need to be handled 
+	}
+
+}
+
+
+
 
 /*Delete a friendship between two users,we have to delete it from the two columns
 

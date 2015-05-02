@@ -90,4 +90,45 @@ function getMyEvents($userId,$numberOfEvents){
 }
 
 
+
+//Get an array of Events which the user has assisted
+
+function getPastEvents($userId,$numberOfEvents){
+	global $link;
+	$todayDate=date("Y-m-d");
+
+	//The query select the info of the events that the user has assisted
+
+	$sql="SELECT  event.*
+	 FROM event_friend AS ef INNER JOIN event ON ef.event_id=event.id
+	 WHERE ef.friend_id='$userId' AND event.date<'$todayDate'
+	 ORDER BY event.date";
+	
+	
+	$result=mysqli_query($link,$sql) or die(mysqli_error($link));
+	$rowsNumber=mysqli_num_rows($result);
+
+	
+	
+	if($rowsNumber<$numberOfEvents){
+		$numberOfEvents=$rowsNumber;	//If in the database there are less events than asked, the number of
+	}									//events showed will change
+	
+
+	for($i=0;$i<$numberOfEvents;$i++){
+		$eventInfo=mysqli_fetch_assoc($result);
+		$events[]=new Event($eventInfo['id'],$eventInfo['user_id'],$eventInfo['name'],$eventInfo['date'],$eventInfo['time'],$eventInfo['place'],$eventInfo['description'],$eventInfo['image_url']);
+		
+	}
+
+	
+	
+	if(isset($events)){
+		return $events;
+	}else{
+		return null;		//If there is any event return null,need to be handled 
+	}
+}
+
+
 ?>
