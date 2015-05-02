@@ -7,7 +7,7 @@ require $_SERVER['DOCUMENT_ROOT'].'/myPromus/model/search-friends.php';
 
 
 $userId=$_SESSION['userId'];
-
+$titlePage="Search friends";
 if(isset($_POST['search'])){
 
 	$search=$_POST['search'];

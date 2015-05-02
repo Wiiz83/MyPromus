@@ -3,8 +3,8 @@
 Model functions to set the user information*/
 
 require $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/db_connection.inc.php';	//Database connections
-require $_SERVER['DOCUMENT_ROOT'].'/myPromus/classes/user.class.php';
-require $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/getUserHelper.inc.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/classes/user.class.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/getUserHelper.inc.php';
 
 
 

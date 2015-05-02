@@ -2,9 +2,10 @@
 /*author: Ferran Rovira 	mail:ferran294@gmail.com
 Controller where will be displayed a sticky form and will update the data of the user */
 
-include $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/session_checker.inc.php';
-include $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/getUserHelper.inc.php';
-include $_SERVER['DOCUMENT_ROOT'].'/myPromus/model/settings.php';
+include_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/session_checker.inc.php';
+include_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/getUserHelper.inc.php';
+include_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/model/settings-model.php';
+include_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/classes/user.class.php';
 
 $userId=$_SESSION['userId'];
 
@@ -39,9 +40,9 @@ if(isset($_POST['submit'])){
 	header("Location: ../controller/profile.php");
 
 }else{
-
+	$titlePage="Update profile";
 	$user=getUser($userId);
-	include $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/update-profile.php';
+	include $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/includes/update-profile.php';
 
 }
 

@@ -12,7 +12,7 @@ $userId=$_SESSION['userId'];
 
 //If there is a POST request to upload an image profile charges the image loader and redirect again to 
 //profile controller
-$titlePage="Profile";
+$titlePage="My profile";
 
 if(isset($_GET['userId'])){
 
@@ -22,6 +22,7 @@ if(isset($_GET['userId'])){
 
 	if($userId==$userProfileId){		//Check if the user is the owner of the profile that's visiting
 		$isAdmin=true;
+
 		$events=getPastEvents($userId,6);
 		
 		include $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/myprofile.php';
@@ -30,7 +31,7 @@ if(isset($_GET['userId'])){
 		$isAdmin=false;
 		$events=getPastEvents($userProfileId,6);
 		$friends=getCommonFriends($userId,$userProfileId);
-
+		$titlePage=$user->getUsername()."'s' Profile";
 		
 
 		include $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/profile-friend.php';

@@ -3,7 +3,7 @@
 Model functions to search friends and show friends suggestions*/
 
 require $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/db_connection.inc.php';	//Database connections
-require $_SERVER['DOCUMENT_ROOT'].'/myPromus/classes/user.class.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/classes/user.class.php';
 require $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/getUserHelper.inc.php';
 
 //Function that return an array of Users that are friends of user's friends as a suggestion
