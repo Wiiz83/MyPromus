@@ -32,7 +32,7 @@ if(isset($_POST['submit'])){
 		setCity($userId,$newCity);
 	}
 
-	if(isset($_FILES['userfile'])){
+	if($_FILES['userfile']['size']!=0){
 		
 		include $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/imageUploader.inc.php';
 	}

@@ -33,8 +33,8 @@ if(move_uploaded_file($_FILES['userfile']['tmp_name'],$upload_path . $imageNewNa
    $finalPath=$upload_path.$imageNewName;
    $query = "UPDATE user SET image_url='$finalPath' WHERE id='$userId'"; //Update in the database the url of the image of the user
    mysqli_query($link,$query);
+   $_SESSION['userImage']=$finalPath;
 
-	header("Location: ../controller/profile.php");	//redirect to the profile controller
 
 
 } else {
