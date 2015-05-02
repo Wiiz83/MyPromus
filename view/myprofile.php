@@ -70,7 +70,7 @@
 
 
             <section class="col-50">
-                <h6> Your Friends </h6>
+                <h6> My Friends </h6>
 
             </section>
 
