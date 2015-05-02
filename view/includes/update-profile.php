@@ -39,8 +39,8 @@
                 <!-- <span> <?php echo ucfirst($user->getUsername());?> </span> -->
                    <ul id="profil-info" >
                                     <li>Username: <?php echo $user->getUsername();?></li>
-                                    <form  id="pizza-form" onSubmit="return validateInput();" name="theform" method="post" action="vieworder.php">
-                                    <li>Password:<input name="password" type="password" value='Password' required /></li>
+                                    <form  id="pizza-form" onSubmit="return validateInput();" name="theform" method="post" action="../controller/update-profile.php">
+                                    <li>Password:<input name="password" id="cname" type="password" value='Password' required /></li>
                                     <li>Email:<input name="email" id="cname" type="email" value='<?php echo $user->getEmail();?>' required /></li>
                                     <li>City:<input name="city" id="cname" type="text" value='<?php echo $user->getCity();?>' required /></li>
                                     <li>Country:<input name="country" id="cname" type="text" value='<?php echo $user->getCountry();?>' required /></li>

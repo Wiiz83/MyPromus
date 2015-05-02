@@ -63,16 +63,15 @@
                     <li><a href="#"> Name - Artist </a></li>
                 </ul>
 
-            </section><!--
+            </section>
 
-            --><section class="col-50">
+            <section class="col-50">
                 <h6> Friends in Common </h6>
 
             </section>
 
         </div>
 
-        <!-- Comments -->
 
 
         <div class="row-main">
