@@ -25,6 +25,7 @@ if(isset($_GET['userId'])){
 		$events=getPastEvents($userId,6);
 		
 		include $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/myprofile.php';
+	
 	}else{
 		$isAdmin=false;
 		$events=getPastEvents($userProfileId,6);
@@ -40,7 +41,7 @@ if(isset($_GET['userId'])){
 }else{
 
 	$user=getUser($userId);
-	include $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/profile.php';
+	include $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/myprofile.php';
 }
 
 ?>
