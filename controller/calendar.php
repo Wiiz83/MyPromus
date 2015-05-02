@@ -11,4 +11,5 @@
 	$events=getEvents($userId);
 
 	echo json_encode($events);
+
 ?>

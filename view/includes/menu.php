@@ -146,7 +146,7 @@
                              </li>
 
                                 <li>
-                                 <a href="../controller/calendar.php"><img src="../view/assets/images/icon-calendar.png" alt="Calendar icon">Calendar</a>
+                                 <a href="../controller/calendarView.php"><img src="../view/assets/images/icon-calendar.png" alt="Calendar icon">Calendar</a>
                              </li>
 
                              <li>
