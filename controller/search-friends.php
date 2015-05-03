@@ -13,13 +13,14 @@ if(isset($_POST['search'])){
 	$search=$_POST['search'];
 	$search=preg_replace("#[^0-9a-z]#i", "", $search);
 	$users=searchFriend($search); //it's an array of users,can be null
+	$titleSecondary="Search: ".$search;
 	include $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/search-friends.php';
 
 }else{
 
 	$users=getFriendSuggestions($userId,20); //it's an array of user,can be null
 	shuffle($users); //Sort randomly the array
-	
+	$titleSecondary="Suggested friends";
 	include $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/search-friends.php';
 
 }

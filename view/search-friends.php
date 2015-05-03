@@ -10,11 +10,11 @@
 				<input type="submit" class="btn" value="Search">
 			</form>
 
-			<h6>Suggested Friends</h6>
+			<h6><?php echo "$titleSecondary";?></h6>
 
 			<div class="row-main">
 			
-
+			<?php if(isset($users)):?>
 			<?php foreach($users as $user): ?>
 
 				<section class="col-25">
@@ -30,8 +30,8 @@
 
 				-->
 			<?php endforeach ?>
-
-				
+			<?php endif ?>
+			<? if(!isset($users)){echo "User not found";} ?>
 			
 
 			</div>					
