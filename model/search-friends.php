@@ -5,6 +5,7 @@ Model functions to search friends and show friends suggestions*/
 require $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/db_connection.inc.php';	//Database connections
 require_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/classes/user.class.php';
 require $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/getUserHelper.inc.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/model/friends_model.php';
 
 //Function that return an array of Users that are friends of user's friends as a suggestion
 
@@ -50,7 +51,7 @@ function getFriendSuggestions($userId,$numberOfFriends){
 
 //Function to search a friend,return an array of users that can match with the username passed
 
-function searchFriend($username){
+function searchFriend($userId,$username){
 
 	global $link;
 
@@ -64,10 +65,18 @@ function searchFriend($username){
 		return null;	//If there isn't any result return null
 	
 	}else{
+
+		$friendsId=getFriendsId($userId);
 	
 		while($friendInfo=mysqli_fetch_assoc($result)){
 
-		$friends[]=new User($friendInfo['id'],$friendInfo['username'],$friendInfo['country'],$friendInfo['city'],$friendInfo['email'],$friendInfo['image_url']);
+			$user=new User($friendInfo['id'],$friendInfo['username'],$friendInfo['country'],$friendInfo['city'],$friendInfo['email'],$friendInfo['image_url']);
+		
+			if(in_array($friendInfo['id'], $friendsId)){
+				$user->setFriend(true);
+			}
+
+			$friends[]=$user;
 
 		}
 

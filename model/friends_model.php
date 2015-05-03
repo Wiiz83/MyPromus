@@ -29,6 +29,42 @@ function getFriends($userId){
 	}
 }
 
+
+
+
+//Return an array of friends ID
+function getFriendsId($userId){
+
+	global $link;
+
+	$sql="SELECT user.id
+	FROM friend INNER JOIN user ON friend.user_id=user.id 
+	WHERE friend.id='$userId'";
+
+	$result=mysqli_query($link,$sql) or die(mysqli_error($link));
+
+	while($friendInfo=mysqli_fetch_assoc($result)){
+		$friendsId[]=$friendInfo['id'];
+
+	}
+
+	if(isset($friendsId)){
+		return $friendsId;
+	}else{
+		return null;		//If there is any event return null,need to be handled 
+	}
+
+
+
+
+}
+
+
+
+
+
+
+
 /*
 Function that return an array of Users that are friends that have in common with another user
 */

@@ -56,6 +56,10 @@ class User {
 		return $this->imageURL;
 	}
 
+	function getIsFriend(){
+		return $this->isFriend;
+	}
+
 	public function setName($newName){
 		//TO DO pensar si ponerlo o no
 	}
@@ -74,6 +78,10 @@ class User {
 
 	public function setEmail($newEmail){
 	//TO DO introducirlo en la BD
+	}
+
+	public function setFriend($booleanValue){
+		$this->isFriend=$booleanValue;
 	}
 }
 ?>

@@ -2,6 +2,8 @@
 	<?php include '../view/includes/header.php'; ?>
 	<?php include '../view/includes/menu.php'; ?>
 
+	<script src='../view/assets/js/sendFriendRequest.js'></script>
+
 	<div class="grid">
 		<div class="panel">
 
@@ -20,10 +22,16 @@
 				<section class="col-25">
 					<div class="friend-box">
 
-						<img class="profile-icon" src="<?php echo $user->getImage(); ?>" alt="Profile picture">
+						<a href="../controller/profile.php?userId=<?php echo $user->getIdUser();?>"><img class="profile-icon" src="<?php echo $user->getImage(); ?>" alt="Profile picture"></a>
 						<p><?php echo $user->getUsername(); ?></p>
 						<p><?php echo $user->getCity(); ?>, <?php echo $user->getCountry(); ?></p>
-						<button type="submit" class="btn">Add</button>
+
+						<?php if(!$user->getIsFriend()): ?>
+						<span id="resultado">
+						<button type="submit" class="btn" onClick="sendFriendRequest(this.value)" value="<?php echo $user->getIdUser();?>">Add</button>
+						</span>
+						<?php endif ?>
+
 					</div>
 
 				</section><!--

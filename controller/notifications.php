@@ -21,9 +21,12 @@ if(isset($_POST['friendId']) && isset($_POST['decline'])){  //Discard a friend r
 }else if(isset($_POST['friendId']) && isset($_POST['request'])){	//Send a friend request and return a string to the AJAX function
 
 	$friendId=$_POST['friendId'];
-	sendFriendRequest($userId,$friendId);
+	$isDone=sendFriendRequest($userId,$friendId);
+	if($isDone){
 	echo "Done";
-
+	}else{
+		echo "Already sent";
+	}
 
 
 }else if(isset($_POST['friendId'])){	//Accept friend request and return a string to the AJAX function
