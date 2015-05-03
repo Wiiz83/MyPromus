@@ -18,6 +18,8 @@ if(isset($_POST['search'])){
 }else{
 
 	$users=getFriendSuggestions($userId,20); //it's an array of user,can be null
+	shuffle($users); //Sort randomly the array
+	
 	include $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/search-friends.php';
 
 }

@@ -17,7 +17,7 @@ function getFriendSuggestions($userId,$numberOfFriends){
 	$sql="SELECT user_id 
 	FROM friend 
 	WHERE id IN(SELECT id FROM friend WHERE user_id='$userId') 
-	AND user_id NOT IN (SELECT user_id FROM friend WHERE id='$userId') 
+	AND user_id NOT IN (SELECT user_id FROM friend WHERE id='$userId') AND user_id<>'$userId'
 	LIMIT 30";
 
 	$result=mysqli_query($link,$sql) or die(mysqli_error($link));
@@ -28,16 +28,20 @@ function getFriendSuggestions($userId,$numberOfFriends){
 		$numberOfFriends=$rowsNumber;	//If in the database there are less events than asked, the number of
 	}	
 
+	echo($numberOfFriends);
 	for($i=0;$i<$numberOfFriends;$i++){
 
 		$friendInfo=mysqli_fetch_assoc($result);
-		$friend=getUser($friendInfo['id']);
+		$friend=getUser($friendInfo['user_id']);
 		$friends[]=$friend;
 
 	}
 
+	
 	if(isset($friends)){
-		return shuffle($friends); //Sort randomly the array
+
+		return $friends;
+		
 	}else{
 		return null;		//If there is any friend return null,need to be handled 
 	}
