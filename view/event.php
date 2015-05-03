@@ -65,6 +65,7 @@
 
                     <ul class="scroll-list">
 
+                    <?php if(isset($participants)): ?>
                     <?php foreach($participants as $user): ?>
                         <li>
                             <a href="../controller/profile.php?userId=<?php echo $user->getIdUser();?>">
@@ -75,7 +76,7 @@
 
                         </li>
                     <?php endforeach ?>
-                      
+                    <?php endif ?> 
                        
                     </ul>
 
@@ -89,6 +90,8 @@
                 <div class="panel">
 
                     <div class="comments-panel">
+
+                        <?php if(isset($comments)): ?>
 
                         <?php foreach($comments as $comment): ?>
 
@@ -106,7 +109,7 @@
 
                     <?php endforeach; ?>
 
-                       
+                    <?php endif ?>   
 
                         
 
