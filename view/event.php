@@ -18,6 +18,8 @@
                 <p><b>Date:</b> <?php echo $event->getDate();?> <?php echo $event->getTime();?></p>
                 <p><b>Place:</b> <?php echo ucfirst($event->getPlace());?> </p>
 
+               
+
                 <h6>Description</h6>
                 <p>
                     <?php echo ucfirst($event->getDescription());?> 

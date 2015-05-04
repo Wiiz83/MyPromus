@@ -14,7 +14,10 @@ if(isset($_POST['submit'])){
 
 	if(isset($_POST['newPassword'])){
 		$newPassword=$_POST['newPassword'];
-		setPassword($userId,$newPassword);
+
+		if($newPassword!="Password"){
+		setPassword($userId,$newPassword);		//To change because in the view is set by default to Password
+		}
 	}
 
 	if(isset($_POST['newEmail'])){
