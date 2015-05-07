@@ -1396,7 +1396,29 @@
 */
 
 
-.col-100 .owl-demo .item{
+.col-100 #incoming .item{
+  background: #5f007f;
+  margin: 10px;
+  color: #FFF;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.col-100 #created .item{
+  background: #5f007f;
+  margin: 10px;
+  color: #FFF;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.col-100 #past .item{
   background: #5f007f;
   margin: 10px;
   color: #FFF;
