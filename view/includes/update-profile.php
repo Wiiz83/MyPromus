@@ -39,7 +39,7 @@
                 <!-- <span> <?php echo ucfirst($user->getUsername());?> </span> -->
                    <ul id="profil-info" >
                                     <li>Username: <?php echo $user->getUsername();?></li>
-                                  <li>Password: <input name="newPassword" id="cname" type="password" value='Password' required /></li>
+                                    <li>Password: <input name="newPassword" id="cname" type="password" value='Password' required /></li>
                                     <li>Email: <input name="newEmail" id="cname" type="email" value='<?php echo $user->getEmail();?>' required /></li>
                                     <li>City: <input name="newCity" id="cname" type="text" value='<?php echo $user->getCity();?>' required /></li>
                                     <li>Country: <input name="newCountry" id="cname" type="text" value='<?php echo $user->getCountry();?>' required /></li>
@@ -85,22 +85,12 @@
                     <li><a href="#"> Name - Artist </a></li>
                 </ul>
 
-            </section><!--
-
-            --><section class="col-50">
+            </section>
+            <section class="col-50 my-friends">
                 <h6> My Friends </h6>
 
             </section>
 
-        </div>
-
-        <!-- Comments -->
-
-
-        <div class="row-main">
-            <section class="col-100">
-
-            </section>
         </div>
 
     </div>
