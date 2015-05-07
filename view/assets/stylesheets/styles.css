@@ -902,7 +902,7 @@
 
         .col-50 {
             display: inline-block;
-            width: 50%;
+            width: 49%;
             vertical-align: top;
             padding: 0 10px;
         }
@@ -1098,100 +1098,6 @@
             }
 
 
-    /*
-        ===========================================================
-        Event main page
-        ===========================================================
-    */
-
-        .row-main {
-            margin-top: 20px;
-            width: 100%;
-            padding: 2px 7px;
-        }
-
-        .col-20 {
-            display: inline-block;
-            width: 20%;
-            vertical-align: top;
-        }
-
-        .col-80 {
-            display: inline-block;
-            width: 80%;
-            vertical-align: top;
-            padding-left: 22px;
-        }
-
-        .col-33 {
-            display: inline-block;
-            width: 33.33%;
-            vertical-align: top;
-        }
-
-        .col-66 {
-            display: inline-block;
-            width: 66.66%;
-            vertical-align: top;
-        }
-
-        .col-100 {
-            display: block;
-            width: 100%;
-            vertical-align: top;
-        }
-
-        .col-50 {
-            display: inline-block;
-            width: 50%;
-            vertical-align: top;
-            padding: 0 10px;
-        }
-
-        .event-pic {
-            width: 100%;
-            height: 350px;
-        }
-
-        h6 {
-            font-weight: 500;
-            border-bottom: 1px solid #5F007F;
-            padding-left: 5px;
-            margin-bottom: 15px;
-        }
-
-        b {
-            font-weight: 500;
-        }
-
-        .event-name {
-            display: block;
-            font-weight: 500;
-            font-size: 28px;
-            margin-left: 20px;
-            margin-bottom: 25px; 
-        }
-
-        .event-info p {
-            margin-left: 40px;
-            margin-bottom: 10px;
-        }
-
-        .playlist {
-            background-color: #BFA2BA;
-            border: 1px solid #40363E;
-            border-radius: 5px; 
-            height: 260px;
-            overflow: hidden;
-            overflow-y: scroll;
-            margin: 0 10px; 
-        }
-
-        .playlist li {
-            border-bottom: 1px solid #7F6C7C;
-            padding: 4px 0 4px 8px; 
-        }
-
 
 
 /*
@@ -1202,7 +1108,7 @@
 
     .row-main {
         margin-top: 20px;
-        width: 100%;
+        width: 98%;
         padding: 2px 7px;
     }
 
@@ -1239,9 +1145,9 @@
 
     .col-50 {
         display: inline-block;
-        width: 50%;
+        width: 48%;
         vertical-align: top;
-        padding: 0 10px;
+        padding: 0 5px;
     }
 
     .event-pic {
@@ -1370,10 +1276,61 @@
         
     }
 
+            .event-pic {
+            width: 100%;
+            height: 350px;
+        }
+
+        h6 {
+            font-weight: 500;
+            border-bottom: 1px solid #5F007F;
+            padding-left: 5px;
+            margin-bottom: 15px;
+        }
+
+        b {
+            font-weight: 500;
+        }
+
+        .event-name {
+            display: block;
+            font-weight: 500;
+            font-size: 28px;
+            margin-left: 20px;
+            margin-bottom: 25px; 
+        }
+
+        .event-info p {
+            margin-left: 40px;
+            margin-bottom: 10px;
+        }
+
+        .playlist {
+            background-color: #BFA2BA;
+            border: 1px solid #40363E;
+            border-radius: 5px; 
+            height: 260px;
+            overflow: hidden;
+            overflow-y: scroll;
+            margin: 0 10px; 
+        }
+
+        .playlist li {
+            border-bottom: 1px solid #7F6C7C;
+            padding: 4px 0 4px 8px; 
+        }
+
+
         .playlist a {
             text-decoration: none;
             color: #01050A;
         }
+
+     .my-friends {
+        width: 51.7% !important;
+
+     }
+
 
 /*
     ===========================================================
@@ -1430,3 +1387,84 @@
     .friend-box p {
         margin: 4% 6%;
     }
+
+
+/*
+    ===========================================================
+    Events Page
+    ===========================================================
+*/
+
+
+.col-100 #incoming .item{
+  background: #5f007f;
+  margin: 10px;
+  color: #FFF;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.col-100 #created .item{
+  background: #5f007f;
+  margin: 10px;
+  color: #FFF;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.col-100 #past .item{
+  background: #5f007f;
+  margin: 10px;
+  color: #FFF;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.col-100 .customNavigation{
+  text-align: center;
+}
+//use styles below to disable ugly selection
+.col-100 .customNavigation a{
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+
+        .prev::before{
+                content: "\f190";
+                font-family: FontAwesome;
+                font-style: normal;
+                font-weight: normal;
+                text-decoration: inherit;
+                cursor: pointer;
+                font-size: 20pt;
+
+
+            }
+
+      .next::before{
+                content: "\f18e";
+                font-family: FontAwesome;
+                font-style: normal;
+                font-weight: normal;
+                text-decoration: inherit;
+                cursor: pointer;
+                 font-size: 20pt;
+
+
+
+            }
+

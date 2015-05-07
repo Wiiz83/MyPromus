@@ -29,7 +29,7 @@
                                 <br>
 
                         <a class="btn btn-small" href="../controller/update-profile.php">Update My Profile</a>
-                        <a class="btn btn-small" href="../controller/delete-user.php">Delete My Account</a>
+                        <a class="btn btn-small" href="../controller/delete-user.php" onclick="return confirm('Are you sure ?');">Delete My Account</a>
                     </div>
 
             </section>
@@ -69,7 +69,7 @@
             </section>
 
 
-            <section class="col-50">
+            <section class="col-50 my-friends">
                 <h6> My Friends </h6>
 
             </section>
@@ -77,12 +77,6 @@
 
         </div>
 
-
-        <div class="row-main">
-            <section class="col-100">
-
-            </section>
-        </div>
 
     </div>
 
