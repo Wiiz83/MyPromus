@@ -335,7 +335,7 @@
                     font-size: 13px;
                     background-color: #ffffff;
                     color: black;
-                    position: fixed;
+                    position: absolute;
                     z-index: 1000;
                     width: 298px;
                     border-bottom: 1px solid #dddddd;
@@ -422,7 +422,7 @@
                     font-size: 13px;
                     background-color: #ffffff;
                     color: black;
-                    position: fixed;
+                    position: absolute;
                     z-index: 5;
                     width: 198px;
                     border-bottom: 1px solid #dddddd;
@@ -1487,7 +1487,7 @@
 
 #notificationsBody ul {
     color: #888;
-    margin-top: 2%;
+
 }
 
 #notificationsBody li {
@@ -1496,5 +1496,9 @@
     height: 20%;
     border-bottom: 1px solid #DDD;
     margin-top: 5%;
-    padding: 0 2% 2% 6%;
+    padding: 0 2% 3% 5%;
+}
+
+#notificationsBody li:last-child {
+    border-bottom: 0;
 }
