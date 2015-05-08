@@ -40,45 +40,33 @@
             <section class="col-50">
                 <h6> Past Events </h6>
                 <ul class="playlist">
-                    <li><a href="#"> Name - Artist </a></li>
-                    <li><a href="#"> Name - Artist </a></li>
-                    <li><a href="#"> Name - Artist </a></li>
-                    <li><a href="#"> Name - Artist </a></li>
-                    <li><a href="#"> Name - Artist </a></li>
-                    <li><a href="#"> Name - Artist </a></li>
-                    <li><a href="#"> Name - Artist </a></li>
-                    <li><a href="#"> Name - Artist </a></li>
-                    <li><a href="#"> Name - Artist </a></li>
-                    <li><a href="#"> Name - Artist </a></li>
-                    <li><a href="#"> Name - Artist </a></li>
-                    <li><a href="#"> Name - Artist </a></li>
-                    <li><a href="#"> Name - Artist </a></li>
-                    <li><a href="#"> Name - Artist </a></li>
-                    <li><a href="#"> Name - Artist </a></li>
-                    <li><a href="#"> Name - Artist </a></li>
-                    <li><a href="#"> Name - Artist </a></li>
-                    <li><a href="#"> Name - Artist </a></li>
-                    <li><a href="#"> Name - Artist </a></li>
-                    <li><a href="#"> Name - Artist </a></li>
-                    <li><a href="#"> Name - Artist </a></li>
+
+                    <?php if(isset($events)): ?>
+                    <?php foreach($events as $event): ?>
+                    <li>Name:<a href="../controller/event.php?eventId=<?php echo $event->getIdEvent(); ?>">  <?php echo $event->getName(); ?> </a>   Owner:<a href="../controller/profile.php?userId=<?php echo $event->getIdAdmin(); ?>">  <?php echo $event->getAdminName(); ?> </a></li>
+                    <?php endforeach ?>
+                    <?php endif ?>
                 </ul>
 
             </section>
 
             <section class="col-50">
                 <h6> Friends in Common </h6>
+                <ul class="playlist">
 
+                    <?php if(isset($friends)): ?>
+                    <?php foreach($friends as $friend): ?>
+                    <li>Name:<a href="../controller/profile.php?userId=<?php echo $friend->getIdUser(); ?>">  <?php echo $friend->getUsername(); ?> </a> </li>
+                    <?php endforeach ?>
+                    <?php endif ?>
+                </ul>
             </section>
 
         </div>
 
 
 
-        <div class="row-main">
-            <section class="col-100">
 
-            </section>
-        </div>
 
     </div>
 

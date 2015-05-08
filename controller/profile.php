@@ -31,7 +31,7 @@ if(isset($_GET['userId'])){
 		$isAdmin=false;
 		$events=getPastEvents($userProfileId,6);
 		$friends=getCommonFriends($userId,$userProfileId);
-		$titlePage=$user->getUsername()."'s' Profile";
+		$titlePage=$user->getUsername()."'s Profile";
 		
 
 		include $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/profile-friend.php';
