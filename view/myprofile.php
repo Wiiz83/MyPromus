@@ -36,45 +36,9 @@
 
         </div>
         
-        <!-- Playlist and list of people -->
+        
 
   
-        <div class="row-main">
-            <section class="col-50">
-                <h6> My Past Events </h6>
-                <ul class="playlist">
-                    <li><a href="#"> Name - Artist </a></li>
-                    <li><a href="#"> Name - Artist </a></li>
-                    <li><a href="#"> Name - Artist </a></li>
-                    <li><a href="#"> Name - Artist </a></li>
-                    <li><a href="#"> Name - Artist </a></li>
-                    <li><a href="#"> Name - Artist </a></li>
-                    <li><a href="#"> Name - Artist </a></li>
-                    <li><a href="#"> Name - Artist </a></li>
-                    <li><a href="#"> Name - Artist </a></li>
-                    <li><a href="#"> Name - Artist </a></li>
-                    <li><a href="#"> Name - Artist </a></li>
-                    <li><a href="#"> Name - Artist </a></li>
-                    <li><a href="#"> Name - Artist </a></li>
-                    <li><a href="#"> Name - Artist </a></li>
-                    <li><a href="#"> Name - Artist </a></li>
-                    <li><a href="#"> Name - Artist </a></li>
-                    <li><a href="#"> Name - Artist </a></li>
-                    <li><a href="#"> Name - Artist </a></li>
-                    <li><a href="#"> Name - Artist </a></li>
-                    <li><a href="#"> Name - Artist </a></li>
-                    <li><a href="#"> Name - Artist </a></li>
-                </ul>
-
-            </section>
-
-
-            <section class="col-50 my-friends">
-                <h6> My Friends </h6>
-
-            </section>
-
-
         </div>
 
 
