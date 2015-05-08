@@ -28,10 +28,19 @@
                 center: 'title',
                 right: 'month,agendaWeek,agendaDay'
             },
-            defaultDate: '2015-02-12',
+            
+            //defaultDate: 'today',
             editable: false,
-            eventLimit: true, // allow "more" link when too many events
-            events: '../controller/calendar.php'
+            eventLimit: false, // allow "more" link when too many events
+            eventColor: '#6C0D99',
+            eventSources: [
+
+                {
+                    url: '../controller/calendar.php',
+
+                }
+
+            ] 
         });
         
     });
