@@ -89,35 +89,14 @@
                                           
                                            
                                            <section class="answer-box"><span id="resultado">
-                                                <button onClick="acceptFriend(this.value)" value="<?php echo $friend->getIdUser();?>">Accept</button>
-                                                <button onClick="declineFriend(this.value)" value="<?php echo $friend->getIdUser();?>">Decline</button>
-                                                <a href="#" ><img src="../view/assets/images/icon-accept.png" alt="Accept Icon"></a>
-                                                 <a href="#"><img src="../view/assets/images/icon-decline.png" alt="Decline Icon"></a>
+                                                <button class="accept-button" onClick="acceptFriend(this.value)" value="<?php echo $friend->getIdUser();?>"></button>
+                                                <button class="decline-button" onClick="declineFriend(this.value)" value="<?php echo $friend->getIdUser();?>"></button>
                                             </span>
                                             </section>
 
                                 </section>
                                 <?php endforeach ?>
-                                   <section class="notification-box">
-                                     <a href="#"><img src="assets/images/profile.png" id="picture" alt="Profil Image"></a>
-                                        <p> Name <p>
-                                           <section class="answer-box">
-                                                <a href="#"><img src="assets/images/icon-accept.png" alt="Accept Icon"></a>
-                                                 <a href="#"><img src="assets/images/icon-decline.png" alt="Decline Icon"></a>
-                                            </section>
 
-                                </section>
-                                   <section class="notification-box">
-                                           <a href="#"><img src="assets/images/profile.png" id="picture" alt="Profil Image"></a>
-                                        <p> Name <p>
-                                           <section class="answer-box">
-                                                <a href="#"><img src="assets/images/icon-accept.png" alt="Accept Icon"></a>
-                                                 <a href="#"><img src="assets/images/icon-decline.png" alt="Decline Icon"></a>
-                                            </section>
-
-                                </section>
-
-  
                         </section>
 
 
@@ -138,30 +117,6 @@
 
                                 </section>
                                 <?php endforeach ?>
-                                   <section class="notification-box">
-                                          <a href="#"><img src="assets/images/profile.png" id="picture" alt="Profil Image"></a>
-                                           <p> Name <p>
-                                        <p> Place <p>
-                                        <p> Date <p>
-                                           <section class="answer-box">
-                                                <a href="#"><img src="assets/images/icon-accept.png" alt="Accept Icon"></a>
-                                                 <a href="#"><img src="assets/images/icon-decline.png" alt="Decline Icon"></a>
-                                            </section>
-
-                                </section>
-                                   <section class="notification-box">
-                                         <a href="#"><img src="assets/images/profile.png" id="picture" alt="Profil Image"></a>
-                                          <p> Name <p>
-                                        <p> Place <p>
-                                        <p> Date <p>
-                                           <section class="answer-box">
-                                                <a href="#"><img src="assets/images/icon-accept.png" alt="Accept Icon"></a>
-                                                 <a href="#"><img src="assets/images/icon-decline.png" alt="Decline Icon"></a>
-                                            </section>
-
-                                </section>
-
-
   
                         </section>
                 </div>
