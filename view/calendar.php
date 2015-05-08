@@ -29,65 +29,32 @@
                 right: 'month,agendaWeek,agendaDay'
             },
             defaultDate: '2015-02-12',
-            editable: true,
+            editable: false,
             eventLimit: true, // allow "more" link when too many events
-            events: [
-                {
-                    title: 'All Day Event',
-                    start: '2015-02-01',
-                    editable: false,
-                    url: 'http://www.google.com'
-                
-                }
-            ]
+            events: '../controller/calendar.php'
         });
         
     });
 
 </script>
 
-<style>
-
-    body {
-        margin: 40px 10px;
-        padding: 0;
-        font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
-        font-size: 14px;
-    }
-
-    #calendar {
-        max-width: 900px;
-        margin: 0 auto;
-    }
-
-</style>
+<?php include '../view/includes/menu.php'; ?>
 
 
+<div class="grid">
+    <section class="row">
+        <div class="panel">
+            <div id='calendar'></div>
+        </div>
+    </section>
 
-
-
-                <?php include '../view/includes/menu.php'; ?>
-
-
-
-
-
-
-
-            <div class="grid">
-                        <section class="row">
-
-                             <div id='calendar'></div>
-
-                        </section>
-
-                </div>
+</div>
 
                 
-                </div>
+            </div>
 
 
 
-                </body>
+        </body>
 
-                </html>
+    </html>
