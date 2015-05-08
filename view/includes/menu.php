@@ -93,6 +93,18 @@
                                     <div id="notificationContainer">
                                     <div id="notificationTitle">Notifications</div>
                                     <div id="notificationsBody" class="notifications">
+                                        <ul>
+                                            <li>Notification 1</li>
+
+                                            <li>Notification 2</li>
+
+                                            <li>Notification 3</li>
+
+                                            <li>Notification 4</li>
+
+                                            <li>Notification 5</li>
+
+                                        </ul>
                                     </div>
                                     <div id="notificationFooter"><a href="../controller/notifications.php">See All</a></div>
                                     </div>
