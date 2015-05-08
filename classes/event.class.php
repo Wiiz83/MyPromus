@@ -2,7 +2,7 @@
 /*author: Ferran Rovira 	mail:ferran294@gmail.com
 Event class that has the attributes of an Event and functions to set new values */
 
-include $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/getUserHelper.inc.php';
+include_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/getUserHelper.inc.php';
 
 class Event {
 	

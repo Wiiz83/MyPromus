@@ -92,7 +92,7 @@
                                         <a href="../controller/event.php?eventId=<?php echo $event->getIdEvent(); ?>"><img class="event-pic" src="<?php echo $event->getImage(); ?>" alt="Event picture"></a>
                                         <br/> <br/>
                                          <span class="event-name"> <?php echo $event->getName(); ?> </span>
-                                        <p><b>Owner: </b>LUCAS</p>
+                                        <p><b>Owner: </b> <?php echo ucfirst($event->getAdminName()); ?></p>
                                         <p><b>Date:</b> <?php echo $event->getDate(); ?>  <?php echo $event->getTime(); ?></p>
                                         <p><b>Place:</b> <?php echo $event->getPlace(); ?> </p>
 
@@ -135,7 +135,7 @@
                                         <a href="../controller/event.php?eventId=<?php echo $event->getIdEvent(); ?>"><img class="event-pic" src="<?php echo $event->getImage(); ?>" alt="Event picture"></a>
                                         <br/> <br/>
                                          <span class="event-name"> <?php echo $event->getName(); ?> </span>
-                                        <p><b>Owner: </b>LUCAS</p>
+                                        <p><b>Owner: </b><?php echo ucfirst($event->getAdminName()); ?></p>
                                         <p><b>Date:</b> <?php echo $event->getDate(); ?>  <?php echo $event->getTime(); ?></p>
                                         <p><b>Place:</b> <?php echo $event->getPlace(); ?> </p>
 
@@ -179,7 +179,7 @@
                                         <a href="../controller/event.php?eventId=<?php echo $event->getIdEvent(); ?>"><img class="event-pic" src="<?php echo $event->getImage(); ?>" alt="Event picture"></a>
                                         <br/> <br/>
                                          <span class="event-name"> <?php echo $event->getName(); ?> </span>
-                                        <p><b>Owner: </b>LUCAS</p>
+                                        <p><b>Owner: </b> <?php echo ucfirst($event->getAdminName()); ?></p>
                                         <p><b>Date:</b> <?php echo $event->getDate(); ?>  <?php echo $event->getTime(); ?></p>
                                         <p><b>Place:</b> <?php echo $event->getPlace(); ?> </p>
 
