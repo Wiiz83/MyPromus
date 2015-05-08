@@ -94,15 +94,49 @@
                                     <div id="notificationTitle">Notifications</div>
                                     <div id="notificationsBody" class="notifications">
                                         <ul>
-                                            <li>Notification 1</li>
+                                            <li>
 
-                                            <li>Notification 2</li>
+                                                <a href="#">
+                                                    <img src="../view/assets/images/icon-friends-active.png" alt="notification icon">
+                                                    <span> Ferran has invited you to his event. </span>
+                                                </a>
 
-                                            <li>Notification 3</li>
+                                            </li>
 
-                                            <li>Notification 4</li>
+                                            <li>
 
-                                            <li>Notification 5</li>
+                                                <a href="#">
+                                                    <img src="../view/assets/images/icon-friends-active.png" alt="notification icon">
+                                                    <span> Ferran has invited you to his event. </span>
+                                                </a>
+
+                                            </li>
+
+                                            <li>
+
+                                                <a href="#">
+                                                    <img src="../view/assets/images/icon-events-active.png" alt="notification icon">
+                                                    <span> Ferran has invited you to his event. </span>
+                                                </a>
+
+                                            </li>
+
+                                            <li>
+
+                                                <a href="#">
+                                                    <img src="../view/assets/images/icon-events-active.png" alt="notification icon">
+                                                    <span> Ferran has invited you to his event. </span>
+                                                </a>
+
+                                            </li>
+
+                                            <li>
+                                                <a href="#">
+                                                    <img src="../view/assets/images/icon-events-active.png" alt="notification icon">
+                                                    <span> Ferran has invited you to his event. </span>
+                                                </a>
+
+                                            </li>
 
                                         </ul>
                                     </div>
