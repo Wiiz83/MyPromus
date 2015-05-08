@@ -8,7 +8,23 @@ include_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/classes/user.class.php';
 
 $titlePage="Friends";
 $userId=$_SESSION['userId'];
+
+if(isset($_POST['friendId'])){
+
+	$friendId=$_POST['friendId'];
+	$isDone=deleteFriend($userId,$friendId);
+	if($isDone){
+		echo "Friend deleted";
+	}else{
+		echo "Error deleting";
+	}
+
+}
+
+
+
 $friends=getFriends($userId);	//Array of Users
+
 
 include $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/friends.php';
 

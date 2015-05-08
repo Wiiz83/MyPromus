@@ -9,6 +9,14 @@
             <aside class="col-20">
                 <img class="event-pic" src="<?php echo $event->getImage();?>" alt="Event picture">
 
+                <?php if($isAdmin): ?>
+                <form id="comment-form" action="../controller/delete-event.php" method="POST">
+                        
+                             <input type="hidden" name="eventId" value="<?php echo $event->getIdEvent();?>"> 
+                            <input class="comment-btn" type="submit" value="Delete">
+                </form>
+            <?php endif ?>
+
             </aside><!--
 
             --><section class="col-80 event-info">
