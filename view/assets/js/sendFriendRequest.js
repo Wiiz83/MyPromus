@@ -3,7 +3,7 @@ function sendFriendRequest(friendId){
                   var xmlhttp=new XMLHttpRequest();
                   xmlhttp.onreadystatechange = function() {
                   if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                    document.getElementById("resultado").innerHTML = xmlhttp.responseText;
+                    document.getElementById("friendId").innerHTML = xmlhttp.responseText;
                     
                   }
                   }

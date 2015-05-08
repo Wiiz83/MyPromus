@@ -27,7 +27,7 @@
 						<p><?php echo $user->getCity(); ?>, <?php echo $user->getCountry(); ?></p>
 
 						<?php if(!$user->getIsFriend()): ?>
-						<span id="resultado">
+						<span id="<?php echo $user->getIdUser();?>">
 						<button type="submit" class="btn" onClick="sendFriendRequest(this.value)" value="<?php echo $user->getIdUser();?>">Add</button>
 						</span>
 						<?php endif ?>
