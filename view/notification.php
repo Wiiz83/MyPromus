@@ -10,7 +10,7 @@
                   var xmlhttp=new XMLHttpRequest();
                   xmlhttp.onreadystatechange = function() {
                   if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                    document.getElementById("resultado").innerHTML = xmlhttp.responseText;
+                    document.getElementById(friendId).innerHTML = xmlhttp.responseText;
                     
                   }
                   }
@@ -26,7 +26,7 @@
                   var xmlhttp=new XMLHttpRequest();
                   xmlhttp.onreadystatechange = function() {
                   if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                    document.getElementById("resultado").innerHTML = xmlhttp.responseText;
+                    document.getElementById(friendId).innerHTML = xmlhttp.responseText;
                     
                   }
                   }
@@ -88,7 +88,7 @@
 
                                           
                                            
-                                           <section class="answer-box"><span id="resultado">
+                                           <section class="answer-box"><span id="<?php echo $friend->getIdUser();?>">
                                                 <button class="accept-button" onClick="acceptFriend(this.value)" value="<?php echo $friend->getIdUser();?>"></button>
                                                 <button class="decline-button" onClick="declineFriend(this.value)" value="<?php echo $friend->getIdUser();?>"></button>
                                             </span>
