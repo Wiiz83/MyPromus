@@ -29,7 +29,7 @@ function getFriendSuggestions($userId,$numberOfFriends){
 		$numberOfFriends=$rowsNumber;	//If in the database there are less events than asked, the number of
 	}	
 
-	echo($numberOfFriends);
+	
 	for($i=0;$i<$numberOfFriends;$i++){
 
 		$friendInfo=mysqli_fetch_assoc($result);
