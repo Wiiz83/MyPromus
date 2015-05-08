@@ -44,7 +44,7 @@
                   var xmlhttp=new XMLHttpRequest();
                   xmlhttp.onreadystatechange = function() {
                   if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                    document.getElementById("resultado").innerHTML = xmlhttp.responseText;
+                    document.getElementById(eventId).innerHTML = xmlhttp.responseText;
                     
                   }
                   }
@@ -60,7 +60,7 @@
                   var xmlhttp=new XMLHttpRequest();
                   xmlhttp.onreadystatechange = function() {
                   if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                    document.getElementById("resultado").innerHTML = xmlhttp.responseText;
+                    document.getElementById(eventId).innerHTML = xmlhttp.responseText;
                     
                   }
                   }
@@ -110,9 +110,11 @@
                                         <p>Name: <?php echo $event->getName(); ?><p>
                                         <p>Place: <?php echo $event->getPlace(); ?><p>
                                         <p>Date: <?php echo $event->getDate(); ?><p>
-                                           <section class="answer-box">
-                                                <button class="accept-button" onClick="acceptFriend(this.value)" value="<?php echo $friend->getIdUser();?>"></button>
-                                                <button class="decline-button" onClick="declineFriend(this.value)" value="<?php echo $friend->getIdUser();?>"></button>
+
+                                           <section class="answer-box"><span id="<?php echo $event->getIdEvent();?>">
+                                                <button class="accept-button" onClick="acceptEvent(this.value)" value="<?php echo $event->getIdEvent();?>"></button>
+                                                <button class="decline-button" onClick="declineEvent(this.value)" value="<?php echo $event->getIdEvent();?>"></button>
+                                            </span>
                                             </section>
 
                                 </section>
