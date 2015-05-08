@@ -111,8 +111,8 @@
                                         <p>Place: <?php echo $event->getPlace(); ?><p>
                                         <p>Date: <?php echo $event->getDate(); ?><p>
                                            <section class="answer-box">
-                                                <a href="#"><img src="assets/images/icon-accept.png" alt="Accept Icon"></a>
-                                                 <a href="#"><img src="assets/images/icon-decline.png" alt="Decline Icon"></a>
+                                                <button class="accept-button" onClick="acceptFriend(this.value)" value="<?php echo $friend->getIdUser();?>"></button>
+                                                <button class="decline-button" onClick="declineFriend(this.value)" value="<?php echo $friend->getIdUser();?>"></button>
                                             </section>
 
                                 </section>
