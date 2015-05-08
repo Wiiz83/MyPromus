@@ -34,9 +34,9 @@ if(!isset($_POST['submit'])){
 	$friends=parseFriends($friends);
 	$finalPath=null;	//Define to null the path to save the event image
 	require_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/imageEventUploader.inc.php'; //upload the image and takes the final path from there
-
+	
 	$eventId=createEvent($userId,$name,$date,$time,$place,$description,$friends,$finalPath);
-	echo($eventId);
+	
 	if($eventId!=false){
 		header("Location: ../controller/event.php?eventId=$eventId");
 	}else{

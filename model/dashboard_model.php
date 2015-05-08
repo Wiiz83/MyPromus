@@ -63,7 +63,7 @@ function getMyEvents($userId,$numberOfEvents){
 	$todayDate=date("Y-m-d");
 
 
-	$sql="SELECT * FROM event WHERE user_id='$userId' AND date>'$todayDate'";
+	$sql="SELECT * FROM event WHERE user_id='$userId' AND date>'$todayDate' ORDER BY date";
 	$result=mysqli_query($link,$sql) or die(mysqli_error($link));
 
 	$rowsNumber=mysqli_num_rows($result);

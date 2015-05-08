@@ -11,7 +11,9 @@ $titlePage="Events";
 $userId=$_SESSION['userId'];
 
 //Get the three next events
-$events=getNearestEvents($userId,6);
+$events=getNearestEvents($userId,20);
+$myEvents=getMyEvents($userId,20);
+$pastEvents=getPastEvents($userId,20);
 
 //code....
 include $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/events.php';

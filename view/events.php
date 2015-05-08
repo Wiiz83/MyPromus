@@ -83,90 +83,26 @@
                             <section class="col-100">
                                 <h6> Incoming Events </h6>
                                     <div id="incoming">
+                                      
+                                      <?php if(isset($events)): ?>
+
+                                      <?php foreach($events as $event): ?>
                                       <div class="item">
 
-                                        <a href=""><img class="event-pic" src="../view/assets/images/event-example.png" alt="Event picture"></a>
+                                        <a href="../controller/event.php?eventId=<?php echo $event->getIdEvent(); ?>"><img class="event-pic" src="<?php echo $event->getImage(); ?>" alt="Event picture"></a>
                                         <br/> <br/>
-                                         <span class="event-name"> YOLO PARTY </span>
+                                         <span class="event-name"> <?php echo $event->getName(); ?> </span>
                                         <p><b>Owner: </b>LUCAS</p>
-                                        <p><b>Date:</b> 17/07/1949</p>
-                                        <p><b>Place:</b> Cork </p>
-
-
+                                        <p><b>Date:</b> <?php echo $event->getDate(); ?>  <?php echo $event->getTime(); ?></p>
+                                        <p><b>Place:</b> <?php echo $event->getPlace(); ?> </p>
 
                                       </div>
-                                      <div class="item">
-                                        <a href=""><img class="event-pic" src="../view/assets/images/event-example.png" alt="Event picture"></a>
-                                        <br/> <br/>
-                                         <span class="event-name"> YOLO PARTY </span>
-                                        <p><b>Owner: </b>LUCAS</p>
-                                        <p><b>Date:</b> 17/07/1949</p>
-                                        <p><b>Place:</b> Cork </p>
-                                      </div>
-                                         <div class="item">
-                                        <a href=""><img class="event-pic" src="../view/assets/images/event-example.png" alt="Event picture"></a>
-                                        <br/> <br/>
-                                         <span class="event-name"> YOLO PARTY </span>
-                                        <p><b>Owner: </b>LUCAS</p>
-                                        <p><b>Date:</b> 17/07/1949</p>
-                                        <p><b>Place:</b> Cork </p>
-                                      </div>
-                                         <div class="item">
-                                        <a href=""><img class="event-pic" src="../view/assets/images/event-example.png" alt="Event picture"></a>
-                                        <br/> <br/>
-                                         <span class="event-name"> YOLO PARTY </span>
-                                        <p><b>Owner: </b>LUCAS</p>
-                                        <p><b>Date:</b> 17/07/1949</p>
-                                        <p><b>Place:</b> Cork </p>
-                                      </div>
-                                         <div class="item">
-                                        <a href=""><img class="event-pic" src="../view/assets/images/event-example.png" alt="Event picture"></a>
-                                        <br/> <br/>
-                                         <span class="event-name"> YOLO PARTY </span>
-                                        <p><b>Owner: </b>LUCAS</p>
-                                        <p><b>Date:</b> 17/07/1949</p>
-                                        <p><b>Place:</b> Cork </p>
-                                      </div>
-                                         <div class="item">
-                                        <a href=""><img class="event-pic" src="../view/assets/images/event-example.png" alt="Event picture"></a>
-                                        <br/> <br/>
-                                         <span class="event-name"> YOLO PARTY </span>
-                                        <p><b>Owner: </b>LUCAS</p>
-                                        <p><b>Date:</b> 17/07/1949</p>
-                                        <p><b>Place:</b> Cork </p>
-                                      </div>
-                                         <div class="item">
-                                        <a href=""><img class="event-pic" src="../view/assets/images/event-example.png" alt="Event picture"></a>
-                                        <br/> <br/>
-                                         <span class="event-name"> YOLO PARTY </span>
-                                        <p><b>Owner: </b>LUCAS</p>
-                                        <p><b>Date:</b> 17/07/1949</p>
-                                        <p><b>Place:</b> Cork </p>
-                                      </div>
-                                         <div class="item">
-                                        <a href=""><img class="event-pic" src="../view/assets/images/event-example.png" alt="Event picture"></a>
-                                        <br/> <br/>
-                                         <span class="event-name"> YOLO PARTY </span>
-                                        <p><b>Owner: </b>LUCAS</p>
-                                        <p><b>Date:</b> 17/07/1949</p>
-                                        <p><b>Place:</b> Cork </p>
-                                      </div>
-                                         <div class="item">
-                                        <a href=""><img class="event-pic" src="../view/assets/images/event-example.png" alt="Event picture"></a>
-                                        <br/> <br/>
-                                         <span class="event-name"> YOLO PARTY </span>
-                                        <p><b>Owner: </b>LUCAS</p>
-                                        <p><b>Date:</b> 17/07/1949</p>
-                                        <p><b>Place:</b> Cork </p>
-                                      </div>
-                                         <div class="item">
-                                        <a href=""><img class="event-pic" src="../view/assets/images/event-example.png" alt="Event picture"></a>
-                                        <br/> <br/>
-                                         <span class="event-name"> YOLO PARTY </span>
-                                        <p><b>Owner: </b>LUCAS</p>
-                                        <p><b>Date:</b> 17/07/1949</p>
-                                        <p><b>Place:</b> Cork </p>
-                                      </div>
+                                      
+                                      <?php endforeach ?>
+                                      <?php endif ?>
+
+                                      
+                                     
                                          <div class="item">
                                         <a href=""><img class="event-pic" src="../view/assets/images/event-example.png" alt="Event picture"></a>
                                         <br/> <br/>
@@ -187,91 +123,29 @@
 
                              <section class="col-100">
                                 <h6> Events You Created </h6>
+
                                    <div id="created">
+
+
+                                     <?php if(isset($myEvents)): ?>
+
+                                      <?php foreach($myEvents as $event): ?>
                                       <div class="item">
 
-                                        <a href=""><img class="event-pic" src="../view/assets/images/event-example.png" alt="Event picture"></a>
+                                        <a href="../controller/event.php?eventId=<?php echo $event->getIdEvent(); ?>"><img class="event-pic" src="<?php echo $event->getImage(); ?>" alt="Event picture"></a>
                                         <br/> <br/>
-                                         <span class="event-name"> YOLO PARTY </span>
+                                         <span class="event-name"> <?php echo $event->getName(); ?> </span>
                                         <p><b>Owner: </b>LUCAS</p>
-                                        <p><b>Date:</b> 17/07/1949</p>
-                                        <p><b>Place:</b> Cork </p>
-
-
+                                        <p><b>Date:</b> <?php echo $event->getDate(); ?>  <?php echo $event->getTime(); ?></p>
+                                        <p><b>Place:</b> <?php echo $event->getPlace(); ?> </p>
 
                                       </div>
-                                      <div class="item">
-                                        <a href=""><img class="event-pic" src="../view/assets/images/event-example.png" alt="Event picture"></a>
-                                        <br/> <br/>
-                                         <span class="event-name"> YOLO PARTY </span>
-                                        <p><b>Owner: </b>LUCAS</p>
-                                        <p><b>Date:</b> 17/07/1949</p>
-                                        <p><b>Place:</b> Cork </p>
-                                      </div>
-                                         <div class="item">
-                                        <a href=""><img class="event-pic" src="../view/assets/images/event-example.png" alt="Event picture"></a>
-                                        <br/> <br/>
-                                         <span class="event-name"> YOLO PARTY </span>
-                                        <p><b>Owner: </b>LUCAS</p>
-                                        <p><b>Date:</b> 17/07/1949</p>
-                                        <p><b>Place:</b> Cork </p>
-                                      </div>
-                                         <div class="item">
-                                        <a href=""><img class="event-pic" src="../view/assets/images/event-example.png" alt="Event picture"></a>
-                                        <br/> <br/>
-                                         <span class="event-name"> YOLO PARTY </span>
-                                        <p><b>Owner: </b>LUCAS</p>
-                                        <p><b>Date:</b> 17/07/1949</p>
-                                        <p><b>Place:</b> Cork </p>
-                                      </div>
-                                         <div class="item">
-                                        <a href=""><img class="event-pic" src="../view/assets/images/event-example.png" alt="Event picture"></a>
-                                        <br/> <br/>
-                                         <span class="event-name"> YOLO PARTY </span>
-                                        <p><b>Owner: </b>LUCAS</p>
-                                        <p><b>Date:</b> 17/07/1949</p>
-                                        <p><b>Place:</b> Cork </p>
-                                      </div>
-                                         <div class="item">
-                                        <a href=""><img class="event-pic" src="../view/assets/images/event-example.png" alt="Event picture"></a>
-                                        <br/> <br/>
-                                         <span class="event-name"> YOLO PARTY </span>
-                                        <p><b>Owner: </b>LUCAS</p>
-                                        <p><b>Date:</b> 17/07/1949</p>
-                                        <p><b>Place:</b> Cork </p>
-                                      </div>
-                                         <div class="item">
-                                        <a href=""><img class="event-pic" src="../view/assets/images/event-example.png" alt="Event picture"></a>
-                                        <br/> <br/>
-                                         <span class="event-name"> YOLO PARTY </span>
-                                        <p><b>Owner: </b>LUCAS</p>
-                                        <p><b>Date:</b> 17/07/1949</p>
-                                        <p><b>Place:</b> Cork </p>
-                                      </div>
-                                         <div class="item">
-                                        <a href=""><img class="event-pic" src="../view/assets/images/event-example.png" alt="Event picture"></a>
-                                        <br/> <br/>
-                                         <span class="event-name"> YOLO PARTY </span>
-                                        <p><b>Owner: </b>LUCAS</p>
-                                        <p><b>Date:</b> 17/07/1949</p>
-                                        <p><b>Place:</b> Cork </p>
-                                      </div>
-                                         <div class="item">
-                                        <a href=""><img class="event-pic" src="../view/assets/images/event-example.png" alt="Event picture"></a>
-                                        <br/> <br/>
-                                         <span class="event-name"> YOLO PARTY </span>
-                                        <p><b>Owner: </b>LUCAS</p>
-                                        <p><b>Date:</b> 17/07/1949</p>
-                                        <p><b>Place:</b> Cork </p>
-                                      </div>
-                                         <div class="item">
-                                        <a href=""><img class="event-pic" src="../view/assets/images/event-example.png" alt="Event picture"></a>
-                                        <br/> <br/>
-                                         <span class="event-name"> YOLO PARTY </span>
-                                        <p><b>Owner: </b>LUCAS</p>
-                                        <p><b>Date:</b> 17/07/1949</p>
-                                        <p><b>Place:</b> Cork </p>
-                                      </div>
+
+                                      <?php endforeach ?>
+                                      <?php endif ?>
+
+
+                                    
                                          <div class="item">
                                         <a href=""><img class="event-pic" src="../view/assets/images/event-example.png" alt="Event picture"></a>
                                         <br/> <br/>
@@ -295,90 +169,26 @@
                              <section class="col-100">
                                 <h6> Your Past Events </h6>
                                   <div id="past">
+
+
+                                       <?php if(isset($pastEvents)): ?>
+
+                                      <?php foreach($pastEvents as $event): ?>
                                       <div class="item">
 
-                                        <a href=""><img class="event-pic" src="../view/assets/images/event-example.png" alt="Event picture"></a>
+                                        <a href="../controller/event.php?eventId=<?php echo $event->getIdEvent(); ?>"><img class="event-pic" src="<?php echo $event->getImage(); ?>" alt="Event picture"></a>
                                         <br/> <br/>
-                                         <span class="event-name"> YOLO PARTY </span>
+                                         <span class="event-name"> <?php echo $event->getName(); ?> </span>
                                         <p><b>Owner: </b>LUCAS</p>
-                                        <p><b>Date:</b> 17/07/1949</p>
-                                        <p><b>Place:</b> Cork </p>
-
-
+                                        <p><b>Date:</b> <?php echo $event->getDate(); ?>  <?php echo $event->getTime(); ?></p>
+                                        <p><b>Place:</b> <?php echo $event->getPlace(); ?> </p>
 
                                       </div>
-                                      <div class="item">
-                                        <a href=""><img class="event-pic" src="../view/assets/images/event-example.png" alt="Event picture"></a>
-                                        <br/> <br/>
-                                         <span class="event-name"> YOLO PARTY </span>
-                                        <p><b>Owner: </b>LUCAS</p>
-                                        <p><b>Date:</b> 17/07/1949</p>
-                                        <p><b>Place:</b> Cork </p>
-                                      </div>
-                                         <div class="item">
-                                        <a href=""><img class="event-pic" src="../view/assets/images/event-example.png" alt="Event picture"></a>
-                                        <br/> <br/>
-                                         <span class="event-name"> YOLO PARTY </span>
-                                        <p><b>Owner: </b>LUCAS</p>
-                                        <p><b>Date:</b> 17/07/1949</p>
-                                        <p><b>Place:</b> Cork </p>
-                                      </div>
-                                         <div class="item">
-                                        <a href=""><img class="event-pic" src="../view/assets/images/event-example.png" alt="Event picture"></a>
-                                        <br/> <br/>
-                                         <span class="event-name"> YOLO PARTY </span>
-                                        <p><b>Owner: </b>LUCAS</p>
-                                        <p><b>Date:</b> 17/07/1949</p>
-                                        <p><b>Place:</b> Cork </p>
-                                      </div>
-                                         <div class="item">
-                                        <a href=""><img class="event-pic" src="../view/assets/images/event-example.png" alt="Event picture"></a>
-                                        <br/> <br/>
-                                         <span class="event-name"> YOLO PARTY </span>
-                                        <p><b>Owner: </b>LUCAS</p>
-                                        <p><b>Date:</b> 17/07/1949</p>
-                                        <p><b>Place:</b> Cork </p>
-                                      </div>
-                                         <div class="item">
-                                        <a href=""><img class="event-pic" src="../view/assets/images/event-example.png" alt="Event picture"></a>
-                                        <br/> <br/>
-                                         <span class="event-name"> YOLO PARTY </span>
-                                        <p><b>Owner: </b>LUCAS</p>
-                                        <p><b>Date:</b> 17/07/1949</p>
-                                        <p><b>Place:</b> Cork </p>
-                                      </div>
-                                         <div class="item">
-                                        <a href=""><img class="event-pic" src="../view/assets/images/event-example.png" alt="Event picture"></a>
-                                        <br/> <br/>
-                                         <span class="event-name"> YOLO PARTY </span>
-                                        <p><b>Owner: </b>LUCAS</p>
-                                        <p><b>Date:</b> 17/07/1949</p>
-                                        <p><b>Place:</b> Cork </p>
-                                      </div>
-                                         <div class="item">
-                                        <a href=""><img class="event-pic" src="../view/assets/images/event-example.png" alt="Event picture"></a>
-                                        <br/> <br/>
-                                         <span class="event-name"> YOLO PARTY </span>
-                                        <p><b>Owner: </b>LUCAS</p>
-                                        <p><b>Date:</b> 17/07/1949</p>
-                                        <p><b>Place:</b> Cork </p>
-                                      </div>
-                                         <div class="item">
-                                        <a href=""><img class="event-pic" src="../view/assets/images/event-example.png" alt="Event picture"></a>
-                                        <br/> <br/>
-                                         <span class="event-name"> YOLO PARTY </span>
-                                        <p><b>Owner: </b>LUCAS</p>
-                                        <p><b>Date:</b> 17/07/1949</p>
-                                        <p><b>Place:</b> Cork </p>
-                                      </div>
-                                         <div class="item">
-                                        <a href=""><img class="event-pic" src="../view/assets/images/event-example.png" alt="Event picture"></a>
-                                        <br/> <br/>
-                                         <span class="event-name"> YOLO PARTY </span>
-                                        <p><b>Owner: </b>LUCAS</p>
-                                        <p><b>Date:</b> 17/07/1949</p>
-                                        <p><b>Place:</b> Cork </p>
-                                      </div>
+
+                                      <?php endforeach ?>
+                                      <?php endif ?>
+
+
                                          <div class="item">
                                         <a href=""><img class="event-pic" src="../view/assets/images/event-example.png" alt="Event picture"></a>
                                         <br/> <br/>
