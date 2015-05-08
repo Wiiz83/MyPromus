@@ -24,6 +24,9 @@ if(isset($_POST['friendId'])){
 
 
 $friends=getFriends($userId);	//Array of Users
+$user=getUser($userId);  //get the User
+$city=$user->getCity();	 //get the city of the user
+$cityFriends=getCityFriends($userId,$city);	//Array of Users
 
 
 include $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/friends.php';

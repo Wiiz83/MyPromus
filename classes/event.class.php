@@ -2,9 +2,8 @@
 /*author: Ferran Rovira 	mail:ferran294@gmail.com
 Event class that has the attributes of an Event and functions to set new values */
 
-/*
-TO DO implementar los updates en cada metodo set
-*/
+include $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/getUserHelper.inc.php';
+
 class Event {
 	
 	private $idEvent;
@@ -59,6 +58,11 @@ class Event {
 
 	public function getImage(){
 		return $this->imageURL;
+	}
+
+	public function getAdminName(){
+		$user=getUser($this->idAdmin);
+		return $user->getUsername();
 	}
 
 	public function setName($newName){
