@@ -6,6 +6,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/myPromus/model/login_functions.php';	//inclu
 require $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/id_parser.inc.php';
 include $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/validatorHelper.inc.php';
 include $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/getUserHelper.inc.php';
+require 'vendor/autoload.php';
 
 
 $username=sanitizeInput($_POST['username']);
@@ -18,8 +19,22 @@ if(checkUser($username,$password)){
 	$_SESSION['logname']=$username;		//variable that identificates the user name in the session
 	$_SESSION['userId']=$userId;	//variable of the id of the user
 	$_SESSION['userImage']=getUserImage($userId);
+
+
+	$session = new SpotifyWebAPI\Session('730c01f53af44936a0cc51459f0cb0ea', 'e1fc633ca35141bdb6edca04632850e7', 'http://localhost/myPromus/controller/dashboard.php');
+	$scopes = array(
+	    'playlist-read-private',
+	    'playlist-modify-private',
+        'playlist-modify-public',
+	    'user-read-private'
+	);
+	$authorizeUrl = $session->getAuthorizeUrl(array(
+	    'scope' => $scopes
+	));
+	header('Location: ' . $authorizeUrl);
+	die();
 	
-	header("Location: dashboard.php");	//redirect to the dahsboard
+	//header("Location: dashboard.php");	//redirect to the dahsboard
 }else{
 	$errorlogin=true;
 	$output_error="No valid username or password";
