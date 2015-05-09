@@ -79,6 +79,7 @@
 
            
             <div class="grid">
+              <div class="panel">
                         <div class="row-main">
                             <section class="col-100">
                                 <h6> Incoming Events </h6>
@@ -210,7 +211,7 @@
 
                             </section>
 
-                
+                  </div>   
                 </div>
 
 

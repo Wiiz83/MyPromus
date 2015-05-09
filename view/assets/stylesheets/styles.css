@@ -1518,3 +1518,7 @@
 #notificationsBody li:last-child {
     border-bottom: 0;
 }
+
+.friend-notific {
+    height: 250px;
+}

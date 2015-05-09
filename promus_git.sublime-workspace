@@ -1,0 +1,231 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"sess",
+				"session_start"
+			],
+			[
+				"curre",
+				"currentEvent"
+			],
+			[
+				"acce",
+				"access_token"
+			],
+			[
+				"body",
+				"bodyString"
+			],
+			[
+				"p",
+				"playlist_name"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 305.0,
+		"selected_items":
+		[
+			[
+				"sftp",
+				"SFTP: Edit Server…"
+			],
+			[
+				"brow",
+				"SFTP: Browse Server…"
+			],
+			[
+				"sft",
+				"SFTP: Browse Server…"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/wamp/www/promus/model/callback.php",
+		"/C/wamp/www/promus/controller/callback.php",
+		"/C/Users/Billy/Documents/VPProjects/Tv.java",
+		"/C/Users/Billy/Documents/VPProjects/RemoteControl.java",
+		"/C/wamp/www/promus/controller/display_search.php",
+		"/C/wamp/www/promus/controller/authorize_search.php",
+		"/C/wamp/www/promus/View/search.html",
+		"/C/wamp/www/promus/Model/callback.php",
+		"/C/wamp/www/promus/Controller/callback.php",
+		"/C/wamp/www/promus/index.php",
+		"/C/wamp/www/promus/controller/search.html",
+		"/C/wamp/www/promus/callback.php",
+		"/C/wamp/www/index.php",
+		"/C/wamp/www/callback.php",
+		"/C/wamp/www/promus/vendor/jwilsson/spotify-web-api-php/src/Request.php",
+		"/C/wamp/bin/apache/apache2.4.9/bin/php.ini",
+		"/C/Users/Billy/Documents/VPProjects/SurroundSoundSystem.java",
+		"/C/Users/Billy/Documents/VPProjects/Person.java",
+		"/C/Users/Billy/Documents/VPProjects/Device.java",
+		"/C/Users/Billy/Documents/RemoteControl/RemoteControl.java",
+		"/C/Users/Billy/Documents/OOA/VehicleLoanValidator.java",
+		"/C/Users/Billy/Documents/OOA/PersonalLoanValidator.java",
+		"/C/Users/Billy/Documents/OOA/LoanApprovalHandler.java",
+		"/C/Users/Billy/Documents/OOA/HolidayLoanValidator.java",
+		"/C/Users/Billy/Documents/OOA/LoanApproval.java",
+		"/C/Users/Billy/Documents/OOA/public abstract class LoanApprovalHandler.java",
+		"/C/Users/Billy/Documents/OOA/HolidayLoanRename.java",
+		"/C/Users/Billy/Documents/OOA/HolidayLoanApproval.java",
+		"/C/Users/Billy/Documents/OOA/HolidayLoanValidator",
+		"/C/wamp/www/mypromus/mypromus/test.php",
+		"/C/wamp/www/mypromus/sftp-config.json",
+		"/C/users/billy/appdata/local/temp/sublime-sftp-browse-1429811460/promus/opt/lampp/htdocs/mypromus/receive_body.php",
+		"/C/users/billy/appdata/local/temp/sublime-sftp-browse-1429811427/promus/opt/lampp/htdocs/mypromus/receive_token.php",
+		"/C/users/billy/appdata/local/temp/sublime-sftp-browse-1429799259/promus/opt/lampp/htdocs/mypromus/web-api-auth-examples-master/authorization_code/app.js",
+		"/C/wamp/www/promus/sftp-config.json",
+		"/C/wamp/www/promus/sftp-config-alt2.json",
+		"/C/wamp/www/promus/sftp-config-alt.json",
+		"/C/Users/Billy/AppData/Roaming/Sublime Text 2/Packages/User/sftp_servers/promus",
+		"/C/users/billy/appdata/local/temp/sublime-sftp-browse-1429799497/promus/opt/lampp/htdocs/index.php",
+		"/C/users/billy/appdata/local/temp/sublime-sftp-browse-1429806017/promus/opt/lampp/htdocs/test.txt",
+		"/C/Users/Billy/Desktop/test.html",
+		"/C/users/billy/appdata/local/temp/sublime-sftp-browse-1429797701/promus/opt/lampp/htdocs/mypromus/index.php",
+		"/C/Users/Billy/Downloads/web-api-auth-examples-master/authorization_code/app.js",
+		"/C/users/billy/appdata/local/temp/sublime-sftp-browse-1429797242/promus/opt/lampp/htdocs/mypromus/web-api-auth-examples-master/authorization_code/app.js",
+		"/C/users/billy/appdata/local/temp/sublime-sftp-browse-1429734699/promus/etc/acpi/powerbtn.sh",
+		"/C/Users/Billy/Documents/promus/promus.sublime-project",
+		"/C/wamp/www/promus.git/classes/event.class.php",
+		"/C/wamp/www/promus/playlist.php",
+		"/C/wamp/www/promus/send_playlist.html",
+		"/C/Users/Billy/Documents/promus/playlist.php",
+		"/C/Users/Billy/Documents/promus/send_playlist.html",
+		"/C/Users/Billy/Documents/promus/api part"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"curl.cai",
+			"print",
+			"throw"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.sftp":
+	{
+		"height": 128.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 206.0,
+	"status_bar_visible": true
+}

@@ -76,8 +76,9 @@
 
 
                 <div class="grid">
+                  <div class="panel">
                         <h3> Friend Notifications </h3>
-                        <section class="row">
+                        <section class="row friend-notific">
                                 
                                 <?php if(isset($friendRequests)): ?>
                                   <?php foreach($friendRequests as $friend): ?>
@@ -127,8 +128,8 @@
                         </section>
                 </div>
 
-
-                                </div>
+              </div>
+          </div>
         </body>
 
 </html>
