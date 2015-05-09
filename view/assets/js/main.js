@@ -46,4 +46,7 @@ function clearFriends() {
 
 }
 
+function enableArea() {
+	document.getElementById( "invited" ).disabled = false;
+}
 
