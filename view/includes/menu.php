@@ -34,13 +34,6 @@
           $("#notificationContainer").hide();
     });
 
-    //Popup on click
-    $("#notificationContainer").click(function()
-    {
-
-
-          return false;
-    });
 
    
 
@@ -57,13 +50,6 @@
     {
           $("#settingsContainer").hide();
     });
-
-    //Popup on click
-    $("#settingsContainer").click(function()
-    {
-          return false;
-    });
-
  
 
  });  
@@ -123,7 +109,7 @@
 
                                             <li>
 
-                                                <a href="#">
+                                                <a href="http://www.google.com">
                                                     <img src="../view/assets/images/icon-events-active.png" alt="notification icon">
                                                     <span> Ferran has invited you to his event. </span>
                                                 </a>
@@ -149,6 +135,7 @@
                         
                                     <a id="settings" href="#"><img src="../view/assets/images/settings.png"></a>
 
+
                                     <div id="settingsContainer">
                                     <div id="settingsTitle">Settings</div>
                                     <div id="settingsBody" class="settings">
@@ -170,7 +157,7 @@
                                 </li>
 
                                 <li>
-                                    <a href="../controller/profile.php"><img src="<?php echo $_SESSION['userImage']; ?>"</a>
+                                    <a href="../controller/profile.php"><img src="<?php echo $_SESSION['userImage']; ?>"></a>
                                 </li>
 
                             </ul>
