@@ -10,6 +10,10 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/classes/event.class.php';
 $titlePage="Dashboard";
 $userId=$_SESSION['userId'];
 
+if(isset($_GET['code'])){
+	$_SESSION['token']=$_GET['code'];
+}
+
 //Get the three next events
 $events=getNearestEvents($userId,6);
 $myEvents=getMyEvents($userId,6);

@@ -5,6 +5,7 @@ Model functions to create,modify or delete event*/
 require $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/db_connection.inc.php';	//Database connections
 require $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/id_parser.inc.php';
 require $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/getUserHelper.inc.php';
+require $_SERVER['DOCUMENT_ROOT'].'/myPromus/vendor/autoload.php';
 
 //Create an event and insert it in the database
 function createEvent($userAdmin,$name,$date,$time,$place,$description,$friends,$imageURL){
@@ -45,6 +46,9 @@ function createEvent($userAdmin,$name,$date,$time,$place,$description,$friends,$
 					mysqli_query($link,$sql) or die(mysqli_error($link));
 				}
 			}
+
+			createPlaylist($name,$eventId);
+
 			return $eventId;
 		
 		}
@@ -123,6 +127,37 @@ function checkPlaylist($eventId){
 	}
 
 
+}
+
+function savePlaylist($eventId, $spotify_playlist_id){
+
+	global $link;
+
+	$sql="INSERT INTO playlist(event_id, spotify_playlist_id) VALUES('$event_id','$spotify_playlist_id')";
+	mysqli_query($link,$sql) or die(mysqli_error($link));
+
+}
+
+function createPlaylist($partyName,$eventId){
+
+		//cuidao en esta session
+		$session = new SpotifyWebAPI\Session('730c01f53af44936a0cc51459f0cb0ea', 'e1fc633ca35141bdb6edca04632850e7', 'http://localhost/promus/controller/event_model.php');
+		$api = new SpotifyWebAPI\SpotifyWebAPI();
+
+		// Request a access token using the code from Spotify
+		$session->requestAccessToken($_SESSION['token']);
+
+		$accessToken = $session->getAccessToken();
+
+		// Set the access token on the API wrapper
+		$api->setAccessToken($accessToken);
+
+		$user = $api->me();
+		$userInfo = json_decode(json_encode($user), true);
+
+		$playlist = json_decode(json_encode($api->createUserPlaylist($userInfo['id'], array('name' => $partyName.'\'s playlist'))), true);
+
+	    savePlaylist($eventId, $playlist['id']);
 }
 
 

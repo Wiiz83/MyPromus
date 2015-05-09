@@ -35,7 +35,6 @@ function inviteFriend() {
 		document.getElementById("already-added").innerHTML = friend + " is already in the list.";
 	}
 
-	return false;
 	
 }
 
@@ -43,7 +42,5 @@ function clearFriends() {
 	document.getElementById( "invited" ).value = "";
 	document.getElementById("already-added").innerHTML = "";
 	added = [];
-
-	return false;
 
 }

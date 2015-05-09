@@ -2,8 +2,8 @@
 /*Author:Ferran Rovira 	mail:ferran294@gmail.com
 This code connects to the database and select the database we are going to use
 */
-
-$link=mysqli_connect('localhost','root','');
+												//mypromusyoroot
+$link=mysqli_connect('localhost','root','');	//Pengouin4
 
 if(!$link){
 	$output_error="Unable to connect to the database server";
