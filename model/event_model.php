@@ -39,7 +39,7 @@ function createEvent($userAdmin,$name,$date,$time,$place,$description,$friends,$
 		
 		}else{
 			//Insert the friends that are invited into the event request table
-			if(isset($friends)){
+			if(is_array($friends)){
 				foreach ($friends as $friend) {
 					$friendId=getUserId($friend);
 					$sql="INSERT INTO event_request (user_id,friend_id,event_id,date) VALUES ('$userAdmin','$friendId','$eventId','$dateToday')";
@@ -47,7 +47,7 @@ function createEvent($userAdmin,$name,$date,$time,$place,$description,$friends,$
 				}
 			}
 
-			//createPlaylist($name,$eventId);
+			createPlaylist($name,$eventId);
 
 			return $eventId;
 		
@@ -133,23 +133,25 @@ function savePlaylist($eventId, $spotify_playlist_id){
 
 	global $link;
 
-	$sql="INSERT INTO playlist(event_id, spotify_playlist_id) VALUES('$event_id','$spotify_playlist_id')";
+	$sql="INSERT INTO playlist(event_id, spotify_playlist_id) VALUES('$eventId','$spotify_playlist_id')";
 	mysqli_query($link,$sql) or die(mysqli_error($link));
 
 }
 
 function createPlaylist($partyName,$eventId){
 
-		//cuidao en esta session
-		$session = new SpotifyWebAPI\Session('730c01f53af44936a0cc51459f0cb0ea', 'e1fc633ca35141bdb6edca04632850e7', 'http://localhost/promus/controller/event_model.php');
+
+		$session = new SpotifyWebAPI\Session('730c01f53af44936a0cc51459f0cb0ea', 'e1fc633ca35141bdb6edca04632850e7', '');
 		$api = new SpotifyWebAPI\SpotifyWebAPI();
 
-		// Request a access token using the code from Spotify
-		$session->requestAccessToken($_SESSION['token']);
+		$refreshToken = $_SESSION['refreshToken'];
+
+		$session->setRefreshToken($refreshToken);
+		$session->refreshAccessToken();
 
 		$accessToken = $session->getAccessToken();
 
-		// Set the access token on the API wrapper
+		// Set the new access token on the API wrapper
 		$api->setAccessToken($accessToken);
 
 		$user = $api->me();
