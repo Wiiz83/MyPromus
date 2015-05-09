@@ -47,7 +47,7 @@ function createEvent($userAdmin,$name,$date,$time,$place,$description,$friends,$
 				}
 			}
 
-			createPlaylist($name,$eventId);
+			//createPlaylist($name,$eventId);
 
 			return $eventId;
 		

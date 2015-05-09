@@ -36,16 +36,16 @@ if(!isset($_POST['submit'])){
 	require_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/imageEventUploader.inc.php'; //upload the image and takes the final path from there
 	
 
-	echo "$name";
-	print_r($friends);
-	
+	//echo "$name";
+	//print_r($friends);
+
 	$eventId=createEvent($userId,$name,$date,$time,$place,$description,$friends,$finalPath);
 	
 
 	
 
 	if($eventId!=false){
-		//header("Location: ../controller/event.php?eventId=$eventId");
+		header("Location: ../controller/event.php?eventId=$eventId");
 	}else{
 		$errorMessage="An error ocurred when trying to insert the user in the database";
 		include $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/error_output.php';
