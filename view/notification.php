@@ -79,23 +79,25 @@
                         <h3> Friend Notifications </h3>
                         <section class="row">
                                 
-                                <?php foreach($friendRequests as $friend): ?>
-                                <section class="notification-box">
+                                <?php if(isset($friendRequests)): ?>
+                                  <?php foreach($friendRequests as $friend): ?>
+                                  <section class="notification-box">
 
-                                        <a href="#"><img src="<?php echo $friend->getImage();?>" id="picture" alt="Profil Image" width="100px" height="100px"></a>
-                                        <p> Name: <?php echo $friend->getUsername();?> <p>
-                                          
+                                          <a href="../controller/profile.php?userId=<?php echo $friend->getIdUser();?>"><img src="<?php echo $friend->getImage();?>" id="picture" alt="Profil Image" width="100px" height="100px"></a>
+                                          <p> Name: <?php echo $friend->getUsername();?> <p>
+                                            
 
-                                          
-                                           
-                                           <section class="answer-box"><span id="<?php echo $friend->getIdUser();?>">
-                                                <button class="accept-button" onClick="acceptFriend(this.value)" value="<?php echo $friend->getIdUser();?>"></button>
-                                                <button class="decline-button" onClick="declineFriend(this.value)" value="<?php echo $friend->getIdUser();?>"></button>
-                                            </span>
-                                            </section>
+                                            
+                                             
+                                             <section class="answer-box"><span id="<?php echo $friend->getIdUser();?>">
+                                                  <button class="accept-button" onClick="acceptFriend(this.value)" value="<?php echo $friend->getIdUser();?>"></button>
+                                                  <button class="decline-button" onClick="declineFriend(this.value)" value="<?php echo $friend->getIdUser();?>"></button>
+                                              </span>
+                                              </section>
 
-                                </section>
-                                <?php endforeach ?>
+                                  </section>
+                                  <?php endforeach ?>
+                                <?php endif ?>
 
                         </section>
 
@@ -104,9 +106,10 @@
                          <h3> Event Notifications </h3>
                         <section class="row">
 
-                               <?php foreach($eventRequests as $event): ?>
-                             <section class="notification-box">
-                                        <a href="#"><img src="<?php echo $event->getImage(); ?>" id="picture" alt="Profil Image"></a>
+                              <?php if(isset($eventRequests)): ?>
+                                <?php foreach($eventRequests as $event): ?>
+                                <section class="notification-box">
+                                        <a href="../controller/event.php?eventId=<?php echo $event->getIdEvent();?>"><img src="<?php echo $event->getImage(); ?>" id="picture" alt="Profil Image"></a>
                                         <p>Name: <?php echo $event->getName(); ?><p>
                                         <p>Place: <?php echo $event->getPlace(); ?><p>
                                         <p>Date: <?php echo $event->getDate(); ?><p>
@@ -119,6 +122,7 @@
 
                                 </section>
                                 <?php endforeach ?>
+                              <?php endif ?>
   
                         </section>
                 </div>

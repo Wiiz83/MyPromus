@@ -119,6 +119,30 @@ function getCityFriends($userId,$city){
 
 
 
+//Get the friends of a user from the same country
+//Get the friends of a user from the same city
+
+function getCountryFriends($userId,$country){
+	global $link;
+
+	$sql="SELECT user.*
+	FROM friend INNER JOIN user ON friend.user_id=user.id 
+	WHERE friend.id='$userId' AND user.country='$country'";
+
+	$result=mysqli_query($link,$sql) or die(mysqli_error($link));
+
+	while($friendInfo=mysqli_fetch_assoc($result)){
+		$friends[]=new User($friendInfo['id'],$friendInfo['username'],$friendInfo['country'],$friendInfo['city'],$friendInfo['email'],$friendInfo['image_url']);
+
+	}
+
+	if(isset($friends)){
+		return $friends;
+	}else{
+		return null;		//If there is any event return null,need to be handled 
+	}
+}
+
 
 
 
