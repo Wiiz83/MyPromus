@@ -43,4 +43,10 @@ function clearFriends() {
 	document.getElementById("already-added").innerHTML = "";
 	added = [];
 
+
 }
+
+
+
+}
+
