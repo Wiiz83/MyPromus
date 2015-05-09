@@ -42,7 +42,7 @@
         <div class="row-main">
             
             <section class="col-50">
-                <section>
+                <section class="playlist">
                     <h6> Playlist </h6>
                     <ul class="scroll-list">
                         <li><a href="#"> Name - Artist </a></li>
@@ -67,6 +67,60 @@
                         <li><a href="#"> Name - Artist </a></li>
                         <li><a href="#"> Name - Artist </a></li>
                     </ul>
+
+                    <form>
+                        <input type="text" name="search-song" placeholder="Search a song.">
+                        <input type="submit" class="btn btn-small" name="submit-search" value="Search">
+                    </form>
+
+                    <section class="song-result">
+                        <ul class="scroll-list">
+                            <li>
+                                <div>
+                                    <img src="../view/assets/images/profile.png" alt="album-picture">
+                                    <span>Name here</span> -
+                                    <span>Author here</span>
+                                </div>
+
+                                
+                                <button type="submit" class="btn-add">Add</button>
+                                
+                            </li>
+
+                            <li>
+                                <div>
+                                    <img src="../view/assets/images/profile.png" alt="album-picture">
+                                    <span>Name here</span> -
+                                    <span>Author here</span>
+                                </div>
+
+                                
+                                <button type="submit" class="btn-add">Add</button>
+                            </li>
+
+                            <li>
+                                <div>
+                                    <img src="../view/assets/images/profile.png" alt="album-picture">
+                                    <span>Name here</span> -
+                                    <span>Author here</span>
+                                </div>
+
+                                
+                                <button type="submit" class="btn-add">Add</button>
+                            </li>
+
+                            <li>
+                                <div>
+                                    <img src="../view/assets/images/profile.png" alt="album-picture">
+                                    <span>Name here</span> -
+                                    <span>Author here</span>
+                                </div>
+
+                                
+                                <button type="submit" class="btn-add">Add</button>
+                            </li>
+                        <ul>
+                    </section>
 
                 </section>
                 <br>
