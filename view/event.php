@@ -1,5 +1,7 @@
     <?php include '../view/includes/header.php'; ?>
     <?php include '../view/includes/menu.php'; ?>
+    <script src="../view/assets/js/main.js"></script> 
+
 
     <div class="grid">
         
@@ -184,6 +186,19 @@
                             <textarea placeholder="Comment" name="comment"></textarea>
                              <input type="hidden" name="eventId" value="<?php echo $event->getIdEvent();?>"> 
                             <input class="comment-btn" type="submit" value="Leave Comment">
+                    </form>
+                </div>
+
+                <h6>Invite your friends</h6>
+                <div class="panel">
+                    <form action="#" class="invite-form">
+                        <select id="friends-list" name="friend">
+                            <option value="ferran">Ferran</option>
+                            <option value="lucas">Lucas</option>
+                            <option value="david">David</option>
+                        </select>
+
+                        <input class="btn-add" type="submit" name="invite" onclick="deleteFriend()"value="Invite">
                     </form>
                 </div>
             

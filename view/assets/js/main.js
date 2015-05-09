@@ -6,7 +6,7 @@ function clearFields() {
 
 function stringInAdded( string ) {
 	for ( var i = 0; i < added.length; i++ ) {
-		if ( string.localeCompare( added[ i ]) == 0 ) {
+		if ( string.localeCompare( added[ i ] ) == 0 ) {
 			return true;
 		}
 	}
@@ -50,3 +50,9 @@ function enableArea() {
 	document.getElementById( "invited" ).disabled = false;
 }
 
+function deleteFriend() {
+	var index = document.getElementById( "friends-list" ).options.selectedIndex;
+	document.getElementById( "friends-list" ).remove( index );
+
+	
+}
