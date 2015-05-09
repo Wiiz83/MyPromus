@@ -77,7 +77,7 @@
 
                 <div class="grid">
                   <div class="panel">
-                        <h3> Friend Notifications </h3>
+                        <h6> Friend Notifications </h6>
                         <section class="row friend-notific">
                                 
                                 <?php if(isset($friendRequests)): ?>
@@ -104,7 +104,7 @@
 
 
 
-                         <h3> Event Notifications </h3>
+                         <h6> Event Notifications </h6>
                         <section class="row">
 
                               <?php if(isset($eventRequests)): ?>

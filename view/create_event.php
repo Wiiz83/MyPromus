@@ -11,8 +11,8 @@
 
                     <section class="row">  
                         <div class="panel">
-                            <h3> Event information </h3>
-                            <form action="../controller/create-event.php" method="POST" class="create-event-form" enctype="multipart/form-data">
+                            <h6> Event information </h6>
+                            <form onSubmit="enableArea()" action="../controller/create-event.php" method="POST" class="create-event-form" enctype="multipart/form-data">
                                 <fieldset class="info-group">
                                     
                                     <section class="col-1-2">
@@ -73,8 +73,8 @@
                                                 <?php endforeach ?>
                                             </select>
 
-                                            <button class="btn btn-small" >Invite</button> 
-                                            <button class="btn btn-small" >Clear</button>
+                                            <button class="btn btn-small" type="button" onClick="inviteFriend()">Invite</button> 
+                                            <button class="btn btn-small" type="button" onClick="clearFriends()">Clear</button>
                                             <p id="already-added"> </p>
                                             <br>
                                         
@@ -83,7 +83,7 @@
                                     <label>
                                         Invited
 
-                                        <textarea id="invited" name="invited" enabled></textarea>
+                                        <textarea id="invited" name="invited" disabled></textarea>
 
                                     </label>
 

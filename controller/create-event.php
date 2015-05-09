@@ -36,9 +36,8 @@ if(!isset($_POST['submit'])){
 	require_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/imageEventUploader.inc.php'; //upload the image and takes the final path from there
 	
 
-	//echo "$name";
-	//print_r($friends);
 
+	
 	$eventId=createEvent($userId,$name,$date,$time,$place,$description,$friends,$finalPath);
 	
 
