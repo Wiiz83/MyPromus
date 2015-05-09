@@ -11,7 +11,7 @@
 
                     <section class="row">  
                         <div class="panel">
-                            <h3> Event information </h3>
+                            <h6> Event information </h6>
                             <form onSubmit="enableArea()" action="../controller/create-event.php" method="POST" class="create-event-form" enctype="multipart/form-data">
                                 <fieldset class="info-group">
                                     
