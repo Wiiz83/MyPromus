@@ -6,7 +6,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/myPromus/model/login_functions.php';	//inclu
 require $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/id_parser.inc.php';
 include $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/validatorHelper.inc.php';
 include $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/getUserHelper.inc.php';
-require 'vendor/autoload.php';
+require $_SERVER['DOCUMENT_ROOT'].'/myPromus/vendor/autoload.php';
 
 
 $username=sanitizeInput($_POST['username']);

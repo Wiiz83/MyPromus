@@ -7,7 +7,7 @@ require $_SERVER['DOCUMENT_ROOT'].'/myPromus/model/signup_functions.php';	//incl
 require $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/validatorHelper.inc.php';
 require $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/getUserHelper.inc.php';
 require $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/id_parser.inc.php';
-
+require $_SERVER['DOCUMENT_ROOT'].'/myPromus/vendor/autoload.php';
 
 
 //The data should be validated in the client side
@@ -37,7 +37,19 @@ if(!checkUsername($username)){
 		$_SESSION['logname']=$username;
 		$_SESSION['firstLogin']=true;	//this is to show a welcome message for the first login in the dashboard
 		$_SESSION['userImage']=getUserImage($userId);
-		header("Location: dashboard.php");
+
+		$session = new SpotifyWebAPI\Session('730c01f53af44936a0cc51459f0cb0ea', 'e1fc633ca35141bdb6edca04632850e7', 'http://localhost/myPromus/controller/dashboard.php');
+		$scopes = array(
+	    'playlist-read-private',
+	    'playlist-modify-private',
+        'playlist-modify-public',
+	    'user-read-private'
+		);
+		$authorizeUrl = $session->getAuthorizeUrl(array('scope' => $scopes));
+		header('Location: ' . $authorizeUrl);
+		die();
+
+		//header("Location: dashboard.php");
 	}else{
 
 		$errorMessage="An error ocurred when trying to insert the user in the database";
