@@ -189,7 +189,7 @@
                     </form>
                 </div>
 
-                <h6>Invite your friends</h6>
+                <h6 style="margin-top: 5%;">Invite your friends</h6>
                 <div class="panel">
                     <form action="#" class="invite-form">
                         <select id="friends-list" name="friend">
