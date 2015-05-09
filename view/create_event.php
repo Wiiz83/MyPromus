@@ -73,8 +73,8 @@
                                                 <?php endforeach ?>
                                             </select>
 
-                                            <button class="btn btn-small" onClick="return inviteFriend()">Invite</button> 
-                                            <button class="btn btn-small" onClick="return clearFriends()">Clear</button>
+                                            <button class="btn btn-small" onClick="inviteFriend()">Invite</button> 
+                                            <button class="btn btn-small" onClick="clearFriends()">Clear</button>
                                             <p id="already-added"> </p>
                                             <br>
                                         
