@@ -6,7 +6,7 @@
 
 
 
-                <div class="grid" onload="clearFields()">
+                <div class="grid">
                     
 
                     <section class="row">  
@@ -73,8 +73,8 @@
                                                 <?php endforeach ?>
                                             </select>
 
-                                            <button class="btn btn-small" onClick="return inviteFriend()">Invite</button> 
-                                            <button class="btn btn-small" onClick="return clearFriends()">Clear</button>
+                                            <button class="btn btn-small" >Invite</button> 
+                                            <button class="btn btn-small" >Clear</button>
                                             <p id="already-added"> </p>
                                             <br>
                                         
@@ -89,7 +89,7 @@
 
                                 </fieldset> 
 
-                                <input class="btn btn-create" type="submit" value="Create">
+                                <input class="btn btn-create" type="submit" name="submit" value="Create">
 
                             </form>
 
