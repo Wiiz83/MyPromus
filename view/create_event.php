@@ -63,22 +63,22 @@
                                     </label>
 
 
-                                    <label>
-                                        Friends
+                                        <label>
+                                            Friends
 
-                                        <select id="friends-list" name="friends">
-                                            
-                                            <?php foreach($friends as $friend): ?>
-                                            <option><?php echo $friend->getUsername();?></option>
-                                            <?php endforeach ?>
-                                        </select>
+                                            <select id="friends-list" name="friends">
+                                                
+                                                <?php foreach($friends as $friend): ?>
+                                                <option><?php echo $friend->getUsername();?></option>
+                                                <?php endforeach ?>
+                                            </select>
 
-                                        <button class="btn btn-small" onClick="inviteFriend()">Invite</button> 
-                                        <button class="btn btn-small" onClick="clearFriends()">Clear</button>
-                                        <p id="already-added"> </p>
-                                        <br>
-                                    
-                                    </label>
+                                            <button class="btn btn-small" onClick="return inviteFriend()">Invite</button> 
+                                            <button class="btn btn-small" onClick="return clearFriends()">Clear</button>
+                                            <p id="already-added"> </p>
+                                            <br>
+                                        
+                                        </label>
 
                                     <label>
                                         Invited
@@ -89,7 +89,7 @@
 
                                 </fieldset> 
 
-                                <input class="btn btn-create" type="submit" name="submit" value="Create">
+                                <input class="btn btn-create" type="submit" value="Create">
 
                             </form>
 
