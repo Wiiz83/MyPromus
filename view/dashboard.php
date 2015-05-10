@@ -103,7 +103,7 @@ $(document).ready(function() {
         </ul>
         <ul class="pgwSlideshow">
             <?php foreach($events as $event): ?>
-                <li><img src="<?php echo $event->getImage(); ?>" alt="<?php echo $event->getPlace(),', ',$event->getDate(),' at ',$event->getTime(); ?>"></li>   
+                <li><img src="<?php echo $event->getImage(); ?>" alt="<?php echo $event->getPlace(); ?>"  data-description="<?php echo $event->getDate(),' at ',$event->getTime(); ?>"></li>
             <?php endforeach ?>     
         </ul>
     </div>
