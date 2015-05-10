@@ -1297,7 +1297,11 @@ li.active a,li.active a:hover {
 }
 .pgwSlideshow::after {
     content:"";
-    background:url(../images/event-example.png) no-repeat;
+    
+    <?php foreach($events as $event): ?>
+    background:url('<?php echo $event->getImage(); ?>') no-repeat; 
+    <?php endforeach ?>  
+
     background-position:center center;
     background-size:cover;
     opacity:0.5;

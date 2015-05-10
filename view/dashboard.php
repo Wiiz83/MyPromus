@@ -89,10 +89,9 @@ $(document).ready(function() {
         <h6>Your Events Summary</h6>
         <ul id="event-info">
             <li id="title">
-            <a href="">
-            <p>
-                Display the event's name.
-            </p>
+                <?php foreach($events as $event): ?>
+            <a href="../controller/event.php?eventId=<?php echo $event->getIdEvent(); ?>">
+            <p><?php echo $event->getName(); ?></p>
             </a>
             </li>
             <li id="playlist">
@@ -102,7 +101,6 @@ $(document).ready(function() {
             </li>
         </ul>
         <ul class="pgwSlideshow">
-            <?php foreach($events as $event): ?>
                 <li><img src="<?php echo $event->getImage(); ?>" alt="<?php echo $event->getPlace(); ?>"  data-description="<?php echo $event->getDate(),' at ',$event->getTime(); ?>"></li>
             <?php endforeach ?>     
         </ul>
