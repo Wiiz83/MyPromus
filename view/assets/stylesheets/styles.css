@@ -1002,6 +1002,11 @@ b {
     border-right:0;
     border-bottom:1px solid #888;
 }
+
+.playlist iframe {
+    display: block;
+    margin: 1% auto;
+}
 .playlist .btn {
     width:22%;
 }
