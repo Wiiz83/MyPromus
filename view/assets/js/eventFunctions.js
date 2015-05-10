@@ -44,13 +44,11 @@ function searchSong(){
                 		newContent+='<span>'+responseObject.tracks.items[i].name+' -<span>';
                 		newContent+='<span> '+responseObject.tracks.items[i].artists[0].name+'<span>';
                 		newContent+='</div>';
-                		newContent+='<button type="submit" class="btn-add" onClick="addSong(this.value)" value="'+responseObject.tracks.items[i].id +'"">Add</button>';
+                		newContent+='<button type="submit" id="buttonSong" class="btn-add" onClick="addSong(this.value)" value="'+responseObject.tracks.items[i].id +'"">Add</button>';
                 		newContent+='</li>';
                 	}
 					
-					//newContent+='<div><li>';
-					//newContent+='<img src="'+responseObject.tracks.items[1].album.images[2].url+'"/>';
-					//newContent+='</li></div>';
+				
 
 
                   	document.getElementById("yeah").innerHTML =newContent;
@@ -63,4 +61,18 @@ function searchSong(){
                 xmlhttp.send("songName="+song);
                 
 
+}
+
+function addSong(songId){
+				var xmlhttp=new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                  document.getElementById("buttonSong").innerHTML = xmlhttp.responseText;
+                    
+                  }
+                  }
+
+                  xmlhttp.open("POST","../controller/event.php",true);
+                  xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+                  xmlhttp.send("songId="+songId);
 }

@@ -45,6 +45,15 @@ if(isset($_POST['comment'])){
 	echo "$result";
 
 
+}else if(isset($_POST['songId'])){
+
+	
+	$songId=$_POST['songId'];
+	$eventId=$_SESSION['currentEvent'];
+	$playlistId=getPlaylistId($eventId);
+	addSong($playlistId,$songId);
+	echo "Done";
+
 }else if(isset($_GET['eventId'])){
 
 	$userId=$_SESSION['userId'];
