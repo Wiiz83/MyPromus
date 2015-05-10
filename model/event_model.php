@@ -253,7 +253,7 @@ function addSong($playlistId, $songId)
 	$user = $api->me();
 	$userInfo = json_decode(json_encode($user), true);
 
-	$api->addUserPlaylistTracks($user['id'], $playlistId, array($songId));
+	$api->addUserPlaylistTracks($userInfo['id'], $playlistId, array($songId));
 }
 
 function getEventPlaylistURI()

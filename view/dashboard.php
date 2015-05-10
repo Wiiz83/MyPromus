@@ -14,7 +14,7 @@ $(document).ready(function() {
             <li id="title">
             <a href="">
             <p>
-                YOLO PARTY
+                $event->getname();
             </p>
             </a>
             </li>
@@ -29,7 +29,6 @@ $(document).ready(function() {
             </li>
             <li><img src="../view/assets/images/event-example.png" alt="Rio de Janeiro, Brazil"></li>
             <li><img src="../view/assets/images/event-example.png" alt="" data-large-src="london.jpg"></li>
-            <li><img src="../view/assets/images/event-example.png" alt=""></li>
             <li><img src="../view/assets/images/event-example.png" alt=""></li>
             <li><img src="../view/assets/images/event-example.png" alt=""></li>
             <li><img src="../view/assets/images/event-example.png" alt=""></li>
