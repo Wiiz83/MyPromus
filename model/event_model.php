@@ -187,5 +187,39 @@ function getPossibleParticipants($userId,$eventId){
 	}
 }
 
+function getPlaylistId($eventId){
+	global $link;
+
+	$sql="SELECT * FROM playlist WHERE event_id='$eventId'";
+	$result=mysqli_query($link,$sql);
+	$playlistInfo=mysqli_fetch_assoc($result);
+
+	return $playlistInfo['spotify_playlist_id'];
+}
+
+
+function searchSong($song){
+
+	$session = new SpotifyWebAPI\Session('730c01f53af44936a0cc51459f0cb0ea', 'e1fc633ca35141bdb6edca04632850e7', '');
+	$api = new SpotifyWebAPI\SpotifyWebAPI();
+
+	$refreshToken = $_SESSION['refreshToken'];
+
+	$session->setRefreshToken($refreshToken);
+	$session->refreshAccessToken();
+
+	$accessToken = $session->getAccessToken();
+
+	// Request a access token using the code from Spotify
+	$refreshToken = $session->getRefreshToken();
+	$_SESSION['refreshToken'] = $refreshToken;
+
+	// Set the new access token on the API wrapper
+	$api->setAccessToken($accessToken);
+
+	$results = $api->search($song, 'track');
+	return json_encode($results);
+}
+
 
 ?>

@@ -38,6 +38,13 @@ if(isset($_POST['comment'])){
 	}
 
 
+}else if(isset($_POST['songName'])){
+	
+	$song=$_POST['songName'];
+	$result=searchSong($song);
+	echo "$result";
+
+
 }else if(isset($_GET['eventId'])){
 
 	$userId=$_SESSION['userId'];

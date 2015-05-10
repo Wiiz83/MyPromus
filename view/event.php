@@ -70,17 +70,19 @@
                         <li><a href="#"> Name - Artist </a></li>
                     </ul>
 
-                    <form>
+                    <form onsubmit="return false">
                         <input type="text" name="search-song" id="search-song" placeholder="Search a song.">
                         <input type="hidden" name="playlistId" id="playlistId" value="<?php echo $playlistId; ?>">
-                        <input type="submit" class="btn btn-small" name="submit-search" value="Search">
+                        <input type="submit" class="btn btn-small" name="submit-search" onclick="searchSong()"  value="Search">
                     </form>
 
                     <section class="song-result">
+
                         <ul class="scroll-list">
-                            <div id="search-result">
+                            <div id="yeah"> 
                             <li>
                                 <div>
+                                    
                                     <img src="../view/assets/images/profile.png" alt="album-picture">
                                     <span>Name here</span> -
                                     <span>Author here</span>
@@ -89,41 +91,10 @@
                                 
                                 <button type="submit" class="btn-add">Add</button>
                                 
-                            </li>
-
-                            <li>
-                                <div>
-                                    <img src="../view/assets/images/profile.png" alt="album-picture">
-                                    <span>Name here</span> -
-                                    <span>Author here</span>
-                                </div>
-
-                                
-                                <button type="submit" class="btn-add">Add</button>
-                            </li>
-
-                            <li>
-                                <div>
-                                    <img src="../view/assets/images/profile.png" alt="album-picture">
-                                    <span>Name here</span> -
-                                    <span>Author here</span>
-                                </div>
-
-                                
-                                <button type="submit" class="btn-add">Add</button>
-                            </li>
-
-                            <li>
-                                <div>
-                                    <img src="../view/assets/images/profile.png" alt="album-picture">
-                                    <span>Name here</span> -
-                                    <span>Author here</span>
-                                </div>
-
-                                
-                                <button type="submit" class="btn-add">Add</button>
                             </li>
                             </div>
+                            
+                            
                         <ul>
                     </section>
 
