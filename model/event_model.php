@@ -151,6 +151,10 @@ function createPlaylist($partyName,$eventId){
 
 		$accessToken = $session->getAccessToken();
 
+		// Request a access token using the code from Spotify
+		$refreshToken = $session->getRefreshToken();
+		$_SESSION['refreshToken'] = $refreshToken;
+
 		// Set the new access token on the API wrapper
 		$api->setAccessToken($accessToken);
 
