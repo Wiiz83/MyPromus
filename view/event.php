@@ -1,5 +1,7 @@
     <?php include '../view/includes/header.php'; ?>
     <?php include '../view/includes/menu.php'; ?>
+    <script src="../view/assets/js/main.js"></script> 
+
 
     <div class="grid">
         
@@ -42,7 +44,7 @@
         <div class="row-main">
             
             <section class="col-50">
-                <section>
+                <section class="playlist">
                     <h6> Playlist </h6>
                     <ul class="scroll-list">
                         <li><a href="#"> Name - Artist </a></li>
@@ -67,6 +69,60 @@
                         <li><a href="#"> Name - Artist </a></li>
                         <li><a href="#"> Name - Artist </a></li>
                     </ul>
+
+                    <form>
+                        <input type="text" name="search-song" placeholder="Search a song.">
+                        <input type="submit" class="btn btn-small" name="submit-search" value="Search">
+                    </form>
+
+                    <section class="song-result">
+                        <ul class="scroll-list">
+                            <li>
+                                <div>
+                                    <img src="../view/assets/images/profile.png" alt="album-picture">
+                                    <span>Name here</span> -
+                                    <span>Author here</span>
+                                </div>
+
+                                
+                                <button type="submit" class="btn-add">Add</button>
+                                
+                            </li>
+
+                            <li>
+                                <div>
+                                    <img src="../view/assets/images/profile.png" alt="album-picture">
+                                    <span>Name here</span> -
+                                    <span>Author here</span>
+                                </div>
+
+                                
+                                <button type="submit" class="btn-add">Add</button>
+                            </li>
+
+                            <li>
+                                <div>
+                                    <img src="../view/assets/images/profile.png" alt="album-picture">
+                                    <span>Name here</span> -
+                                    <span>Author here</span>
+                                </div>
+
+                                
+                                <button type="submit" class="btn-add">Add</button>
+                            </li>
+
+                            <li>
+                                <div>
+                                    <img src="../view/assets/images/profile.png" alt="album-picture">
+                                    <span>Name here</span> -
+                                    <span>Author here</span>
+                                </div>
+
+                                
+                                <button type="submit" class="btn-add">Add</button>
+                            </li>
+                        <ul>
+                    </section>
 
                 </section>
                 <br>
@@ -130,6 +186,19 @@
                             <textarea placeholder="Comment" name="comment"></textarea>
                              <input type="hidden" name="eventId" value="<?php echo $event->getIdEvent();?>"> 
                             <input class="comment-btn" type="submit" value="Leave Comment">
+                    </form>
+                </div>
+
+                <h6 style="margin-top: 5%;">Invite your friends</h6>
+                <div class="panel">
+                    <form action="#" class="invite-form">
+                        <select id="friends-list" name="friend">
+                            <option value="ferran">Ferran</option>
+                            <option value="lucas">Lucas</option>
+                            <option value="david">David</option>
+                        </select>
+
+                        <input class="btn-add" type="submit" name="invite" onclick="deleteFriend()"value="Invite">
                     </form>
                 </div>
             
