@@ -1,6 +1,83 @@
 <?php include '../view/includes/header.php'; ?>
 <?php include '../view/includes/menu.php'; ?>
 <script src='../view/assets/js/pgwslideshow.js'></script>
+
+
+
+<script type="text/javascript" src="../view/assets/js/owl.carousel.min.js"></script>
+
+    <link href="../view/assets/stylesheets/owl.carousel.css" rel="stylesheet">
+    <link href="../view/assets/stylesheets/owl.theme.css" rel="stylesheet">
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+
+            <script type="text/javascript">
+            $(document).ready(function() {
+             
+              var owl1 = $("#incoming");
+             
+              owl1.owlCarousel({
+                  items : 5, //10 items above 1000px browser width
+                  itemsDesktop : [1000,5], //5 items between 1000px and 901px
+                  itemsDesktopSmall : [900,3], // betweem 900px and 601px
+                  itemsTablet: [600,2], //2 items between 600 and 0
+                  itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
+              });
+             
+              // Custom Navigation Events
+              $(".next-inco").click(function(){
+                owl1.trigger('owl.next');
+              })
+              $(".prev-inco").click(function(){
+                owl1.trigger('owl.prev');
+              })
+
+
+
+              var owl2 = $("#created");
+             
+              owl2.owlCarousel({
+                  items : 5, //10 items above 1000px browser width
+                  itemsDesktop : [1000,5], //5 items between 1000px and 901px
+                  itemsDesktopSmall : [900,3], // betweem 900px and 601px
+                  itemsTablet: [600,2], //2 items between 600 and 0
+                  itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
+              });
+             
+              // Custom Navigation Events
+              $(".next-created").click(function(){
+                owl2.trigger('owl.next');
+              })
+              $(".prev-created").click(function(){
+                owl2.trigger('owl.prev');
+              })
+             
+
+             var owl3 = $("#past");
+             
+              owl3.owlCarousel({
+                  items : 5, //10 items above 1000px browser width
+                  itemsDesktop : [1000,5], //5 items between 1000px and 901px
+                  itemsDesktopSmall : [900,3], // betweem 900px and 601px
+                  itemsTablet: [600,2], //2 items between 600 and 0
+                  itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
+              });
+             
+              // Custom Navigation Events
+              $(".next-past").click(function(){
+                owl3.trigger('owl.next');
+              })
+              $(".prev-past").click(function(){
+                owl3.trigger('owl.prev');
+              })
+             
+             
+            });
+
+            </script>
+
+
+
 <script type="text/javascript">
 $(document).ready(function() {
     $('.pgwSlideshow').pgwSlideshow();
@@ -14,27 +91,20 @@ $(document).ready(function() {
             <li id="title">
             <a href="">
             <p>
-                $event->getname();
+                Display the event's name.
             </p>
             </a>
             </li>
             <li id="playlist">
+                <!--Must change this for the current event's playlist-->
                 <iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3Aqlmhuge%3Aplaylist%3A6Df19VKaShrdWrAnHinwVO&theme=white" width="300" height="380" frameborder="0" allowtransparency="true">
             </iframe>
             </li>
         </ul>
         <ul class="pgwSlideshow">
-            <li>
-            <img src="../view/assets/images/event-example.png" alt="San Francisco, USA" data-description="17/07/1994">
-            </li>
-            <li><img src="../view/assets/images/event-example.png" alt="Rio de Janeiro, Brazil"></li>
-            <li><img src="../view/assets/images/event-example.png" alt="" data-large-src="london.jpg"></li>
-            <li><img src="../view/assets/images/event-example.png" alt=""></li>
-            <li><img src="../view/assets/images/event-example.png" alt=""></li>
-            <li><img src="../view/assets/images/event-example.png" alt=""></li>
-            <li><img src="../view/assets/images/event-example.png" alt=""></li>
-            <li><img src="../view/assets/images/event-example.png" alt=""></li>
-            <li><img src="../view/assets/images/event-example.png" alt=""></li>
+            <?php foreach($events as $event): ?>
+                <li><img src="<?php echo $event->getImage(); ?>" alt="<?php echo $event->getPlace(),', ',$event->getDate(),' at ',$event->getTime(); ?>"></li>   
+            <?php endforeach ?>     
         </ul>
     </div>
     <div id="friend-bloc">
@@ -67,32 +137,26 @@ $(document).ready(function() {
     </div>
 
     <div id="tendance-bloc">
-        <h6>The Moment Tendance</h6>
-        <div id="friends-column">
-            <ul>
-                <li><a href="../controller/profile.php"><img src="../view/assets/images/event-example.png"/></a>
-                <p>
-                    Lucas Uzan go to Yolo Party
-                </p>
-                </li>
-                <li><a href="../controller/profile.php"><img src="../view/assets/images/event-example.png"/></a>
-                <p>
-                    Lucas Uzan go to Yolo Party
-                </p>
-                </li>
-                <li><a href="../controller/profile.php"><img src="../view/assets/images/event-example.png"/></a>
-                <p>
-                    Lucas Uzan go to Yolo Party
-                </p>
-                </li>
-                </li>
-                <li><a href="../controller/profile.php"><img src="../view/assets/images/event-example.png"/></a>
-                <p>
-                    Lucas Uzan go to Yolo Party
-                </p>
-                </li>
-            </ul>
-        </div>
+        <h6>The Popular Events</h6>
+            <div id="incoming">
+                                         <div class="item tendance">
+                                        <a href=""><img class="event-pic" src="../view/assets/images/event-example.png" alt="Event picture"></a>
+                                        <br/> <br/>
+                                         <span class="event-name"> YOLO PARTY </span>
+                                                 <span><i>24 People Coming<i></span>
+                                                <p><b>Owner: </b>LUCAS</p>
+                                                <p><b>Date:</b> 17/07/1949</p>
+                                                <p><b>Place:</b> Cork </p>
+                                      </div>
+
+                                    </div>
+                                     
+                                    <div class="customNavigation">
+                                                <span class="prev prev-inco"></span>
+                                                 <span class="next next-inco"></span>
+
+                                    </div>
+
     </div>
 </div>
 </body>

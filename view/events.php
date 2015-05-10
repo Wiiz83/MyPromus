@@ -80,9 +80,9 @@
            
             <div class="grid">
               <div class="panel">
-                        <div class="row-main">
+                        <div class="row">
                             <section class="col-100">
-                                <h6> Incoming Events </h6>
+                                <h6> Events You Go</h6>
                                     <div id="incoming">
                                       
                                       <?php if(isset($events)): ?>

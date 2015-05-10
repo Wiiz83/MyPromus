@@ -157,7 +157,7 @@
                                 </li>
 
                                 <li>
-                                    <a href="../controller/profile.php"><img src="<?php echo $_SESSION['userImage']; ?>"></a>
+                                    <a href="../controller/profile.php"><img src="<?php echo $_SESSION['userImage']; ?>" ></a>
                                 </li>
 
                             </ul>
