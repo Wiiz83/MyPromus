@@ -91,27 +91,20 @@ $(document).ready(function() {
             <li id="title">
             <a href="">
             <p>
-                $event->getname();
+                Display the event's name.
             </p>
             </a>
             </li>
             <li id="playlist">
+                <!--Must change this for the current event's playlist-->
                 <iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3Aqlmhuge%3Aplaylist%3A6Df19VKaShrdWrAnHinwVO&theme=white" width="300" height="380" frameborder="0" allowtransparency="true">
             </iframe>
             </li>
         </ul>
         <ul class="pgwSlideshow">
-            <li>
-            <img src="../view/assets/images/event-example.png" alt="San Francisco, USA" data-description="17/07/1994">
-            </li>
-            <li><img src="../view/assets/images/event-example.png" alt="Rio de Janeiro, Brazil"></li>
-            <li><img src="../view/assets/images/event-example.png" alt="" data-large-src="london.jpg"></li>
-            <li><img src="../view/assets/images/event-example.png" alt=""></li>
-            <li><img src="../view/assets/images/event-example.png" alt=""></li>
-            <li><img src="../view/assets/images/event-example.png" alt=""></li>
-            <li><img src="../view/assets/images/event-example.png" alt=""></li>
-            <li><img src="../view/assets/images/event-example.png" alt=""></li>
-            <li><img src="../view/assets/images/event-example.png" alt=""></li>
+            <?php foreach($events as $event): ?>
+                <li><img src="<?php echo $event->getImage(); ?>" alt="<?php echo $event->getPlace(),', ',$event->getDate(),' at ',$event->getTime(); ?>"></li>   
+            <?php endforeach ?>     
         </ul>
     </div>
     <div id="friend-bloc">
