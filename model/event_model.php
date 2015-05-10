@@ -221,7 +221,7 @@ function searchSong($song){
 	return json_encode($results);
 }
 
-function addSong($userId, $playlistId, $songId)
+function addSong($playlistId, $songId)
 {
 	$session = new SpotifyWebAPI\Session('730c01f53af44936a0cc51459f0cb0ea', 'e1fc633ca35141bdb6edca04632850e7', '');
 	$api = new SpotifyWebAPI\SpotifyWebAPI();
@@ -240,7 +240,9 @@ function addSong($userId, $playlistId, $songId)
 	// Set the new access token on the API wrapper
 	$api->setAccessToken($accessToken);
 
-	$api->addUserPlaylistTracks($usernameId, $playlistId, array($songId));
+	$user = $api->me();
+
+	$api->addUserPlaylistTracks($user['id'], $playlistId, array($songId));
 }
 
 
