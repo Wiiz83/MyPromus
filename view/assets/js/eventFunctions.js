@@ -70,7 +70,7 @@ function addSong(songId){
                 xmlhttp.onreadystatechange = function() {
                 if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
                   document.getElementById("buttonSong").innerHTML = xmlhttp.responseText;
-                    alert("There is delay with the spotify API to show the song in the playlist,wait a moment and will be showed");
+                    alert("There is delay with the spotify API to show the song in the playlist,wait at least 7 minutes and will be showed");
                   }
                   }
 
