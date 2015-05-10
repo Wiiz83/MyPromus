@@ -44,7 +44,7 @@ function searchSong(){
                 		newContent+='<span>'+responseObject.tracks.items[i].name+' -<span>';
                 		newContent+='<span> '+responseObject.tracks.items[i].artists[0].name+'<span>';
                 		newContent+='</div>';
-                		newContent+='<button type="submit" class="btn-add" value="'+responseObject.tracks.items[i].id +'"">Add</button>';
+                		newContent+='<button type="submit" class="btn-add" onClick="addSong(this.value)" value="'+responseObject.tracks.items[i].id +'"">Add</button>';
                 		newContent+='</li>';
                 	}
 					
