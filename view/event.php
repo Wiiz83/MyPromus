@@ -1,7 +1,7 @@
     <?php include '../view/includes/header.php'; ?>
     <?php include '../view/includes/menu.php'; ?>
     <script src="../view/assets/js/main.js"></script> 
-
+    <script src="../view/assets/js/eventFunctions.js"></script> 
 
     <div class="grid">
         
@@ -71,12 +71,14 @@
                     </ul>
 
                     <form>
-                        <input type="text" name="search-song" placeholder="Search a song.">
+                        <input type="text" name="search-song" id="search-song" placeholder="Search a song.">
+                        <input type="hidden" name="playlistId" id="playlistId" value="<?php echo $playlistId; ?>">
                         <input type="submit" class="btn btn-small" name="submit-search" value="Search">
                     </form>
 
                     <section class="song-result">
                         <ul class="scroll-list">
+                            <div id="search-result">
                             <li>
                                 <div>
                                     <img src="../view/assets/images/profile.png" alt="album-picture">
@@ -121,6 +123,7 @@
                                 
                                 <button type="submit" class="btn-add">Add</button>
                             </li>
+                            </div>
                         <ul>
                     </section>
 
@@ -191,15 +194,20 @@
 
                 <h6 style="margin-top: 5%;">Invite your friends</h6>
                 <div class="panel">
-                    <form action="#" class="invite-form">
-                        <select id="friends-list" name="friend">
-                            <option value="ferran">Ferran</option>
-                            <option value="lucas">Lucas</option>
-                            <option value="david">David</option>
-                        </select>
 
-                        <input class="btn-add" type="submit" name="invite" onclick="deleteFriend()"value="Invite">
+                    <?php if(isset($friendsToInvite)): ?>
+
+
+                    <form action="#" class="invite-form" onSubmit="inviteFriend(this.value)">
+                        <select id="friends-list" name="friend" >
+                            <?php foreach($friendsToInvite as $user): ?>
+                                <option value="<?php echo $user->getIdUser(); ?>"><?php echo $user->getUsername();?></option>
+                            <?php endforeach ?>
+                        </select>
+                        <p id="result"></p>
+                        <input class="btn-add" type="submit" name="invite" value="Invite">
                     </form>
+                    <?php endif ?>
                 </div>
             
             </section>

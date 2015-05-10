@@ -7,6 +7,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/model/event_model.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/getEventHelper.inc.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/model/comment_model.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/includes/getUserHelper.inc.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/myPromus/model/event_model.php';
 
 $titlePage="Event";
 	
@@ -21,6 +22,20 @@ if(isset($_POST['comment'])){
 	createComment($userId,$eventId,$comment);
 	header("Location: ../controller/event.php?eventId=$eventId");
 	
+
+
+}else if(isset($_POST['friendId'])){	//AJAX request to send an event request to a user
+
+	$friendId=$_POST['friendId'];
+	$eventId=$_SESSION['currentEvent'];
+	$userId=$_SESSION['userId'];
+	$isDone=sendEventRequest($userId,$friendId,$eventId);
+
+	if($isDone){
+		echo "Done";
+	}else{
+		echo "Already sent";
+	}
 
 
 }else if(isset($_GET['eventId'])){
@@ -45,8 +60,9 @@ if(isset($_POST['comment'])){
 	$_SESSION['currentEvent']=$event->getIdEvent();
 
 	$comments=loadComments($eventId);	//Array of Comments
-
+	$playlistId=getPlaylistId($eventId);
 	$participants=getParticipants($eventId);	//Array of users
+	$friendsToInvite=getPossibleParticipants($userId,$eventId);
 
 	
 	include $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/event.php';

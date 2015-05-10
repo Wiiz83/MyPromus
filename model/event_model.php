@@ -47,7 +47,7 @@ function createEvent($userAdmin,$name,$date,$time,$place,$description,$friends,$
 				}
 			}
 
-			//createPlaylist($name,$eventId);
+			createPlaylist($name,$eventId);
 
 			return $eventId;
 		
@@ -162,7 +162,26 @@ function createPlaylist($partyName,$eventId){
 	    savePlaylist($eventId, $playlist['id']);
 }
 
+function getPossibleParticipants($userId,$eventId){
 
+	global $link;
+	$sql="SELECT * FROM friend 
+	WHERE id='$userId' AND
+	user_id NOT IN (SELECT friend_id FROM event_friend WHERE event_id='$eventId')";
+	$result=mysqli_query($link,$sql);
+
+	while($userInfo=mysqli_fetch_assoc($result)){
+		$user=getUser($userInfo['user_id']);
+		$friends[]=$user;
+	}
+
+
+	if(isset($friends)){
+		return $friends;
+	}else{
+		return null;
+	}
+}
 
 
 ?>

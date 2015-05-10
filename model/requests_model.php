@@ -129,4 +129,27 @@ function sendFriendRequest($userId,$friendId){
 
 }
 
+//Send an event request,checking that the user is not the same and checking that the request wasn't sended before
+
+
+function sendEventRequest($userId,$friendId,$eventId){
+	global $link;
+
+	
+
+	$sql="SELECT * FROM event_request WHERE user_id='$userId' AND friend_id='$friendId' AND event_id='$eventId'";
+	$result=mysqli_query($link,$sql);
+	$rows=mysqli_num_rows($result);
+
+	if($rows!=0){
+		return false;
+	}
+
+	$sql="INSERT INTO event_request (user_id,friend_id,event_id,date) VALUES ('$userId','$friendId','$eventId',DATE(NOW()))";
+	mysqli_query($link,$sql) or die(mysqli_error($link));
+	return true;
+
+	
+
+}
 ?>
