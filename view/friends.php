@@ -2,7 +2,7 @@
 
                 <?php include '../view/includes/header.php'; ?>
                 <?php include '../view/includes/menu.php'; ?>
-
+                <script src="../view/assets/js/deleteFriend.js"></script> 
 
 <script type="text/javascript">
  function bgenScroll() {
@@ -33,6 +33,7 @@
 });
 
 </script>        
+           
             <div class="grid grid-friends">
                         <section class="row">
 
@@ -48,28 +49,81 @@
                                             <div id="tab1" class="tab active">
                                                 
                                                 <section class="col-25">
+
+                                                <?php if(isset($friends)):?>
+                                                    <?php foreach($friends as $user): ?>
+
                                                     <div class="friend-box">
-                                                    <a href="../controller/profile.php?userId=32">
-                                                    <img class="profile-icon" alt="Profile picture" src="../view/assets/userImages/default.jpg">
+                                                    <a href="../controller/profile.php?userId=<?php echo $user->getIdUser();?>">
+                                                    <img class="profile-icon" alt="Profile picture" src="<?php echo $user->getImage();?>">
                                                     </a>
-                                                    <p>ferran12</p>
-                                                    <p>jhg, hgfjh</p>
-                                                    <span id="32">
-                                                    <button class="btn" value="32" onclick="sendFriendRequest(this.value)" type="submit">Remove</button>
+
+                                                    <p><?php echo ucfirst($user->getUsername());?></p>
+                                                    <p><?php echo ucfirst($user->getCity());?></p>
+                                                    <p><?php echo ucfirst($user->getCountry());?></p>
+                                                    <span class="<?php echo $user->getIdUser();?>">
+                                                    <button class="btn" value="<?php echo $user->getIdUser();?>" onclick="deleteFriend(this.value)" type="submit">Remove</button>
                                                     </span>
                                                     </div>
-                                                    </section>
+
+                                                    <?php endforeach ?>
+                                                <?php endif ?>
+                                                </section>
 
                                             </div>
 
                                             <div id="tab2" class="tab">
-                                                <p>Tab #2 content goes here!</p>
-                                                <p>Donec pulvinar neque sed semper lacinia. Curabitur lacinia ullamcorper nibh; quis imperdiet velit eleifend ac. Donec blandit mauris eget aliquet lacinia! Donec pulvinar massa interdum risus ornare mollis. In hac habitasse platea dictumst. Ut euismod tempus hendrerit. Morbi ut adipiscing nisi. Etiam rutrum sodales gravida! Aliquam tellus orci, iaculis vel.</p>
+
+                                                <section class="col-25">
+
+                                                <?php if(isset($cityFriends)):?>
+                                                    <?php foreach($cityFriends as $user): ?>
+
+                                                    <div class="friend-box">
+                                                    <a href="../controller/profile.php?userId=<?php echo $user->getIdUser();?>">
+                                                    <img class="profile-icon" alt="Profile picture" src="<?php echo $user->getImage();?>">
+                                                    </a>
+
+                                                    <p><?php echo ucfirst($user->getUsername());?></p>
+                                                    
+                                                    <p><?php echo ucfirst($user->getCity());?></p>
+                                                    <p><?php echo ucfirst($user->getCountry());?></p>
+                                                    <span class="<?php echo $user->getIdUser();?>">
+                                                    <button class="btn" value="<?php echo $user->getIdUser();?>" onclick="deleteFriend(this.value)" type="submit">Remove</button>
+                                                    </span>
+                                                    </div>
+
+                                                    <?php endforeach ?>
+                                                <?php endif ?>
+                                                </section>                                                
+
+
                                             </div>
 
                                             <div id="tab3" class="tab">
-                                                <p>Tab #3 content goes here!</p>
-                                                <p>Donec pulvinar neque sed semper lacinia. Curabitur lacinia ullamcorper nibh; quis imperdiet velit eleifend ac. Donec blandit mauris eget aliquet lacinia! Donec pulvinar massa interdum ri.</p>
+
+                                                <section class="col-25">
+
+                                                <?php if(isset($countryFriends)):?>
+                                                    <?php foreach($countryFriends as $user): ?>
+
+                                                    <div class="friend-box">
+                                                    <a href="../controller/profile.php?userId=<?php echo $user->getIdUser();?>">
+                                                    <img class="profile-icon" alt="Profile picture" src="<?php echo $user->getImage();?>">
+                                                    </a>
+
+                                                    <p><?php echo ucfirst($user->getUsername());?></p>
+                                                    <p><?php echo ucfirst($user->getCity());?></p>
+                                                    <p><?php echo ucfirst($user->getCountry());?></p>
+                                                    <span class="<?php echo $user->getIdUser();?>">
+                                                    <button class="btn" value="<?php echo $user->getIdUser();?>" onclick="deleteFriend(this.value)" type="submit">Remove</button>
+                                                    </span>
+                                                    </div>
+
+                                                    <?php endforeach ?>
+                                                <?php endif ?>
+                                                </section> 
+
                                             </div>
 
                                             <div id="tab4" class="tab">

@@ -11,7 +11,8 @@ $titlePage="Friends";
 $userId=$_SESSION['userId'];
 
 if(isset($_POST['friendId'])){
-
+	
+	
 	$friendId=$_POST['friendId'];
 	$isDone=deleteFriend($userId,$friendId);
 	if($isDone){
@@ -19,8 +20,8 @@ if(isset($_POST['friendId'])){
 	}else{
 		echo "Error deleting";
 	}
-
-}
+	
+}else{
 
 
 
@@ -35,5 +36,5 @@ $countryFriends=getCountryFriends($userId,$country);
 
 
 include $_SERVER['DOCUMENT_ROOT'].'/myPromus/view/friends.php';
-
+}
 ?>
