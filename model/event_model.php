@@ -161,7 +161,7 @@ function createPlaylist($partyName,$eventId){
 		$user = $api->me();
 		$userInfo = json_decode(json_encode($user), true);
 
-		$playlist = json_decode(json_encode($api->createUserPlaylist($userInfo['id'], array('name' => $partyName.'\'s playlist'))), true);
+		$playlist = json_decode(json_encode($api->createUserPlaylist($userInfo['id'], array('name' => $partyName.'\'s playlist', 'public' => true))), true);
 
 	    savePlaylist($eventId, $playlist['id']);
 }
@@ -243,7 +243,7 @@ function addSong($playlistId, $songId)
 	$user = $api->me();
 	$userInfo = json_decode(json_encode($user), true);
 
-	$api->addUserPlaylistTracks($userInfo['id'], $playlistId, array($songId));
+	$api->addUserPlaylistTracks($user['id'], $playlistId, array($songId));
 }
 
 
