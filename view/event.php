@@ -57,18 +57,7 @@
 
                         <ul class="scroll-list">
                             <div id="yeah"> 
-                            <li>
-                                <div>
-                                    
-                                    <img src="../view/assets/images/profile.png" alt="album-picture">
-                                    <span>Name here</span> -
-                                    <span>Author here</span>
-                                </div>
-
-                                
-                                <button type="submit" class="btn-add">Add</button>
-                                
-                            </li>
+                            
                             </div>
                             
                             

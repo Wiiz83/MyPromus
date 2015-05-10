@@ -38,14 +38,14 @@ if(isset($_POST['comment'])){
 	}
 
 
-}else if(isset($_POST['songName'])){
+}else if(isset($_POST['songName'])){	//Ajax request to search a song, a JSON file with the info is returned
 	
 	$song=$_POST['songName'];
 	$result=searchSong($song);
 	echo "$result";
 
 
-}else if(isset($_POST['songId'])){
+}else if(isset($_POST['songId'])){		//Ajax request to add a song to the playlist
 
 	
 	$songId=$_POST['songId'];
@@ -54,7 +54,7 @@ if(isset($_POST['comment'])){
 	addSong($playlistId,$songId);
 	echo "Done";
 
-}else if(isset($_GET['eventId'])){
+}else if(isset($_GET['eventId'])){		//Loads the event page with the eventId
 
 	$userId=$_SESSION['userId'];
 	$eventId=$_GET['eventId'];
