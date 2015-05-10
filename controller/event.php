@@ -77,6 +77,7 @@ if(isset($_POST['comment'])){
 
 	$comments=loadComments($eventId);	//Array of Comments
 	$playlistId=getPlaylistId($eventId);
+	$spotifyUserId=getSpotifyUserId($eventId);
 	$participants=getParticipants($eventId);	//Array of users
 	$friendsToInvite=getPossibleParticipants($userId,$eventId);
 
