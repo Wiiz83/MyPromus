@@ -129,11 +129,11 @@ function checkPlaylist($eventId){
 
 }
 
-function savePlaylist($eventId, $spotify_playlist_id){
+function savePlaylist($eventId, $spotify_playlist_id, $spotify_user_id){
 
 	global $link;
 
-	$sql="INSERT INTO playlist(event_id, spotify_playlist_id) VALUES('$eventId','$spotify_playlist_id')";
+	$sql="INSERT INTO playlist(event_id, spotify_playlist_id, spotify_user_id) VALUES('$eventId','$spotify_playlist_id', '$spotify_user_id')";
 	mysqli_query($link,$sql) or die(mysqli_error($link));
 
 }
@@ -163,7 +163,7 @@ function createPlaylist($partyName,$eventId){
 
 		$playlist = json_decode(json_encode($api->createUserPlaylist($userInfo['id'], array('name' => $partyName.'\'s playlist', 'public' => true))), true);
 
-	    savePlaylist($eventId, $playlist['id']);
+	    savePlaylist($eventId, $playlist['id'], $userInfo['id']);
 }
 
 function getPossibleParticipants($userId,$eventId){
@@ -195,6 +195,16 @@ function getPlaylistId($eventId){
 	$playlistInfo=mysqli_fetch_assoc($result);
 
 	return $playlistInfo['spotify_playlist_id'];
+}
+
+function getSpotifyUserId($eventId){
+	global $link;
+
+	$sql="SELECT * FROM playlist WHERE event_id='$eventId'";
+	$result=mysqli_query($link,$sql);
+	$playlistInfo=mysqli_fetch_assoc($result);
+
+	return $playlistInfo['spotify_user_id'];
 }
 
 
@@ -244,6 +254,31 @@ function addSong($playlistId, $songId)
 	$userInfo = json_decode(json_encode($user), true);
 
 	$api->addUserPlaylistTracks($user['id'], $playlistId, array($songId));
+}
+
+function getEventPlaylistURI()
+{
+	$session = new SpotifyWebAPI\Session('730c01f53af44936a0cc51459f0cb0ea', 'e1fc633ca35141bdb6edca04632850e7', '');
+	$api = new SpotifyWebAPI\SpotifyWebAPI();
+
+	$refreshToken = $_SESSION['refreshToken'];
+
+	$session->setRefreshToken($refreshToken);
+	$session->refreshAccessToken();
+
+	$accessToken = $session->getAccessToken();
+
+	// Request a access token using the code from Spotify
+	$refreshToken = $session->getRefreshToken();
+	$_SESSION['refreshToken'] = $refreshToken;
+
+	// Set the new access token on the API wrapper
+	$api->setAccessToken($accessToken);
+
+	$user = $api->me();
+	$userInfo = json_decode(json_encode($user), true);
+
+	return $userInfo['id'];
 }
 
 

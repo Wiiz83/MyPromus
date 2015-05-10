@@ -19,7 +19,7 @@ $(document).ready(function() {
             </a>
             </li>
             <li id="playlist">
-            <iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3Aqlmhuge%3Aplaylist%3A6Df19VKaShrdWrAnHinwVO&theme=white" width="300" height="380" frameborder="0" allowtransparency="true">
+                <iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3Aqlmhuge%3Aplaylist%3A6Df19VKaShrdWrAnHinwVO&theme=white" width="300" height="380" frameborder="0" allowtransparency="true">
             </iframe>
             </li>
         </ul>
@@ -51,6 +51,41 @@ $(document).ready(function() {
                 <p>
                     Lucas Uzan go to Yolo Party
                 </p>
+                </li>
+                <li><a href="../controller/profile.php"><img src="../view/assets/images/event-example.png"/></a>
+                <p>
+                    Lucas Uzan go to Yolo Party
+                </p>
+                </li>
+                </li>
+                <li><a href="../controller/profile.php"><img src="../view/assets/images/event-example.png"/></a>
+                <p>
+                    Lucas Uzan go to Yolo Party
+                </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="tendance-bloc">
+        <h6>The Moment Tendance</h6>
+        <div id="friends-column">
+            <ul>
+                <li><a href="../controller/profile.php"><img src="../view/assets/images/event-example.png"/></a>
+                <p>
+                    Lucas Uzan go to Yolo Party
+                </p>
+                </li>
+                <li><a href="../controller/profile.php"><img src="../view/assets/images/event-example.png"/></a>
+                <p>
+                    Lucas Uzan go to Yolo Party
+                </p>
+                </li>
+                <li><a href="../controller/profile.php"><img src="../view/assets/images/event-example.png"/></a>
+                <p>
+                    Lucas Uzan go to Yolo Party
+                </p>
+                </li>
                 </li>
                 <li><a href="../controller/profile.php"><img src="../view/assets/images/event-example.png"/></a>
                 <p>

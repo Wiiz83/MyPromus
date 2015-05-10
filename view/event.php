@@ -46,30 +46,7 @@
             <section class="col-50">
                 <section class="playlist">
                     <h6> Playlist </h6>
-                    <ul class="scroll-list">
-                        <li><a href="#"> Name - Artist </a></li>
-                        <li><a href="#"> Name - Artist </a></li>
-                        <li><a href="#"> Name - Artist </a></li>
-                        <li><a href="#"> Name - Artist </a></li>
-                        <li><a href="#"> Name - Artist </a></li>
-                        <li><a href="#"> Name - Artist </a></li>
-                        <li><a href="#"> Name - Artist </a></li>
-                        <li><a href="#"> Name - Artist </a></li>
-                        <li><a href="#"> Name - Artist </a></li>
-                        <li><a href="#"> Name - Artist </a></li>
-                        <li><a href="#"> Name - Artist </a></li>
-                        <li><a href="#"> Name - Artist </a></li>
-                        <li><a href="#"> Name - Artist </a></li>
-                        <li><a href="#"> Name - Artist </a></li>
-                        <li><a href="#"> Name - Artist </a></li>
-                        <li><a href="#"> Name - Artist </a></li>
-                        <li><a href="#"> Name - Artist </a></li>
-                        <li><a href="#"> Name - Artist </a></li>
-                        <li><a href="#"> Name - Artist </a></li>
-                        <li><a href="#"> Name - Artist </a></li>
-                        <li><a href="#"> Name - Artist </a></li>
-                    </ul>
-
+                    <iframe src="https://embed.spotify.com/?uri=spotify:user:<?php echo $spotifyUserId ?>:playlist:<?php echo $playlistId ?>" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
                     <form onsubmit="return false">
                         <input type="text" name="search-song" id="search-song" placeholder="Search a song.">
                         <input type="hidden" name="playlistId" id="playlistId" value="<?php echo $playlistId; ?>">
