@@ -56,3 +56,87 @@ function deleteFriend() {
 
 	
 }
+
+
+
+ $(document).ready(function() {
+             
+              var owl1 = $("#incoming");
+             
+              owl1.owlCarousel({
+                  items : 5, //10 items above 1000px browser width
+                  itemsDesktop : [1000,5], //5 items between 1000px and 901px
+                  itemsDesktopSmall : [900,3], // betweem 900px and 601px
+                  itemsTablet: [600,2], //2 items between 600 and 0
+                  itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
+              });
+             
+              // Custom Navigation Events
+              $(".next-inco").click(function(){
+                owl1.trigger('owl.next');
+              })
+              $(".prev-inco").click(function(){
+                owl1.trigger('owl.prev');
+              })
+
+
+
+              var owl2 = $("#created");
+             
+              owl2.owlCarousel({
+                  items : 5, //10 items above 1000px browser width
+                  itemsDesktop : [1000,5], //5 items between 1000px and 901px
+                  itemsDesktopSmall : [900,3], // betweem 900px and 601px
+                  itemsTablet: [600,2], //2 items between 600 and 0
+                  itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
+              });
+             
+              // Custom Navigation Events
+              $(".next-created").click(function(){
+                owl2.trigger('owl.next');
+              })
+              $(".prev-created").click(function(){
+                owl2.trigger('owl.prev');
+              })
+             
+
+             var owl3 = $("#past");
+             
+              owl3.owlCarousel({
+                  items : 5, //10 items above 1000px browser width
+                  itemsDesktop : [1000,5], //5 items between 1000px and 901px
+                  itemsDesktopSmall : [900,3], // betweem 900px and 601px
+                  itemsTablet: [600,2], //2 items between 600 and 0
+                  itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
+              });
+             
+              // Custom Navigation Events
+              $(".next-past").click(function(){
+                owl3.trigger('owl.next');
+              })
+              $(".prev-past").click(function(){
+                owl3.trigger('owl.prev');
+              })
+             
+             
+            });
+
+
+       $(document).ready(function() {
+      $("#content-slider").lightSlider({
+                loop:true,
+                keyPress:true
+            });
+            $('#image-gallery').lightSlider({
+                gallery:true,
+                item:1,
+                thumbItem:9,
+                slideMargin: 0,
+                speed:500,
+                auto:true,
+                loop:true,
+                onSliderLoad: function() {
+                    $('#image-gallery').removeClass('cS-hidden');
+                }  
+            });
+    });

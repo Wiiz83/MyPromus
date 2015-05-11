@@ -48,7 +48,6 @@
                                         <div class="tab-content">
                                             <div id="tab1" class="tab active">
                                                 
-                                                <section class="col-25">
 
                                                 <?php if(isset($friends)):?>
                                                     <?php foreach($friends as $user): ?>
@@ -67,14 +66,20 @@
                                                     </div>
 
                                                     <?php endforeach ?>
+
+                                                    <?php else:?>
+
+                        
+                                                    <p>You don't have any friends for the moment.</p>
+
+
+
                                                 <?php endif ?>
-                                                </section>
 
                                             </div>
 
                                             <div id="tab2" class="tab">
 
-                                                <section class="col-25">
 
                                                 <?php if(isset($cityFriends)):?>
                                                     <?php foreach($cityFriends as $user): ?>
@@ -94,15 +99,18 @@
                                                     </div>
 
                                                     <?php endforeach ?>
-                                                <?php endif ?>
-                                                </section>                                                
+                                                     <?php else:?>
+
+                        
+                                                    <p>You don't have any friends living in the same city.</p>
+
+
+                                                <?php endif ?>                                               
 
 
                                             </div>
 
                                             <div id="tab3" class="tab">
-
-                                                <section class="col-25">
 
                                                 <?php if(isset($countryFriends)):?>
                                                     <?php foreach($countryFriends as $user): ?>
@@ -121,14 +129,14 @@
                                                     </div>
 
                                                     <?php endforeach ?>
+                                                     <?php else:?>
+
+                        
+                                                    <p>You don't have any friends living in the same country.</p>
+
+
                                                 <?php endif ?>
-                                                </section> 
 
-                                            </div>
-
-                                            <div id="tab4" class="tab">
-                                                <p>Tab #4 content goes here!</p>
-                                                <p>Donec pulvinar neque sed semper lacinia. Curabitur lacinia ullamcorper nibh; quis imperdiet velit eleifend ac. Donec blandit mauris eget aliquet lacinia! Donec pulvinar massa interdum risus ornare mollis. In hac habitasse platea dictumst. Ut euismod tempus hendrerit. Morbi ut adipiscing nisi. Etiam rutrum sodales gravida! Aliquam tellus orci, iaculis vel.</p>
                                             </div>
                                         </div>
                                     </div>
