@@ -26,4 +26,9 @@ curl.cainfo ="/opt/xampp/htdocs/myPromus/cacert.pem"
 LAMPP
 curl.cainfo ="/opt/lampp/htdocs/promus/cacert.pem"
 
+
+
+
+
+
 Thanks and enjoy Mypromus

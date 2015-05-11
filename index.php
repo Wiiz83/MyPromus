@@ -1,3 +1,3 @@
 <?php
-header("Location: ../controller/dashboard.php");
+header("Location: ../myPromus/controller/dashboard.php");
 ?>
