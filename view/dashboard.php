@@ -1,15 +1,24 @@
-<?php include '../view/includes/header.php'; ?>
-<?php include '../view/includes/menu.php'; ?>
-<script src='../view/assets/js/pgwslideshow.js'></script>
-
-
-
-<script type="text/javascript" src="../view/assets/js/owl.carousel.min.js"></script>
-
+    <?php include '../view/includes/header.php'; ?>
+    <?php include '../view/includes/menu.php'; ?>
+        
+    <script src='../view/assets/js/pgwslideshow.js'></script>
+    <script type="text/javascript" src="../view/assets/js/owl.carousel.min.js"></script>
     <link href="../view/assets/stylesheets/owl.carousel.css" rel="stylesheet">
     <link href="../view/assets/stylesheets/owl.theme.css" rel="stylesheet">
-            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
+
+      <?php
+
+            header("Content-type: text/css; charset: UTF-8");
+
+            foreach($events as $event):
+
+            echo "<style type='text/css'> .pgwSlideshow::after {background: url(".$event->getImage().") no-repeat !important; }</style>";
+
+            endforeach
+            
+        ?> 
 
             <script type="text/javascript">
             $(document).ready(function() {
@@ -100,7 +109,7 @@ $(document).ready(function() {
             </iframe>
             </li>
         </ul>
-        <ul class="pgwSlideshow">
+        <ul class="pgwSlideshow" >
                 <li><img src="<?php echo $event->getImage(); ?>" alt="<?php echo $event->getPlace(); ?>"  data-description="<?php echo $event->getDate(),' at ',$event->getTime(); ?>"></li>
             <?php endforeach ?>     
         </ul>
