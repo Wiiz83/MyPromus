@@ -9,14 +9,22 @@
 
 
       <?php
-
-            header("Content-type: text/css; charset: UTF-8");
-
+            if(isset($events)):
             foreach($events as $event):
 
             echo "<style type='text/css'> .pgwSlideshow::after {background: url(".$event->getImage().") no-repeat !important; }</style>";
 
-            endforeach
+            endforeach;
+            else:
+
+            echo "<style type='text/css'> .pgwSlideshow::after {background: url('../view/assets/images/slider-default.png') no-repeat !important; margin-left: 0px !important;} 
+                .pgwSlideshow .ps-list{display: none !important;}
+                #friend-bloc { height: 671px; }
+
+
+                </style>";
+
+            endif;
             
         ?> 
 
@@ -98,7 +106,9 @@ $(document).ready(function() {
         <h6>Your Events Summary</h6>
         <ul id="event-info">
             <li id="title">
-                <?php foreach($events as $event): ?>
+               <?php if(isset($events)): ?>
+
+                                      <?php foreach($events as $event): ?>
             <a href="../controller/event.php?eventId=<?php echo $event->getIdEvent(); ?>">
             <p><?php echo $event->getName(); ?></p>
             </a>
@@ -110,8 +120,30 @@ $(document).ready(function() {
             </li>
         </ul>
         <ul class="pgwSlideshow" >
+
                 <li><img src="<?php echo $event->getImage(); ?>" alt="<?php echo $event->getPlace(); ?>"  data-description="<?php echo $event->getDate(),' at ',$event->getTime(); ?>"></li>
-            <?php endforeach ?>     
+            
+                <?php endforeach ?>
+
+
+                <?php else: ?>
+
+
+
+                
+                       <a href="../controller/event.php">
+                      <p>LET'S CREATE MY FIRST EVENT</p>
+                     </a>
+                    </li>
+                    
+                </ul>
+                <ul class="pgwSlideshow" >
+
+                <li><img src="../view/assets/images/event-example.png"></li>
+
+                <div class="ps-list" style="display:none !important;">
+
+                <?php endif ?>    
         </ul>
     </div>
     <div id="friend-bloc">

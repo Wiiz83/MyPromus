@@ -1294,15 +1294,16 @@ li.active a,li.active a:hover {
     display:none;
     display:block;
     position:relative;
+
+    height: 100%;
+    overflow: hidden;
+    background-size: cover;
+
+
 }
 .pgwSlideshow::after {
     content:"";
-    
-    <?php foreach($events as $event): ?>
-    background:url('<?php echo $event->getImage(); ?>') no-repeat; 
-    <?php endforeach ?>  
-
-    background-position:center center;
+    background-position:center center !important;
     background-size:cover;
     opacity:0.5;
     top:0;
@@ -1311,6 +1312,8 @@ li.active a,li.active a:hover {
     right:0;
     position:absolute;
     z-index:0;
+    margin-left: 17% !important;
+    width: 100% !important;
     -webkit-filter:blur(5px);
     -moz-filter:blur(5px);
     -o-filter:blur(5px);
@@ -1363,7 +1366,7 @@ li.active a,li.active a:hover {
 }
 .pgwSlideshow .ps-list {
     border-top:1px solid #555;
-    box-shadow:0 10px 10px -5px #333 inset;
+    box-shadow:0 5px 20px -5px #000  inset;
     background:#f8f8f8;
     overflow:hidden;
     position:relative;
