@@ -1,4 +1,0 @@
-cambiar tipo de fecha en crearEvento
-
-
-anyadir atributo "time" en la tabla comment y event(despues de date)
