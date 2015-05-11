@@ -39,12 +39,12 @@ function searchSong(){
                 	
                 	for(var i=0;i<responseObject.tracks.items.length;i++){
                 		
-                		newContent+='<div><li>';
+                		newContent+='<li><div>';
                 		newContent+='<img src="'+responseObject.tracks.items[i].album.images[2].url+'"/>';
                 		newContent+='<span>'+responseObject.tracks.items[i].name+' -<span>';
                 		newContent+='<span> '+responseObject.tracks.items[i].artists[0].name+'<span>';
                 		newContent+='</div>';
-                		newContent+='<span id="buttonSong">';
+                    newContent+='<span id="buttonSong">';
                 		newContent+='<button type="submit" class="btn-add" onClick="addSong(this.value)" value="'+responseObject.tracks.items[i].id +'"">Add</button>';
                 		newContent+='</span>';
                 		newContent+='</li>';
