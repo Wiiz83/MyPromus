@@ -1,15 +1,32 @@
-<?php include '../view/includes/header.php'; ?>
-<?php include '../view/includes/menu.php'; ?>
-<script src='../view/assets/js/pgwslideshow.js'></script>
-
-
-
-<script type="text/javascript" src="../view/assets/js/owl.carousel.min.js"></script>
-
+    <?php include '../view/includes/header.php'; ?>
+    <?php include '../view/includes/menu.php'; ?>
+        
+    <script src='../view/assets/js/pgwslideshow.js'></script>
+    <script type="text/javascript" src="../view/assets/js/owl.carousel.min.js"></script>
     <link href="../view/assets/stylesheets/owl.carousel.css" rel="stylesheet">
     <link href="../view/assets/stylesheets/owl.theme.css" rel="stylesheet">
-            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
+
+      <?php
+            if(isset($events)):
+            foreach($events as $event):
+
+            echo "<style type='text/css'> .pgwSlideshow::after {background: url(".$event->getImage().") no-repeat !important; }</style>";
+
+            endforeach;
+            else:
+
+            echo "<style type='text/css'> .pgwSlideshow::after {background: url('../view/assets/images/slider-default.png') no-repeat !important; margin-left: 0px !important;} 
+                .pgwSlideshow .ps-list{display: none !important;}
+                #friend-bloc { height: 671px; }
+
+
+                </style>";
+
+            endif;
+            
+        ?> 
 
             <script type="text/javascript">
             $(document).ready(function() {
@@ -89,10 +106,11 @@ $(document).ready(function() {
         <h6>Your Events Summary</h6>
         <ul id="event-info">
             <li id="title">
-            <a href="">
-            <p>
-                Display the event's name.
-            </p>
+               <?php if(isset($events)): ?>
+
+                                      <?php foreach($events as $event): ?>
+            <a href="../controller/event.php?eventId=<?php echo $event->getIdEvent(); ?>">
+            <p><?php echo $event->getName(); ?></p>
             </a>
             </li>
             <li id="playlist">
@@ -101,10 +119,31 @@ $(document).ready(function() {
             </iframe>
             </li>
         </ul>
-        <ul class="pgwSlideshow">
-            <?php foreach($events as $event): ?>
+        <ul class="pgwSlideshow" >
+
                 <li><img src="<?php echo $event->getImage(); ?>" alt="<?php echo $event->getPlace(); ?>"  data-description="<?php echo $event->getDate(),' at ',$event->getTime(); ?>"></li>
-            <?php endforeach ?>     
+            
+                <?php endforeach ?>
+
+
+                <?php else: ?>
+
+
+
+                
+                       <a href="../controller/event.php">
+                      <p>LET'S CREATE MY FIRST EVENT</p>
+                     </a>
+                    </li>
+                    
+                </ul>
+                <ul class="pgwSlideshow" >
+
+                <li><img src="../view/assets/images/event-example.png"></li>
+
+                <div class="ps-list" style="display:none !important;">
+
+                <?php endif ?>    
         </ul>
     </div>
     <div id="friend-bloc">

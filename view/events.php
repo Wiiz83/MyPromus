@@ -102,16 +102,7 @@
                                       <?php endforeach ?>
                                       <?php endif ?>
 
-                                      
-                                     
-                                         <div class="item">
-                                        <a href=""><img class="event-pic" src="../view/assets/images/event-example.png" alt="Event picture"></a>
-                                        <br/> <br/>
-                                         <span class="event-name"> YOLO PARTY </span>
-                                        <p><b>Owner: </b>LUCAS</p>
-                                        <p><b>Date:</b> 17/07/1949</p>
-                                        <p><b>Place:</b> Cork </p>
-                                      </div>
+                                    
 
                                     </div>
                                      
@@ -146,16 +137,6 @@
                                       <?php endif ?>
 
 
-                                    
-                                         <div class="item">
-                                        <a href=""><img class="event-pic" src="../view/assets/images/event-example.png" alt="Event picture"></a>
-                                        <br/> <br/>
-                                         <span class="event-name"> YOLO PARTY </span>
-                                        <p><b>Owner: </b>LUCAS</p>
-                                        <p><b>Date:</b> 17/07/1949</p>
-                                        <p><b>Place:</b> Cork </p>
-                                      </div>
-
                                     </div>
                                      
                                     <div class="customNavigation">
@@ -189,15 +170,6 @@
                                       <?php endforeach ?>
                                       <?php endif ?>
 
-
-                                         <div class="item">
-                                        <a href=""><img class="event-pic" src="../view/assets/images/event-example.png" alt="Event picture"></a>
-                                        <br/> <br/>
-                                         <span class="event-name"> YOLO PARTY </span>
-                                        <p><b>Owner: </b>LUCAS</p>
-                                        <p><b>Date:</b> 17/07/1949</p>
-                                        <p><b>Place:</b> Cork </p>
-                                      </div>
 
                                     </div>
                                      
