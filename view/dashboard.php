@@ -9,13 +9,7 @@
 <script src="../view/assets/js/lightslider.js"></script>
 <?php
 
-      $sum = 0;
-      foreach($events as $event)
-      {
-         $sum+= $event;
-      }
-      echo $sum;
-
+      $sum =count($events);
              if(isset($events)):
             foreach($events as $event):
             echo "<style type='text/css'>
