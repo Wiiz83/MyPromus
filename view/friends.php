@@ -40,7 +40,7 @@
                                
                                      <div class="tabs">
                                         <ul class="tab-links">
-                                            <li class="active"><a href="#tab1">All Friends</a></li>
+                                            <li class="active"><a href="#tab1">All</a></li>
                                             <li><a href="#tab2">Same City</a></li>
                                             <li><a href="#tab3">Same Country</a></li>
                                         </ul>

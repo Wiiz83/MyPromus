@@ -8,14 +8,22 @@
 <link type="text/css" rel="stylesheet" href="../view/assets/stylesheets/lightslider.css"/>
 <script src="../view/assets/js/lightslider.js"></script>
 <?php
-            if(isset($events)):
+
+      $sum = 0;
+      foreach($events as $event)
+      {
+         $sum+= $event;
+      }
+      echo $sum;
+
+             if(isset($events)):
             foreach($events as $event):
             echo "<style type='text/css'>
  .pgwSlideshow::after {background: url(".$event->getImage().") no-repeat !important; }
 </style>
 "; endforeach; 
 
-elseif(isset($events as $event)==1): echo "
+elseif($sum==2): echo "
   <style type='text/css'>
   #friend-bloc { height: 170px !important; }
 </style>
@@ -52,8 +60,8 @@ else: echo "
           <?php if(isset($events)): ?>
           <?php foreach($events as $event): ?>
           <li data-thumb="<?php echo $event->getImage(); ?>">
-           <!-- <iframe class="content-left" src="https://embed.spotify.com/?uri=spotify%3Auser%3Aqlmhuge%3Aplaylist%3A6Df19VKaShrdWrAnHinwVO&theme=white" width="300" height="380" frameborder="0" allowtransparency="true">
-          </iframe> --> 
+            <iframe class="content-left" src="https://embed.spotify.com/?uri=spotify%3Auser%3Aqlmhuge%3Aplaylist%3A6Df19VKaShrdWrAnHinwVO&theme=white" width="300" height="380" frameborder="0" allowtransparency="true">
+          </iframe>  
           <ul id="event-infos">
             <li id="event-name">
             <p>

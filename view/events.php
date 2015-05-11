@@ -74,82 +74,139 @@
              
             });
 
+ function bgenScroll() {
+         if (window.pageYOffset!= null){
+          st=window.pageYOffset+'';
+         }
+         if (document.body.scrollWidth!= null){
+          if (document.body.scrollTop){
+             st=document.body.scrollTop;
+          }
+          st=document.documentElement.scrollTop;
+         }
+          setTimeout('window.scroll(0,st)',10);
+        }
+
+        jQuery(document).ready(function() {
+    jQuery('.tabs .tab-links a').on('click', function(e)  {
+        var currentAttrValue = jQuery(this).attr('href');
+ 
+        // Show/Hide Tabs
+        jQuery('.tabs ' + currentAttrValue).show().siblings().hide();
+ 
+        // Change/remove current tab to active
+        jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
+ 
+        e.preventDefault();
+    });
+});
+
             </script>
-
-
+      
            
-            <div class="grid">
-              <div class="panel">
-                        <div class="row">
-                            <section class="col-100">
-                                <h6> Events You Go</h6>
-                                    <div id="incoming">
-                                      
-                                      <?php if(isset($events)): ?>
+            <div class="grid grid-friends">
+                        <section class="row">
 
-                                      <?php foreach($events as $event): ?>
-                                      <div class="item">
+                               
+                                     <div class="tabs">
+                                        <ul class="tab-links">
+                                            <li class="active"><a href="#tab1">Incoming</a></li>
+                                            <li><a href="#tab2">Created</a></li>
+                                            <li><a href="#tab3">Past</a></li>
+                                        </ul>
 
-                                        <a href="../controller/event.php?eventId=<?php echo $event->getIdEvent(); ?>"><img class="event-pic" src="<?php echo $event->getImage(); ?>" alt="Event picture"></a>
-                                        <br/> <br/>
-                                         <span class="event-name"> <?php echo $event->getName(); ?> </span>
-                                        <p><b>Owner: </b> <?php echo ucfirst($event->getAdminName()); ?></p>
-                                        <p><b>Date:</b> <?php echo $event->getDate(); ?>  <?php echo $event->getTime(); ?></p>
-                                        <p><b>Place:</b> <?php echo $event->getPlace(); ?> </p>
+                                        <div class="tab-content">
+                                            <div id="tab1" class="tab active">
+                                                
 
-                                      </div>
-                                      
-                                      <?php endforeach ?>
-                                      <?php endif ?>
+                                                <section class="col-100">
+                                                      <div id="incoming">
+                                                        
+                                                        <?php if(isset($events)): ?>
 
-                                    
+                                                        <?php foreach($events as $event): ?>
+                                                        <div class="item">
 
-                                    </div>
-                                     
-                                    <div class="customNavigation">
-                                                <span class="prev prev-inco"></span>
-                                                 <span class="next next-inco"></span>
+                                                          <a href="../controller/event.php?eventId=<?php echo $event->getIdEvent(); ?>"><img class="event-pic" src="<?php echo $event->getImage(); ?>" alt="Event picture"></a>
+                                                          <br/> <br/>
+                                                           <span class="event-name"> <?php echo $event->getName(); ?> </span>
+                                                          <p><b>Owner: </b> <?php echo ucfirst($event->getAdminName()); ?></p>
+                                                          <p><b>Date:</b> <?php echo $event->getDate(); ?>  <?php echo $event->getTime(); ?></p>
+                                                          <p><b>Place:</b> <?php echo $event->getPlace(); ?> </p>
 
-                                    </div>
-                            </section>
-
-                             <section class="col-100">
-                                <h6> Events You Created </h6>
-
-                                   <div id="created">
+                                                        </div>
+                                                        
+                                                        <?php endforeach ?>
 
 
-                                     <?php if(isset($myEvents)): ?>
+                                                      </div>
+                                                       
+                                                      <div class="customNavigation">
+                                                                  <span class="prev prev-inco"></span>
+                                                                   <span class="next next-inco"></span>
 
-                                      <?php foreach($myEvents as $event): ?>
-                                      <div class="item">
+                                                      </div>
 
-                                        <a href="../controller/event.php?eventId=<?php echo $event->getIdEvent(); ?>"><img class="event-pic" src="<?php echo $event->getImage(); ?>" alt="Event picture"></a>
-                                        <br/> <br/>
-                                         <span class="event-name"> <?php echo $event->getName(); ?> </span>
-                                        <p><b>Owner: </b><?php echo ucfirst($event->getAdminName()); ?></p>
-                                        <p><b>Date:</b> <?php echo $event->getDate(); ?>  <?php echo $event->getTime(); ?></p>
-                                        <p><b>Place:</b> <?php echo $event->getPlace(); ?> </p>
+                                                        <?php else: ?>
 
-                                      </div>
-
-                                      <?php endforeach ?>
-                                      <?php endif ?>
+                                                       <p style="width: 350px;">You don't have any incoming event for the moment.</p>
 
 
-                                    </div>
-                                     
-                                    <div class="customNavigation">
-                                                <span class="prev prev-created"></span>
-                                                 <span class="next next-created"></span>
 
-                                    </div>
+                                                        <?php endif ?>
+
+                                                      
+
+                                              </section>
+                                            </div>
+
+                                            <div id="tab2" class="tab">
 
 
-                            </section>
+                                               <section class="col-100">
+                                                       <div id="created">
 
-                             <section class="col-100">
-                                <h6> Your Past Events </h6>
+
+                                                         <?php if(isset($myEvents)): ?>
+
+                                                          <?php foreach($myEvents as $event): ?>
+                                                          <div class="item">
+
+                                                            <a href="../controller/event.php?eventId=<?php echo $event->getIdEvent(); ?>"><img class="event-pic" src="<?php echo $event->getImage(); ?>" alt="Event picture"></a>
+                                                            <br/> <br/>
+                                                             <span class="event-name"> <?php echo $event->getName(); ?> </span>
+                                                            <p><b>Owner: </b><?php echo ucfirst($event->getAdminName()); ?></p>
+                                                            <p><b>Date:</b> <?php echo $event->getDate(); ?>  <?php echo $event->getTime(); ?></p>
+                                                            <p><b>Place:</b> <?php echo $event->getPlace(); ?> </p>
+
+                                                          </div>
+
+                                                          <?php endforeach ?>
+
+
+                                                        </div>
+                                                         
+                                                        <div class="customNavigation">
+                                                                    <span class="prev prev-inco"></span>
+                                                                     <span class="next next-inco"></span>
+
+                                                        </div>
+
+                                                          <?php else: ?>
+
+                                                         <p style="width: 350px;">You don't have any created event for the moment.</p>
+
+
+
+                                                          <?php endif ?>
+
+
+                                                </section>
+                                            </div>
+
+                                            <div id="tab3" class="tab">
+
+                                             <section class="col-100">
                                   <div id="past">
 
 
@@ -166,24 +223,39 @@
                                         <p><b>Place:</b> <?php echo $event->getPlace(); ?> </p>
 
                                       </div>
-
                                       <?php endforeach ?>
-                                      <?php endif ?>
 
 
                                     </div>
                                      
                                     <div class="customNavigation">
-                                                <span class="prev prev-past"></span>
-                                                 <span class="next next-past"></span>
+                                                <span class="prev prev-inco"></span>
+                                                 <span class="next next-inco"></span>
 
                                     </div>
-                                
+
+                                      <?php else: ?>
+
+                                     <p style="width: 350px;">You don't have any past event for the moment.</p>
+
+
+
+                                      <?php endif ?>
 
 
                             </section>
 
-                  </div>   
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                          
+                        </section>
+
+                </div>
+
+                
                 </div>
 
 
@@ -191,3 +263,4 @@
                 </body>
 
                 </html>
+

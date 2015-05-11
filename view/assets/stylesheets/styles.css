@@ -1375,7 +1375,7 @@ display:inline-block;
     font-size: 20pt;
 }
 
-#incoming {
+#tendance-bloc #incoming {
  border:1px solid #e9eaed;
     display:inline-block;
     padding:2% 2%;
@@ -1384,7 +1384,7 @@ display:inline-block;
     vertical-align:top;
     width:100%;
 }
-#incoming .tendance {
+#tendance-bloc #incoming .tendance {
     background-color: none !important;
     background: none !important;
     margin: 0px !important;
