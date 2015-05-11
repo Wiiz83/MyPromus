@@ -55,10 +55,7 @@
 
                     <section class="song-result">
 
-                        <ul class="scroll-list">
-                            <div id="yeah"> 
-                            
-                            </div>
+                        <ul class="scroll-list" id="yeah">
                             
                             
                         <ul>
