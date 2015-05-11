@@ -1228,7 +1228,7 @@ li.active a,li.active a:hover {
 }
 #friend-bloc {
     width:29%;
-    height:758px;
+    height: auto;
     border-radius:3px;
     box-shadow:-1px 1px 1px rgba(0,0,0,0.15);
     background:#fff;
@@ -1310,11 +1310,18 @@ li.active a,li.active a:hover {
     width: 22px;
 }
 
+#image-gallery {
+ height: auto;
+
+
+}
+
     #image-gallery li img {
       margin: 0;
       padding: 0;
       display: block;
-      height: 50% !important;
+      height: 300px !important;
+
     }
 #image-gallery li .content-left {
   display: inline-block;

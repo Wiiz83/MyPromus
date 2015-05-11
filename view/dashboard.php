@@ -13,26 +13,20 @@
              if(isset($events)):
             foreach($events as $event):
             echo "<style type='text/css'>
- .pgwSlideshow::after {background: url(".$event->getImage().") no-repeat !important; }
-</style>
-"; endforeach; 
+     .pgwSlideshow::after {background: url(".$event->getImage().") no-repeat !important; }
+    </style>
+    "; endforeach; 
 
-elseif($sum==2): echo "
-  <style type='text/css'>
-  #friend-bloc { height: 170px !important; }
-</style>
-  ";
-  
-else: echo "
-<style type='text/css'>
- .pgwSlideshow::after {background: url('../view/assets/images/slider-default.png') no-repeat !important; margin-left: 0px !important;} 
-                .pgwSlideshow .ps-list{display: none !important;}
-                #friend-bloc { height: 270px; }
-</style>
-"; endif; ?>
-<style>
+    else: echo "
+    <style type='text/css'>
+     .pgwSlideshow::after {background: url('../view/assets/images/slider-default.png') no-repeat !important; margin-left: 0px !important;} 
+                    .pgwSlideshow .ps-list{display: none !important;}
+                    #friend-bloc { height: 270px; }
+    </style>
+    "; endif; 
 
-</style>
+
+?>
 <script type="text/javascript">
   $(document).ready(function() {
     $("#lightSlider").lightSlider(); 
