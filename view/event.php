@@ -135,15 +135,14 @@
                     <?php if(isset($friendsToInvite)): ?>
 
 
-                    <form action="#" class="invite-form" onSubmit="inviteFriend(this.value)">
+                    
                         <select id="friends-list" name="friend" >
                             <?php foreach($friendsToInvite as $user): ?>
-                                <option value="<?php echo $user->getIdUser(); ?>"><?php echo $user->getUsername();?></option>
+                                <option value="<?php echo $user->getIdUser(); ?>" id="<?php echo $user->getIdUser(); ?>" onclick="inviteFriend(this.value)"><?php echo $user->getUsername();?></option>
                             <?php endforeach ?>
                         </select>
                         <p id="result"></p>
-                        <input class="btn-add" type="submit" name="invite" value="Invite">
-                    </form>
+                        
                     <?php endif ?>
                 </div>
             
