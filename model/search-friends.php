@@ -68,18 +68,24 @@ function searchFriend($userId,$username){
 
 		$friendsId=getFriendsId($userId);
 	
-		while($friendInfo=mysqli_fetch_assoc($result)){
+			while($friendInfo=mysqli_fetch_assoc($result)){
 
-			$user=new User($friendInfo['id'],$friendInfo['username'],$friendInfo['country'],$friendInfo['city'],$friendInfo['email'],$friendInfo['image_url']);
-		
-			if(in_array($friendInfo['id'], $friendsId)){
-				$user->setFriend(true);
+				$user=new User($friendInfo['id'],$friendInfo['username'],$friendInfo['country'],$friendInfo['city'],$friendInfo['email'],$friendInfo['image_url']);
+			
+				if(is_array($friendsId)){
+					if(in_array($friendInfo['id'], $friendsId)){
+						$user->setFriend(true);
+					}
+				}else{
+					if($friendInfo['id']==$friendsId){
+						$user->setFriend(true);
+					}
+				}
+				
+				$friends[]=$user;
+
 			}
-
-			$friends[]=$user;
-
-		}
-
+		
 		return $friends;
 	}
 
