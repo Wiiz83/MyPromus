@@ -61,9 +61,9 @@
                                                     <p><?php echo ucfirst($user->getUsername());?></p>
                                                     <p><?php echo ucfirst($user->getCity());?></p>
                                                     <p><?php echo ucfirst($user->getCountry());?></p>
-                                                    <span class="<?php echo $user->getIdUser();?>">
-                                                    <button class="btn" value="<?php echo $user->getIdUser();?>" onclick="deleteFriend(this.value)" type="submit">Remove</button>
-                                                    </span>
+                                                    
+                                                    <button class="btn"  value="<?php echo $user->getIdUser();?>" onclick="deleteFriend(this.value)" type="submit">Remove</button>
+                                                    
                                                     </div>
 
                                                     <?php endforeach ?>
@@ -88,9 +88,9 @@
                                                     
                                                     <p><?php echo ucfirst($user->getCity());?></p>
                                                     <p><?php echo ucfirst($user->getCountry());?></p>
-                                                    <span class="<?php echo $user->getIdUser();?>">
-                                                    <button class="btn" value="<?php echo $user->getIdUser();?>" onclick="deleteFriend(this.value)" type="submit">Remove</button>
-                                                    </span>
+                                                    
+                                                    <button class="btn"  value="<?php echo $user->getIdUser();?>" onclick="deleteFriend(this.value)" type="submit">Remove</button>
+                                                    
                                                     </div>
 
                                                     <?php endforeach ?>
@@ -115,9 +115,9 @@
                                                     <p><?php echo ucfirst($user->getUsername());?></p>
                                                     <p><?php echo ucfirst($user->getCity());?></p>
                                                     <p><?php echo ucfirst($user->getCountry());?></p>
-                                                    <span class="<?php echo $user->getIdUser();?>">
-                                                    <button class="btn" value="<?php echo $user->getIdUser();?>" onclick="deleteFriend(this.value)" type="submit">Remove</button>
-                                                    </span>
+                                                    
+                                                    <button class="btn"  value="<?php echo $user->getIdUser();?>" onclick="deleteFriend(this.value)" type="submit" >Remove</button>
+                                                    
                                                     </div>
 
                                                     <?php endforeach ?>
