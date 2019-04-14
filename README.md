@@ -1,6 +1,12 @@
 # What is it ?
 
-MyPromus is Cette application permettra aux utilisateurs de créer des évènements, d’y inviter ses amis et de participer tous ensemble a l'élaboration d’une playlist collaborative qui sera ensuite diffusée lors de l'évènement. Je suis responsable du design, de l'intégration et de l’interactivité.
+MyPromus is a Web Application to create and manage events by allowing users to :
+* logging on the website using their facebook/spotify account or by creating a new account from scratch 
+* creating events 
+* inviting friends to an event 
+* specifying the musical genres allowed/forbidden for the playlist
+* modifying the information of the event (description, location, date, etc…)
+* participating in the development of a collaborative Spotify playlist which will then be broadcast during the event
 
 # How to install it ?
 
@@ -25,4 +31,5 @@ curl.cainfo ="/opt/xampp/htdocs/myPromus/cacert.pem"
 LAMPP
 curl.cainfo ="/opt/lampp/htdocs/promus/cacert.pem"
 
-Thanks and enjoy Mypromus
+
+**Thanks and enjoy Mypromus**
