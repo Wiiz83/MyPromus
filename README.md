@@ -19,6 +19,10 @@ after login with Mypromus you have to login with Spotify to use all the services
 
 4-This page has errors,is not full tested (even Facebook has errors!)
 
+![alt text](https://github.com/Wiiz83/Project-MyPromus/blob/master/image/promus1.png)
+
+![alt text](https://github.com/Wiiz83/Project-MyPromus/blob/master/image/promus2.png)
+
  # Important 
  
 You have to edit the php.ini file of the Lampp or Xampp
